@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jade Layout Template</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" media="all" href="css/screen.min.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      !function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/assets/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="font_css_cache"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"css/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}()},19:function(e,t){}});
+      
+    </script>
+    <div class="svg-defs-container" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-rss" viewBox="0 0 30 30"><path clip-rule="evenodd" fill="none" d="M64.3-1392v-8.5h37v-.5c-2.7-1.7-12-10.6-13-13.5 2.2-1.5 3.3-4.1 6-5 5.3 5.5 10.7 11 16 16.5 2.2 2.2 5.8 4 6.5 7.5-5.5 5.3-11 10.7-16.5 16-2.1 2.1-4 5.4-7 6.5-1.5-2.2-4.1-3.3-5-6 4.3-4.2 8.7-8.3 13-12.5v-.5h-37z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-2.8 20.5c-.9 0-1.7-.8-1.7-1.7 0-.9.8-1.7 1.7-1.7.9 0 1.7.8 1.7 1.7.1 1-.7 1.7-1.7 1.7zm4.8 0c-.7 0-1.2-.5-1.2-1.2 0-2.3-1.8-4.1-4.1-4.1-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c3.6 0 6.5 2.9 6.5 6.5 0 .7-.5 1.2-1.2 1.2zm4.3 0c-.7 0-1.2-.6-1.2-1.2 0-4.6-3.7-8.3-8.3-8.3-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2c5.9 0 10.8 4.8 10.8 10.8-.1.6-.6 1.1-1.3 1.1z"/></symbol></svg></div>
+    <!--BEGIN out-->
+    <div class="container-left-menu">
+      <div class="wrapper-left-menu">
+        <!-- Logo-->
+        <div class="wrapper-left-menu_logo">
+          <div class="block-left-menu_logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178" height="89" viewBox="0 0 178 89"><defs><path d="M0 0h250v840H0z"/><filter width="121.6%" height="106.4%" x="-6%" y="-3%" filterUnits="objectBoundingBox"><feOffset dx="12" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7"/><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/></filter><path d="M0 89.21V.188h178V89.21z"/></defs><g fill="none" fill-rule="evenodd"><g transform="translate(-36 -36)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#FFF" xlink:href="#b"/></g><g transform="translate(0 .225)"><mask fill="#fff"><use xlink:href="#c"/></mask><path fill="#EB1C24" d="M130.064 12.08l-75.95-.06c-21.86 0-29.464-5.828-32.147-9.887-1.45-2.19-3.586-2.537-5.57-1.005C10.342 5.804 0 16.142 0 33.71c0 30.22 23.64 42.74 47.802 42.74l75.95.06c21.86 0 29.464 5.827 32.148 9.886 1.45 2.192 3.586 2.538 5.57 1.006 6.054-4.677 16.397-15.015 16.397-32.584 0-30.218-23.64-42.74-47.803-42.74" mask="url(#d)"/></g><path fill="#FEFEFE" d="M43.31 53.98V34.66c0-.684.204-1.225.613-1.623.41-.397.96-.595 1.654-.595h10.516c.614 0 1.117.19 1.51.57.39.38.587.87.587 1.466s-.196 1.085-.588 1.465c-.392.38-.895.572-1.51.572h-8.247v5.762h6.463c.613 0 1.116.19 1.508.57.393.38.588.87.588 1.466s-.195 1.085-.588 1.465c-.392.382-.895.572-1.508.572h-6.463v5.762h8.59c.613 0 1.116.19 1.508.57.392.38.59.87.59 1.466 0 .597-.198 1.085-.59 1.466-.392.38-.895.57-1.51.57H45.578c-.693 0-1.244-.198-1.654-.595-.41-.398-.613-.934-.613-1.608m-4.694-20.93c-.403-.398-.957-.596-1.662-.596H24.558c-.694 0-1.245.198-1.654.595-.41.398-.614.934-.614 1.607v19.425c0 .673.205 1.208.614 1.606.41.398.96.596 1.654.596.693 0 1.245-.198 1.654-.596.41-.398.614-.933.614-1.606V36.514h7.86v17.568c0 .673.202 1.208.605 1.606.405.398.96.596 1.664.596.705 0 1.26-.198 1.662-.596.404-.398.606-.933.606-1.606V34.657c0-.673-.202-1.21-.606-1.606m21.986 2.892c-.392-.38-.59-.868-.59-1.465 0-.596.198-1.084.59-1.465.392-.38.895-.57 1.508-.57h13.267c.613 0 1.116.19 1.508.57.392.38.59.87.59 1.465 0 .597-.198 1.085-.59 1.465-.392.38-.895.57-1.508.57H71.01v17.572c0 .674-.202 1.21-.605 1.607-.403.398-.958.597-1.663.597-.705 0-1.258-.2-1.662-.596-.404-.397-.605-.932-.605-1.606v-17.57H62.11c-.613 0-1.116-.19-1.508-.572M83.97 44.66h3.136c1.32 0 2.348-.358 3.087-1.077.738-.717 1.108-1.716 1.108-2.997 0-1.28-.37-2.278-1.107-2.996-.74-.717-1.768-1.076-3.087-1.076H83.97v8.146zm-4.536 9.37V34.66c0-.685.204-1.226.613-1.624.41-.397.96-.595 1.655-.595h5.404c2.592 0 4.726.78 6.403 2.343 1.676 1.562 2.514 3.497 2.514 5.803 0 2.308-.838 4.24-2.515 5.796s-3.81 2.335-6.404 2.335H83.97v5.313c0 .674-.204 1.208-.613 1.607-.41.397-.962.596-1.654.596-.694 0-1.245-.2-1.655-.596-.41-.4-.613-.933-.613-1.607zm37.232.117c0-.53.256-1.21.768-2.036l5.336-8.13-4.825-7.466c-.51-.828-.767-1.507-.767-2.037 0-.596.227-1.112.682-1.548a2.24 2.24 0 0 1 1.602-.655c.478 0 .898.122 1.263.364.363.242.636.52.818.827l3.956 6.44h.135l3.94-6.44c.18-.31.456-.585.826-.828a2.26 2.26 0 0 1 1.27-.365c.615 0 1.146.218 1.595.654.45.435.674.95.674 1.547 0 .53-.257 1.21-.77 2.037l-4.807 7.467 5.337 8.13c.512.828.767 1.507.767 2.037 0 .596-.224 1.112-.673 1.548-.45.436-.98.654-1.594.654-.478 0-.9-.12-1.27-.356-.37-.238-.646-.51-.828-.82l-4.467-7.137h-.136l-4.468 7.137c-.182.31-.46.582-.828.82-.37.236-.793.355-1.27.355a2.21 2.21 0 0 1-1.594-.655c-.45-.436-.674-.952-.674-1.548m26.42-7.535h5.25l-2.522-8.66h-.205l-2.524 8.66zm-6.848 7.433c0-.353.12-.916.358-1.688l5.79-17.616a3.515 3.515 0 0 1 1.22-1.73c.573-.435 1.276-.653 2.106-.653.83 0 1.528.218 2.096.653a3.53 3.53 0 0 1 1.21 1.73l5.97 17.67c.226.74.34 1.303.34 1.69 0 .596-.224 1.112-.673 1.548-.45.436-.98.654-1.594.654-1.16 0-1.97-.735-2.437-2.203l-1.075-3.25h-7.673l-.914 3.195c-.465 1.468-1.278 2.203-2.437 2.203-.615 0-1.15-.218-1.603-.655-.455-.435-.682-.95-.682-1.548zm21.324-19.333c0 1.434-.957 2.39-2.4 2.39-1.436 0-2.4-.956-2.4-2.39 0-1.436.964-2.39 2.4-2.39 1.443 0 2.4.954 2.4 2.39zm-4.364 0c0 1.175.788 1.966 1.964 1.966 1.183 0 1.97-.79 1.97-1.966s-.786-1.967-1.97-1.967c-1.176 0-1.964.79-1.964 1.967zm2.1-1.21c.535 0 .835.273.835.718 0 .325-.212.53-.472.61-.053.02-.053.035-.006.06a.766.766 0 0 1 .342.405l.24.532c.028.053 0 .086-.056.086h-.32c-.042 0-.07-.02-.09-.06l-.163-.39c-.138-.3-.28-.446-.664-.446h-.22v.823c0 .047-.026.073-.074.073h-.302c-.047 0-.074-.026-.074-.073v-2.264c0-.047.027-.074.074-.074h.95zm-.574 1.123h.424c.342 0 .555-.126.555-.372 0-.233-.17-.332-.405-.332h-.574v.705zM115.25 34.4c-.054-.577-.318-1.062-.787-1.442a2.164 2.164 0 0 0-1.6-.496c-.602.052-1.437.364-1.994 1.558l-4.452 9.775-4.777-9.78c-.554-1.19-1.39-1.5-1.99-1.553a2.165 2.165 0 0 0-1.6.495c-.47.38-.734.866-.787 1.442-.05.533.092 1.136.42 1.79l6.304 12.61-.708 1.588c-.223.52-.493.902-.804 1.134-.253.19-.628.296-1.08.313l-1.08-.033c-1.345.002-1.98.613-2.276 1.124a1.988 1.988 0 0 0-.19 1.633c.54 1.714 2.96 1.714 3.756 1.714 1.854 0 3.246-.823 3.776-1.31a8.198 8.198 0 0 0 1.955-2.78l7.492-15.993c.327-.655.47-1.257.42-1.79"/></g></svg></div>
+        </div>
+        <!-- Menu-->
+        <div class="wrapper-left-menu_nav">
+          <ul>
+            <li>
+              <div class="active-link box-hover-menu" data-tab="1">Компания</div>
+            </li>
+            <li>
+              <div class="active-link box-hover-menu" data-tab="2">100% качества</div>
+            </li>
+            <li>
+              <div class="active-link box-hover-menu" data-tab="3">Продукты</div>
+            </li>
+            <li class="active"><a class="menu-no box-hover-menu" href="#">Рецепты</a></li>
+            <li><a class="menu-no box-hover-menu" href="#">Акции</a></li>
+            <li>
+              <div class="active-link box-hover-menu" data-tab="3">Контакты</div>
+            </li>
+          </ul>
+        </div>
+        <!-- Image flower-->
+        <div class="wrapper-left-menu_img"></div>
+        <!-- Btn Personal Area-->
+        <div class="wrapper-btn-personal-area">
+          <div class="btn-personal-area">
+            <div class="icon-personal-area"></div>
+            <div class="txt-personal-area">Личный кабинет</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="out">
+      <main id="barba-wrapper">
+        <section class="barba-container">
+          <div class="container-main">
+            <div class="container-slider-header">
+              <div class="swiper-container-header">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image:url(&quot;img/slider/1.jpg&quot;);">
+                    <div class="wrapper-swiper-slide">
+                      <h1>Процесс производства</h1>
+                      <div class="wrapper-swiper-slide_txt">Крупнейший производитель продуктов из мяса птицы на територии Республики Беларусь. Формула успеха компании заключается в свежести продукции, остуствии консервантов и пищевых добавок.</div><a class="btn-link" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image:url(&quot;img/slider/1.jpg&quot;);">
+                    <div class="wrapper-swiper-slide">
+                      <h1>Процесс производства</h1>
+                      <div class="wrapper-swiper-slide_txt">Крупнейший производитель продуктов из мяса птицы на територии Республики Беларусь. Формула успеха компании заключается в свежести продукции, остуствии консервантов и пищевых добавок.</div><a class="btn-link" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="background-image:url(&quot;img/slider/1.jpg&quot;);">
+                    <div class="wrapper-swiper-slide">
+                      <h1>Процесс производства</h1>
+                      <div class="wrapper-swiper-slide_txt">Крупнейший производитель продуктов из мяса птицы на територии Республики Беларусь. Формула успеха компании заключается в свежести продукции, остуствии консервантов и пищевых добавок.</div><a class="btn-link" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add Pagination-->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows-->
+                <div class="swiper-button-next">
+                  <div class="icon-btn-slider"><svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#EB1C24" fill-rule="evenodd"/></svg></div>
+                </div>
+                <div class="swiper-button-prev">
+                  <div class="icon-btn-slider"><svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#EB1C24" fill-rule="evenodd"/></svg></div>
+                </div>
+              </div>
+            </div>
+            <div class="container-block-info"><a class="block-info-list" href="#">
+                <div class="wrapper-block-info"><img class="wrapper-block-info_img" src="img/2.jpg" alt="">
+                  <div class="wrapper-block-info_text">
+                    <div class="block-info_text-section">Акции</div>
+                    <div class="two-block">
+                      <div class="block-info_text-title">Участвуйте в розыгрыше призов!</div>
+                      <div class="block-info_text-txt">Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем одноразовые пакеты, тщательно моем фрукты и овощи, но покупаем курицу без упаковки.</div>
+                    </div>
+                  </div>
+                </div></a><a class="block-info-list" href="#">
+                <div class="wrapper-block-info"><img class="wrapper-block-info_img" src="img/3.jpg" alt="">
+                  <div class="wrapper-block-info_text">
+                    <div class="block-info_text-section">Акции</div>
+                    <div class="two-block">
+                      <div class="block-info_text-title">«Гарантируем удачу!»</div>
+                      <div class="block-info_text-txt">Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем одноразовые пакеты, тщательно моем фрукты и овощи, но покупаем курицу без упаковки.</div>
+                    </div>
+                  </div>
+                </div></a><a class="block-info-list" href="#">
+                <div class="wrapper-block-info"><img class="wrapper-block-info_img" src="img/4.jpg" alt="">
+                  <div class="wrapper-block-info_text">
+                    <div class="block-info_text-section">Новинка</div>
+                    <div class="two-block">
+                      <div class="block-info_text-title">Мясо птицы в маринаде «Гурме Гриль»!</div>
+                      <div class="block-info_text-txt">«Гурме Гриль» – отборное мясо птицы, дополненное утончёнными маринадами и упакованное под вакуумом!</div>
+                    </div>
+                  </div>
+                </div></a></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!--END out-->
+    <!--include includes/_footer-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">
+    <script src="js/lib.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>
