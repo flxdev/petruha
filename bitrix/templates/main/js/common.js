@@ -4,8 +4,14 @@ function initSliderHeader() {
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        spaceBetween: 30
+        spaceBetween: 30,
+        speed: 900,
     });
 }
 
+function initScrollOrdering() {
+    Revealator.effects_padding = '-350';
+}
+
 initSliderHeader();
+initScrollOrdering();

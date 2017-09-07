@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>BTN</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Start" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Start_p_001!!!" transform="translate(-476.000000, -1528.000000)">
+            <g id="Brends" transform="translate(250.000000, 1421.000000)">
+                <rect id="BGR" fill="#F9F9F9" opacity="0.100000001" x="0" y="0" width="1350" height="719"></rect>
+                <g id="BTN" transform="translate(226.000000, 107.000000)">
+                    <path d="M9.44334001,-8.16078975e-16 L9.44334001,-8.16078975e-16 L9.44334001,0 C14.6587527,-9.5810946e-16 18.88668,4.22792733 18.88668,9.44334001 L18.88668,9.44334001 L18.88668,9.44334001 C18.88668,14.6587527 14.6587527,18.88668 9.44334001,18.88668 L9.44334001,18.88668 L9.44334001,18.88668 C4.22792733,18.88668 9.90310264e-15,14.6587527 0,9.44334001 L8.90129984e-17,9.44334001 L0,9.44334001 C-6.387035e-16,4.22792733 4.22792733,2.7344663e-15 9.44334001,1.77635684e-15 Z" id="Rectangle-7" fill="#EB1C24"></path>
+                    <path d="M12.5,9.5 L8.12910251,5.12241358 L6.96439164,6.28712445 L10.1324805,9.45521331 L6.96439164,12.6233022 L8.12910251,13.788013 L12.5,9.5 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

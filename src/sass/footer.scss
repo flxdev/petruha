@@ -1,0 +1,136 @@
+.footer{
+  margin-left: 16%;
+  width: 84%;
+  padding: 50px 60px;
+  @include hover-time-all;
+}
+
+.footer-row{
+  width: 100%;
+  position: relative;
+}
+
+.wrapper-btn-f{
+  @include display-inline-middle;
+  margin-right: 8%;
+  @include hover-time-all;
+}
+
+.wrapper-tel-f{
+  @include display-inline-middle;
+  margin-right: 8%;
+  @include hover-time-all;
+  .wrapper-tel-f_label{
+    @include fontOpenSans300;
+    font-size: 14px;
+    line-height: 1;
+    text-align: left;
+    color: #9fa2ad;
+    margin-bottom: 10px;
+  }
+  .wrapper-tel-f_tel{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #000000;
+    @include hover-time;
+    &:hover{
+      color: #d40008;
+    }
+  }
+}
+
+.wrapper-email-f{
+  @include display-inline-middle;
+  .wrapper-email-f_label{
+    @include fontOpenSans300;
+    font-size: 14px;
+    line-height: 1;
+    text-align: left;
+    color: #9fa2ad;
+    margin-bottom: 10px;
+  }
+  .wrapper-email-f_email{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #39b54a;
+    text-decoration: underline;
+    @include hover-time-all;
+    &:hover{
+      color: #eb1c24;
+    }
+    &:focus{
+      color: #d40008;
+    }
+  }
+}
+
+.wrapper-soc-f{
+  float: right;
+  @include hover-time-all;
+  ul{
+    li{
+      margin-left: 16px;
+      @include display-inline-middle;
+      .soc-link-f{
+        width: 32px;
+        height: 32px;
+        display: block;
+        svg{
+          g{
+            @include hover-time-all;
+          }
+        }
+        &:hover{
+          svg{
+            g{
+              fill: #d40008;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+.footer-row-2{
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 40px;
+  margin-top: 54px;
+  .wrapper-rights-f{
+    float: left;
+    @include fontOpenSans300;
+    font-size: 15px;
+    text-align: left;
+    color: #9fa2ad;
+  }
+  .wrapper-dev-f{
+    float: right;
+    @include fontOpenSans300;
+    font-size: 15px;
+    text-align: right;
+    color: #9fa2ad;
+    span{
+      color: #39b54a;
+      text-decoration: underline;
+      @include hover-time;
+    }
+    &:hover{
+      span{
+        color: #eb1c24;
+      }
+    }
+    &:focus{
+      span{
+        color: #d40008;
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@
   box-shadow: 12px 2px 14px 0 rgba(0, 0, 0, 0.1);
   width: 16%;
   height: 100%;
+  z-index: 1;
+  @include hover-time-all;
 }
 
 .wrapper-left-menu{
@@ -74,6 +76,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 2;
+  background-position: bottom left;
 }
 
 .wrapper-btn-personal-area{
