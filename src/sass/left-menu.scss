@@ -1,10 +1,9 @@
 .container-left-menu{
   position: fixed;
   background: white;
-  box-shadow: 12px 2px 14px 0 rgba(0, 0, 0, 0.1);
   width: 16%;
   height: 100%;
-  z-index: 1;
+  z-index: 5;
   @include hover-time-all;
 }
 
@@ -13,8 +12,10 @@
   height: 100%;
   margin: 0 auto;
   position: relative;
+  box-shadow: 12px 2px 14px 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
   .wrapper-left-menu_logo{
-    margin-top: 15%;
+    padding-top: 15%;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -215,9 +216,197 @@
   height: 100%;
   background-color: #fff;
   z-index: 1;
-  top: -38px;
+  top: 0;
 }
 
-.rver{
-  //left: 16% !important;
+.container-white-block{
+  position: absolute;
+  top: 0;
+  left: -250%;
+  width: 720px;
+  height: 100%;
+  background-color: #f9f9f9;
+  transition: all 0.5s ease-in-out;
+}
+
+.wrapper-white-block{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .btn-close{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    right: -70px;
+    cursor: pointer;
+    path{
+      @include hover-time-run;
+    }
+    &:hover{
+      path{
+        fill: #d9d9d9;
+      }
+    }
+  }
+}
+
+.block-white-tabs{
+  width: 310px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper-white-tabs{
+  position: relative;
+  width: 100%;
+  .block-white-block_title{
+    @include fontTTRoundsCondensedB;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 125px;
+  }
+  .block-white-block_btn-tabs{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 285px;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 0;
+    .tab-link{
+      @include display-inline-top;
+      @include fontTTRoundsCondensedR;
+      font-size: 16px;
+      font-stretch: condensed;
+      line-height: 3.8;
+      text-align: left;
+      color: #5e5e5e;
+      margin-bottom: -2px;
+      margin-right: 50px;
+      cursor: pointer;
+      @include hover-time;
+      &:hover{
+        color: #000000;
+      }
+    }
+    .tab-link.current-f{
+      color: #000000;
+      border-bottom: 3px solid #eb1c24;
+    }
+  }
+}
+
+.wrapper-white-block-tabs.current-f{
+  display: inherit;
+}
+
+.wrapper-white-block-tabs{
+  display: none;
+}
+
+.wrapper-white-block-tabs_form{
+  width: 285px;
+  .link-pass-no{
+    text-align: right;
+    @include fontOpenSans300;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #39b54a;
+    display: block;
+    @include hover-time;
+    &:hover{
+      color: #1ea832;
+    }
+    &:focus{
+      color: #149f27;
+    }
+  }
+
+  .link-pass-no + .box-btn-form{
+    margin-top: 11px;
+  }
+
+  .box-btn-form{
+    margin-top: 45px;
+  }
+}
+
+.box-input{
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  .form-label{
+    margin-bottom: 10px;
+    .input-label{
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: left;
+      color: #b5b3b3;
+      span{
+        color: #eb1c24;
+      }
+    }
+  }
+  .form-input{
+    .input-box{
+      width: 100%;
+      border-radius: 2px;
+      border: solid 1px #b5b3b3;
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      color: #000000;
+      @include hover-time-all;
+      padding: 12px 15px;
+      &:focus{
+        border-color: #39b54a;
+      }
+      &:hover{
+        background-color: #f9f9f9;
+      }
+    }
+    .input-box.error{
+      border: solid 1px #eb1c24;
+    }
+    .form-error{
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      color: #eb1c24;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.box-btn-form{
+  display: block;
+}
+
+.btn-form{
+  @include fontTTRoundsCondensedR;
+  font-size: 18px;
+  font-stretch: condensed;
+  line-height: 1;
+  text-align: left;
+  color: #ffffff;
+  padding: 15px 40px 17px 40px;
+  border-radius: 2px;
+  background-color: #39b54a;
+  @include hover-time-run;
+  &:hover{
+    background-color: #1ea931;
+  }
+  &:focus{
+    background-color: #139f27;
+  }
 }
