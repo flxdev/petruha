@@ -71,7 +71,7 @@
         .wrapper-white-block
             .btn-close
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40"><defs><path d="M39.562 0v39.562H0V0z"/></defs><g fill="none" fill-rule="evenodd"><mask fill="#fff"><use xlink:href="#a"/></mask><path fill="#FFF" d="M19.783 37.984c-10.038 0-18.204-8.166-18.205-18.203 0-10.036 8.166-18.2 18.203-18.2 10.038 0 18.204 8.165 18.204 18.2 0 10.038-8.165 18.204-18.2 18.204M19.78 0C8.874 0 0 8.874 0 19.78c0 10.91 8.875 19.783 19.783 19.783 10.906 0 19.78-8.874 19.78-19.78C39.563 8.872 30.688 0 19.78 0m8.2 11.578a.79.79 0 0 0-1.115 0l-7.085 7.086-7.085-7.086a.79.79 0 1 0-1.116 1.117l7.084 7.086-7.085 7.086a.79.79 0 1 0 1.115 1.116l7.085-7.085 7.085 7.085a.786.786 0 0 0 1.116 0 .79.79 0 0 0 0-1.116l-7.084-7.085 7.085-7.085a.79.79 0 0 0 0-1.117" mask="url(#b)"/></g></svg>
-            .block-white-tabs
+            .block-white-tabs(style="display:none")
                 .wrapper-white-tabs
                     .block-white-block_btn-tabs
                         .tab-link.current-f(data-tabs="tabs-1") Вход
@@ -135,10 +135,53 @@
                                     button(type='submit').btn-form Зарегистрироваться
 
 
+            .block-white-feedback(style="display:none")
 
+                .wrapper-white-feedback
+                    .wrapper-white-feedback_title Форма обратной связи
+                    .wrapper-white-feedback_form
+                        form.js-form
+                            .box-input
+                                .form-label
+                                    label.input-label ФИО<span>*</span>
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Не верно введены данные").input-box
 
+                            .box-input
+                                .form-label
+                                    label.input-label Телефон <span>*</span>
+                                .form-input
+                                    input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Не верно введены данные").input-box
 
+                            .box-input
+                                .form-label
+                                    label.input-label E-mail<span>*</span>
+                                .form-input
+                                    input(data-validation="email" type="email" data-validation-error-msg="Не верно введены данные").input-box
 
+                            .box-input
+                                .form-label
+                                    label.input-label Категория вопроса
+                                .form-input
+                                    select.select-box.select2
+                                        option(value='1') Фирменный магазин
+                                        option(value='2') Поставка продукции
+                                        option(value='3') Корма
+                                        option(value='4') Отдел кадров
 
+                            .box-input.textarea
+                                .form-label
+                                    label.input-label Вопрос<span>*</span>
+                                .form-input
+                                    textarea.textarea-box(data-validation="required length" data-validation-length='min3' data-validation-error-msg="Не верно введены данные")
 
+                            .box-dropzon-btn
+                                .wrapper-dropzone
+                                .box-btn-form
+                                    button.btn-form.radius Отправить
 
+                .wrapper-white-feedback.center.response(style='display: none;')
+                    .wrapper-white-feedback_title Спасибо!
+                    .wrapper-white-feedback_text
+                        p Благодарим вас, что уделили внимание нашей компании. В течение рабочего времени с вами свяжется наш сотрудник.
+                        a(href="#") Главная страница

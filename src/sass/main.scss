@@ -399,3 +399,235 @@ slideRightNone
     }
   }
 }
+
+.container-header.header-404{
+  height: 100vh;
+}
+
+.container-404{
+  width: 430px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  h1{
+    position: relative !important;
+    text-align: center;
+    left: auto !important;
+    bottom: auto !important;
+    font-size: 220px;
+    margin-bottom: 31px;
+  }
+  p{
+    color: white;
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    margin-bottom: 40px;
+    a{
+      color: #39b54a;
+      text-decoration: underline;
+      @include hover-time-all;
+      &:hover{
+        color: #eb1c24;
+      }
+      &:focus{
+        color: #d40008;
+      }
+    }
+  }
+  .box-search{
+    .input-box-search{
+      background-color: inherit;
+      //background-color: hsla(0,0%,100%,.0);
+      border-radius: 50px;
+      border: solid 1px rgba(255, 255, 255, 1);
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      color: #ffffff;
+      padding: 9px 50px 11px 22px;
+      text-align: left;
+      width: 85%;
+      &::-webkit-input-placeholder {@include fontOpenSans300; font-size: 16px; color: #ffffff};
+      &::-moz-placeholder          {@include fontOpenSans300; font-size: 16px; color: #ffffff};
+      &:-moz-placeholder           {@include fontOpenSans300; font-size: 16px; color: #ffffff};
+      &:-ms-input-placeholder      {@include fontOpenSans300; font-size: 16px; color: #ffffff};
+    }
+    .btn-s{
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      right: 10%;
+    }
+  }
+}
+
+.container-telephone-hotline-f{
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 67px;
+  .block-label-txt{
+    @include display-inline-top;
+    width: 420px;
+  }
+  .block-label-txt.telefon{
+    @include display-inline-top;
+    .block-label{
+      margin-bottom: 5px;
+    }
+  }
+  .block-label-txt.email{
+    @include display-inline-top;
+    .block-label{
+      margin-bottom: 12px;
+    }
+  }
+  .block-label{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #5e5e5e;
+  }
+  .block-telefon_txt{
+    @include fontTTRoundsCondensedB;
+    font-size: 28px;
+    font-stretch: condensed;
+    line-height: 1.29;
+    text-align: left;
+    color: #000000;
+    @include hover-time;
+    &:hover{
+      color: #eb1c24;
+    }
+  }
+  .block-email_txt{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #39b54a;
+    text-decoration: underline;
+    @include hover-time-all;
+    &:hover{
+      color: #eb1c24;
+    }
+    &:focus{
+      color: #d40008;
+    }
+  }
+  .block-btn{
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
+
+.btn-green{
+  @include fontTTRoundsCondensedR;
+  font-size: 18px;
+  font-stretch: condensed;
+  line-height: 1;
+  text-align: left;
+  color: #ffffff;
+  border-radius: 30px;
+  background-color: #39b54a;
+  padding: 18px 40px 19px 40px;
+  display: inline-block;
+  @include hover-time-run;
+  cursor: pointer;
+  &:hover{
+    background-color: #1ea931;
+  }
+  &:focus{
+    background-color: #139f27;
+  }
+}
+
+.container-contact-row{
+  width: 100%;
+  font-size: 0;
+  margin-bottom: 15px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .wrapper-contact_big-title{
+    @include fontTTRoundsCondensedB;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1.22;
+    text-align: left;
+    color: #000000;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+.wrapper-contact_list{
+  width: 525px;
+  margin-bottom: 52px;
+  @include display-inline-top;
+  .wrapper-contact_list-title{
+    @include fontTTRoundsCondensedR;
+    font-size: 24px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .wrapper-contact_block{
+    display: block;
+    .wrapper-contact_block-row{
+      font-size: 0;
+      .label{
+        @include display-inline-middle;
+        @include fontOpenSans300;
+        font-size: 14px;
+        text-align: left;
+        color: #b5b3b3;
+        width: 115px;
+      }
+      .text{
+        @include display-inline-middle;
+        .telefon{
+          @include fontOpenSans300;
+          font-size: 16px;
+          line-height: 2;
+          text-align: left;
+          color: #5e5e5e;
+          @include hover-time;
+          &:hover{
+            color: #eb1c24;
+          }
+          &:focus{
+            color: #d40008;
+          }
+        }
+        .email{
+          @include fontOpenSans300;
+          font-size: 16px;
+          line-height: 1.88;
+          text-align: left;
+          color: #39b54a;
+          text-decoration: underline;
+          @include hover-time-all;
+          &:hover{
+            color: #eb1c24;
+          }
+          &:focus{
+            color: #d40008;
+          }
+        }
+      }
+    }
+    .wrapper-contact_block-row.email{
+      margin-top: 5px;
+    }
+  }
+}
