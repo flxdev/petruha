@@ -12,6 +12,24 @@
   .wrapper-contact_list{
     width: 50%;
   }
+  .wrapper-text-popup{
+    width: 70%;
+  }
+  .wrapper-nav-text{
+    width: 30%;
+  }
+  .container-text-popup{
+    width: 75%;
+  }
+  .container-text-popup-m{
+    .wrapper-text-popup_header{
+      .wrapper-text-popup_container{
+        .wrapper-text-popup_txt{
+          padding-right: 60px;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1280px){
@@ -110,6 +128,18 @@
   .footer{
     margin-left: 20%;
     width: 80%;
+  }
+
+  .container-text-popup-m{
+    .wrapper-text-popup_header{
+      padding: 40px 60px 40px 80px;
+    }
+    .wrapper-content-text{
+      padding: 40px 60px 40px 80px;
+    }
+    .wrapper-content-soc{
+      padding: 0 60px 50px 80px;
+    }
   }
 }
 
