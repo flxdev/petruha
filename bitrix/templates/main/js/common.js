@@ -15,7 +15,7 @@ function initScrollOrdering() {
 
 function initMenu() {
     var clearSetTimeout;
-    var menuDelay = 200;
+    var menuDelay = 800;
     $('.js-menu-category .menu_categories li a').on('mouseover', function (e) {
         var __self = this;
         var _e = e;
@@ -23,11 +23,11 @@ function initMenu() {
         clearSetTimeout = setTimeout(function () {
             var fade = 0;
             if (!globalSetting.menuFirstOpen) {
-                fade = 300;
+                fade = 800;
                 globalSetting.menuFirstOpen = true;
                 menuDelay = 0;
             }
-            else fade = 0;
+            else fade = 800;
             if ($(__self).data('index') == undefined) _e.preventDefault();
             else {
                 //находим нужную вкладку
@@ -44,6 +44,8 @@ function initMenu() {
                         'left': '16%'
                     });
                 }
+
+
 
                 $('.js-menu-category-content-item').css({
                     'left': '16%'
@@ -91,7 +93,7 @@ function initMenu() {
     $('.js-menu-category').on('mouseleave', function (e) {
         clearTimeout(clearSetTimeout);
         // $('body').removeClass('modal-open');
-        menuDelay = 200;
+        menuDelay = 800;
         $('.js-menu-category-content-item').css({
             'left': '-150%'
         });
@@ -168,6 +170,9 @@ function initRegMenu() {
             $('.overlow-bg').css({
                 'opacity': '0'
             });
+            $('.menu_categories').css({
+                'pointer-events': 'initial'
+            });
         } else {
             $('.container-white-block').addClass('openWhiteMenu').css({
                 'left': '100%'
@@ -176,6 +181,10 @@ function initRegMenu() {
             $('.block-white-feedback').hide();
             $('.overlow-bg').css({
                 'opacity': '.5'
+            });
+
+            $('.menu_categories').css({
+                'pointer-events': 'none'
             });
         }
     });
@@ -187,6 +196,10 @@ function initRegMenu() {
         $('.block-white-tabs').hide(1000);
         $('.overlow-bg').css({
             'opacity': '0'
+        });
+
+        $('.menu_categories').css({
+            'pointer-events': 'initial'
         });
     });
 }
@@ -201,6 +214,10 @@ function initFormFeedback() {
             $('.overlow-bg').css({
                 'opacity': '0'
             });
+
+            $('.menu_categories').css({
+                'pointer-events': 'initial'
+            });
         } else {
             $('.container-white-block').addClass('openWhiteMenu').css({
                 'left': '100%'
@@ -209,6 +226,10 @@ function initFormFeedback() {
             $('.block-white-tabs').hide();
             $('.overlow-bg').css({
                 'opacity': '.5'
+            });
+
+            $('.menu_categories').css({
+                'pointer-events': 'none'
             });
         }
     });
@@ -220,6 +241,10 @@ function initFormFeedback() {
         $('.block-white-tabs').hide(1000);
         $('.overlow-bg').css({
             'opacity': '0'
+        });
+
+        $('.menu_categories').css({
+            'pointer-events': 'initial'
         });
     });
 }
@@ -261,6 +286,10 @@ function initBigPopup() {
             $('.overlow-bg').css({
                 'opacity': '0'
             });
+
+            $('.menu_categories').css({
+                'pointer-events': 'initial'
+            });
         } else {
             $('body').addClass('overflow-hidden');
             $('.container-text-popup').addClass('openWhiteMenu').css({
@@ -268,6 +297,10 @@ function initBigPopup() {
             });
             $('.overlow-bg').css({
                 'opacity': '.5'
+            });
+
+            $('.menu_categories').css({
+                'pointer-events': 'none'
             });
         }
     });
@@ -279,6 +312,10 @@ function initBigPopup() {
         });
         $('.overlow-bg').css({
             'opacity': '0'
+        });
+
+        $('.menu_categories').css({
+            'pointer-events': 'initial'
         });
     });
 }

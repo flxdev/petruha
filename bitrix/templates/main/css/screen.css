@@ -2241,7 +2241,7 @@ slideRightNone
 
 .container-sorting {
   position: absolute;
-  top: 0;
+  top: 13px;
   right: 0; }
   .container-sorting .txt-sorting {
     font-family: 'TTRoundsCondensed';
