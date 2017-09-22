@@ -141,6 +141,11 @@
       padding: 0 60px 50px 80px;
     }
   }
+  .container-tabs-btn.row-tabs{
+    .tabs-link{
+      margin-right: 35px;
+    }
+  }
 }
 
 @media all and (max-width: 1207px){

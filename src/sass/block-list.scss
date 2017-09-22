@@ -234,6 +234,20 @@
     background-position: center;
     position: relative;
     overflow: hidden;
+    .block-info_text-section{
+      @include fontTTRoundsCondensedB;
+      font-size: 14px;
+      font-stretch: condensed;
+      text-align: center;
+      color: #fff;
+      border-radius: 3px;
+      background-color: #eb1c24;
+      padding: 7px 29px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-transform: uppercase;
+    }
     .wrapper-text-inside_img{
       width: 100%;
       position: relative;

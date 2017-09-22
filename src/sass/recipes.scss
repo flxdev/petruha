@@ -1,0 +1,77 @@
+.container-filter{
+  width: 100%;
+  position: relative;
+  clear: both;
+}
+
+.wrapper-filter{
+  font-size: 0;
+  border-top: 1px solid #cdcdcd;
+  margin-top: 16px;
+  padding: 20px 0 0 0;
+  margin-bottom: 40px;
+  position: relative;
+  .wrapper-filter-title{
+    @include fontTTRoundsCondensedR;
+    font-size: 16px;
+    font-stretch: condensed;
+    text-align: left;
+    color: #000000;
+    @include display-inline-middle;
+    margin-right: 18px;
+  }
+  .block-filter{
+    @include display-inline-middle;
+    margin-right: 20px;
+  }
+}
+
+.button-dropdown{
+
+}
+
+.filter-button-dropdown{
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding: 0 20px 0 0;
+  &:after{
+    content: '';
+    display: block;
+    background-image: url("../img/svg/shape.svg");
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 9px;
+    right: 0;
+  }
+  .filter_title{
+    @include fontTTRoundsCondensedR;
+    font-size: 16px;
+    font-stretch: condensed;
+    text-align: left;
+    color: #5e5e5e;
+    &:hover{
+      color: #000000;
+    }
+  }
+}
+
+.button-reset-filter{
+  position: absolute;
+  @include fontTTRoundsCondensedR;
+  font-size: 16px;
+  font-stretch: condensed;
+  text-align: left;
+  color: #5e5e5e;
+  cursor: pointer;
+  top: 24px;
+  right: 0;
+  &:hover{
+    color: #000000;
+  }
+}
+
+.hidden{
+  display: none!important;
+}
