@@ -27,7 +27,169 @@
 }
 
 .button-dropdown{
-
+  //.SumoSelect>.CaptionCont{
+  //  @include fontTTRoundsCondensedR;
+  //  font-size: 16px;
+  //  font-stretch: condensed;
+  //  text-align: left;
+  //  color: #000000;
+  //}
+  .SumoSelect{
+    width: auto;
+    cursor: pointer;
+    &:hover{
+      .CaptionCont{
+        box-shadow: none;
+      }
+    }
+    &:focus{
+      .CaptionCont{
+        box-shadow: none;
+      }
+    }
+    .CaptionCont{
+      background-color: inherit;
+      border: none;
+      padding: 6px 12px;
+      span{
+        padding-right: 20px;
+        cursor: pointer;
+        &:before{
+          content: attr(data-before);
+          display: none;
+        }
+      }
+      .placeholder{
+        @include fontTTRoundsCondensedR;
+        font-size: 16px;
+        font-stretch: condensed;
+        text-align: left;
+        color: #5e5e5e;
+        font-style: normal;
+      }
+      .placeholder + label{
+        cursor: pointer;
+        i{
+          width: 9px;
+          height: 9px;
+          opacity: 0.6;
+        }
+      }
+    }
+    .optWrapper{
+      z-index: 2;
+      width: 245px;
+      .options{
+        padding-top: 16px;
+        li.opt{
+          @include fontTTRoundsCondensedR;
+          font-size: 16px;
+          font-stretch: condensed;
+          text-align: left;
+          color: #5e5e5e;
+          border-bottom: none;
+          padding: 7px 10px 7px 46px;
+          &:hover{
+            background-color: inherit;
+            color: black;
+          }
+          span{
+            i{
+              border: 1px solid black;
+              box-shadow: none;
+              border-radius: 3px;
+            }
+          }
+        }
+        li.opt.selected{
+          color: black;
+          span{
+            i{
+              background-image: url("../img/icon-check.jpg");
+              background-size: cover;
+              width: 17px;
+              height: 14px;
+              background-repeat: no-repeat;
+              border: none;
+            }
+          }
+        }
+      }
+      .MultiControls{
+        padding: 20px;
+        p{
+          width: 40%;
+          text-align: center;
+        }
+        .btnOk{
+          background-color: #39b54a;
+          @include fontTTRoundsCondensedR;
+          font-size: 16px;
+          font-stretch: condensed;
+          color: white;
+          border-radius: 3px !important;
+          border-right: 0 !important;
+          padding: 8px 12px !important;
+          width: 100px;
+          &:hover{
+            background-color: #1ea931;
+          }
+          &:focus{
+            background-color: #139f27;
+          }
+        }
+        .btnCancel{
+          @include fontTTRoundsCondensedR;
+          font-size: 16px;
+          font-stretch: condensed;
+          color: #5e5e5e;
+          width: 80px;
+          float: right;
+          &:hover{
+            background-color: inherit;
+            color: black;
+          }
+          &:focus{
+            background-color: inherit;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  .SumoSelect.open{
+    .CaptionCont{
+      box-shadow: none;
+    }
+  }
+  .SelectBox.filter-true{
+    border-radius: 3px;
+    background-color: #b5b3b3;
+    @include fontTTRoundsCondensedR;
+    font-size: 16px;
+    font-stretch: condensed;
+    text-align: left;
+    color: white;
+    font-style: normal;
+    span{
+      padding-right: 30px;
+      &:before{
+        content: attr(data-before);
+        display: inline-block;
+      }
+    }
+    label{
+      cursor: pointer;
+      border-left: 1px solid white;
+      i{
+        background-image: url("../img/svg/combined-shape.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
 }
 
 .filter-button-dropdown{
@@ -58,15 +220,24 @@
 }
 
 .button-reset-filter{
-  position: absolute;
+  @include display-inline-middle;
   @include fontTTRoundsCondensedR;
   font-size: 16px;
   font-stretch: condensed;
   text-align: left;
   color: #5e5e5e;
   cursor: pointer;
-  top: 24px;
-  right: 0;
+  margin-left: 30px;
+  &:before{
+    content: '';
+    display: inline-block;
+    background-image: url("../img/svg/combined-shape-copy.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 11px;
+    height: 11px;
+    margin-right: 12px;
+  }
   &:hover{
     color: #000000;
   }

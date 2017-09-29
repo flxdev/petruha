@@ -1884,6 +1884,385 @@ button.swiper-pagination-bullet {
   opacity: .75;
   color: black; }
 
+.SumoSelect p {
+  margin: 0; }
+
+.SumoSelect {
+  width: 200px; }
+
+.SelectBox {
+  padding: 5px 8px; }
+
+.sumoStopScroll {
+  overflow: hidden; }
+
+/* Filtering style */
+.SumoSelect .hidden {
+  display: none; }
+
+.SumoSelect .search-txt {
+  display: none;
+  outline: none; }
+
+.SumoSelect .no-match {
+  display: none;
+  padding: 6px; }
+
+.SumoSelect.open .search-txt {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 5px 8px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.SumoSelect.open > .search > span, .SumoSelect.open > .search > label {
+  visibility: hidden; }
+
+/*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
+.SelectClass, .SumoUnder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+
+.SelectClass {
+  z-index: 1; }
+
+.SumoSelect > .optWrapper > .options li.opt label, .SumoSelect > .CaptionCont, .SumoSelect .select-all > label {
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none; }
+
+.SumoSelect {
+  display: inline-block;
+  position: relative;
+  outline: none; }
+
+.SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont, .SumoSelect.open > .CaptionCont {
+  -webkit-box-shadow: 0 0 2px #7799D0;
+  box-shadow: 0 0 2px #7799D0;
+  border-color: #7799D0; }
+
+.SumoSelect > .CaptionCont {
+  position: relative;
+  border: 1px solid #A4A4A4;
+  min-height: 14px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin: 0; }
+
+.SumoSelect > .CaptionCont > span {
+  display: block;
+  padding-right: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default; }
+
+/*placeholder style*/
+.SumoSelect > .CaptionCont > span.placeholder {
+  color: #ccc;
+  font-style: italic; }
+
+.SumoSelect > .CaptionCont > label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px; }
+
+.SumoSelect > .CaptionCont > label > i {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wMdBhAJ/fwnjwAAAGFJREFUKM9jYBh+gBFKuzEwMKQwMDB8xaOWlYGB4T4DA0MrsuapDAwM//HgNwwMDDbYTJuGQ8MHBgYGJ1xOYGNgYJiBpuEpAwODHSF/siDZ+ISBgcGClEDqZ2Bg8B6CkQsAPRga0cpRtDEAAAAASUVORK5CYII=");
+  background-position: center center;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-repeat: no-repeat;
+  opacity: 0.8; }
+
+.SumoSelect > .optWrapper {
+  display: none;
+  z-index: 1000;
+  top: 30px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+  overflow: hidden; }
+
+.SumoSelect.open > .optWrapper {
+  top: 35px;
+  display: block; }
+
+.SumoSelect.open > .optWrapper.up {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 5px; }
+
+.SumoSelect > .optWrapper ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  overflow: auto; }
+
+.SumoSelect > .optWrapper > .options {
+  border-radius: 2px;
+  position: relative;
+  /*Set the height of pop up here (only for desktop mode)*/
+  max-height: 250px;
+  /*height*/ }
+
+.SumoSelect > .optWrapper.okCancelInMulti > .options {
+  border-radius: 2px 2px 0 0; }
+
+.SumoSelect > .optWrapper.selall > .options {
+  border-radius: 0 0 2px 2px; }
+
+.SumoSelect > .optWrapper.selall.okCancelInMulti > .options {
+  border-radius: 0; }
+
+.SumoSelect > .optWrapper > .options li.group.disabled > label {
+  opacity: 0.5; }
+
+.SumoSelect > .optWrapper > .options li ul li.opt {
+  padding-left: 22px; }
+
+.SumoSelect > .optWrapper.multiple > .options li ul li.opt {
+  padding-left: 50px; }
+
+.SumoSelect > .optWrapper.isFloating > .options {
+  max-height: 100%;
+  -webkit-box-shadow: 0 0 100px #595959;
+  box-shadow: 0 0 100px #595959; }
+
+.SumoSelect > .optWrapper > .options li.opt {
+  padding: 6px 6px;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5; }
+
+.SumoSelect > .optWrapper > .options > li.opt:first-child {
+  border-radius: 2px 2px 0 0; }
+
+.SumoSelect > .optWrapper.selall > .options > li.opt:first-child {
+  border-radius: 0; }
+
+.SumoSelect > .optWrapper > .options > li.opt:last-child {
+  border-radius: 0 0 2px 2px;
+  border-bottom: none; }
+
+.SumoSelect > .optWrapper.okCancelInMulti > .options > li.opt:last-child {
+  border-radius: 0; }
+
+.SumoSelect > .optWrapper > .options li.opt:hover {
+  background-color: #E4E4E4; }
+
+.SumoSelect > .optWrapper > .options li.opt.sel, .SumoSelect .select-all.sel {
+  background-color: #a1c0e4; }
+
+.SumoSelect > .optWrapper > .options li label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  cursor: pointer; }
+
+.SumoSelect > .optWrapper > .options li span {
+  display: none; }
+
+.SumoSelect > .optWrapper > .options li.group > label {
+  cursor: default;
+  padding: 8px 6px;
+  font-weight: bold; }
+
+/*Floating styles*/
+.SumoSelect > .optWrapper.isFloating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  bottom: 0;
+  margin: auto;
+  max-height: 90%; }
+
+/*disabled state*/
+.SumoSelect > .optWrapper > .options li.opt.disabled {
+  background-color: inherit;
+  pointer-events: none; }
+
+.SumoSelect > .optWrapper > .options li.opt.disabled * {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+  /* Netscape */
+  -moz-opacity: 0.5;
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+  /* Good browsers */
+  opacity: 0.5; }
+
+/*styling for multiple select*/
+.SumoSelect > .optWrapper.multiple > .options li.opt {
+  padding-left: 35px;
+  cursor: pointer; }
+
+.SumoSelect > .optWrapper.multiple > .options li.opt span,
+.SumoSelect .select-all > span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  margin-left: -35px; }
+
+.SumoSelect > .optWrapper.multiple > .options li.opt span i,
+.SumoSelect .select-all > span i {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #AEAEAE;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  background-color: #fff; }
+
+.SumoSelect > .optWrapper > .MultiControls {
+  display: none;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+  border-radius: 0 0 3px 3px; }
+
+.SumoSelect > .optWrapper.multiple.isFloating > .MultiControls {
+  display: block;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls {
+  display: block; }
+
+.SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls > p {
+  padding: 6px; }
+
+.SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls > p:focus {
+  -webkit-box-shadow: 0 0 2px #a1c0e4;
+  box-shadow: 0 0 2px #a1c0e4;
+  border-color: #a1c0e4;
+  outline: none;
+  background-color: #a1c0e4; }
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p {
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center; }
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p:hover {
+  background-color: #f1f1f1; }
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p.btnOk {
+  border-right: 1px solid #DBDBDB;
+  border-radius: 0 0 0 3px; }
+
+.SumoSelect > .optWrapper.multiple > .MultiControls > p.btnCancel {
+  border-radius: 0 0 3px 0; }
+
+/*styling for select on popup mode*/
+.SumoSelect > .optWrapper.isFloating > .options li.opt {
+  padding: 12px 6px; }
+
+/*styling for only multiple select on popup mode*/
+.SumoSelect > .optWrapper.multiple.isFloating > .options li.opt {
+  padding-left: 35px; }
+
+.SumoSelect > .optWrapper.multiple.isFloating {
+  padding-bottom: 43px; }
+
+.SumoSelect > .optWrapper.multiple > .options li.opt.selected span i,
+.SumoSelect .select-all.selected > span i,
+.SumoSelect .select-all.partial > span i {
+  background-color: #11a911;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+/*disabled state*/
+.SumoSelect.disabled {
+  opacity: 0.7;
+  cursor: not-allowed; }
+
+.SumoSelect.disabled > .CaptionCont {
+  border-color: #ccc;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/**Select all button**/
+.SumoSelect .select-all {
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 8px 0 3px 35px;
+  height: 20px;
+  cursor: pointer; }
+
+.SumoSelect .select-all > label, .SumoSelect .select-all > span i {
+  cursor: pointer; }
+
+.SumoSelect .select-all.partial > span i {
+  background-color: #ccc; }
+
+/*styling for optgroups*/
+.SumoSelect > .optWrapper > .options li.optGroup {
+  padding-left: 5px;
+  text-decoration: underline; }
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -3187,8 +3566,7 @@ slideRightNone
   -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
   margin: 0;
-  padding: 10px 10px;
-  margin: 20px 0; }
+  padding: 10px 10px; }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
   background-color: inherit;
@@ -4480,12 +4858,105 @@ slideRightNone
       text-align: left;
       color: #b5b3b3; }
 
+.wrapper-list-items {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 60px; }
+
+.block-list-items {
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 32%;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  padding: 50px 50px;
+  margin-bottom: 30px; }
+  .block-list-items .block-list-items_icon {
+    margin-bottom: 25px; }
+    .block-list-items .block-list-items_icon .icon-list-items {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto; }
+  .block-list-items .block-list-items_txt .items_txt-title {
+    font-family: 'TTRoundsCondensed';
+    font-weight: normal;
+    font-size: 24px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px; }
+  .block-list-items .block-list-items_txt .items_text-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    color: #5e5e5e; }
+
+.block-list-items:nth-child(3n+1) {
+  margin-right: 1%; }
+
+.block-list-items:nth-child(3n+2) {
+  margin-left: 1%;
+  margin-right: 1%; }
+
+.block-list-items:nth-child(3n+3) {
+  margin-left: 1%; }
+
 .container-tabs-btn.row-tabs {
   position: relative;
   top: 0;
   left: 0;
   display: inline-block;
   margin-bottom: 70px; }
+
+.wrapper-product-subbrand {
+  width: 100%;
+  font-size: 0; }
+
+.block-product-subbrand {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; }
+
+.block-product-subbrand_title {
+  font-family: 'TTRoundsCondensed';
+  font-weight: normal;
+  font-size: 24px;
+  font-stretch: condensed;
+  line-height: 1.5;
+  text-align: left;
+  color: #000000; }
+
+.block-product-subbrand_doc {
+  font-size: 0;
+  width: 100%; }
+
+.block-doc {
+  display: inline-block;
+  vertical-align: top; }
+  .block-doc .block-doc_icon {
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .block-doc .block-doc_icon.catalog {
+    background-image: url("../img/svg/catalog.svg"); }
 
 .container-filter {
   width: 100%;
@@ -4514,6 +4985,134 @@ slideRightNone
     vertical-align: middle;
     margin-right: 20px; }
 
+.button-dropdown .SumoSelect {
+  width: auto;
+  cursor: pointer; }
+  .button-dropdown .SumoSelect:hover .CaptionCont {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .button-dropdown .SumoSelect:focus .CaptionCont {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .button-dropdown .SumoSelect .CaptionCont {
+    background-color: inherit;
+    border: none;
+    padding: 6px 12px; }
+    .button-dropdown .SumoSelect .CaptionCont span {
+      padding-right: 20px;
+      cursor: pointer; }
+      .button-dropdown .SumoSelect .CaptionCont span:before {
+        content: attr(data-before);
+        display: none; }
+    .button-dropdown .SumoSelect .CaptionCont .placeholder {
+      font-family: 'TTRoundsCondensed';
+      font-weight: normal;
+      font-size: 16px;
+      font-stretch: condensed;
+      text-align: left;
+      color: #5e5e5e;
+      font-style: normal; }
+    .button-dropdown .SumoSelect .CaptionCont .placeholder + label {
+      cursor: pointer; }
+      .button-dropdown .SumoSelect .CaptionCont .placeholder + label i {
+        width: 9px;
+        height: 9px;
+        opacity: 0.6; }
+  .button-dropdown .SumoSelect .optWrapper {
+    z-index: 2;
+    width: 245px; }
+    .button-dropdown .SumoSelect .optWrapper .options {
+      padding-top: 16px; }
+      .button-dropdown .SumoSelect .optWrapper .options li.opt {
+        font-family: 'TTRoundsCondensed';
+        font-weight: normal;
+        font-size: 16px;
+        font-stretch: condensed;
+        text-align: left;
+        color: #5e5e5e;
+        border-bottom: none;
+        padding: 7px 10px 7px 46px; }
+        .button-dropdown .SumoSelect .optWrapper .options li.opt:hover {
+          background-color: inherit;
+          color: black; }
+        .button-dropdown .SumoSelect .optWrapper .options li.opt span i {
+          border: 1px solid black;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-radius: 3px; }
+      .button-dropdown .SumoSelect .optWrapper .options li.opt.selected {
+        color: black; }
+        .button-dropdown .SumoSelect .optWrapper .options li.opt.selected span i {
+          background-image: url("../img/icon-check.jpg");
+          background-size: cover;
+          width: 17px;
+          height: 14px;
+          background-repeat: no-repeat;
+          border: none; }
+    .button-dropdown .SumoSelect .optWrapper .MultiControls {
+      padding: 20px; }
+      .button-dropdown .SumoSelect .optWrapper .MultiControls p {
+        width: 40%;
+        text-align: center; }
+      .button-dropdown .SumoSelect .optWrapper .MultiControls .btnOk {
+        background-color: #39b54a;
+        font-family: 'TTRoundsCondensed';
+        font-weight: normal;
+        font-size: 16px;
+        font-stretch: condensed;
+        color: white;
+        border-radius: 3px !important;
+        border-right: 0 !important;
+        padding: 8px 12px !important;
+        width: 100px; }
+        .button-dropdown .SumoSelect .optWrapper .MultiControls .btnOk:hover {
+          background-color: #1ea931; }
+        .button-dropdown .SumoSelect .optWrapper .MultiControls .btnOk:focus {
+          background-color: #139f27; }
+      .button-dropdown .SumoSelect .optWrapper .MultiControls .btnCancel {
+        font-family: 'TTRoundsCondensed';
+        font-weight: normal;
+        font-size: 16px;
+        font-stretch: condensed;
+        color: #5e5e5e;
+        width: 80px;
+        float: right; }
+        .button-dropdown .SumoSelect .optWrapper .MultiControls .btnCancel:hover {
+          background-color: inherit;
+          color: black; }
+        .button-dropdown .SumoSelect .optWrapper .MultiControls .btnCancel:focus {
+          background-color: inherit;
+          color: black; }
+
+.button-dropdown .SumoSelect.open .CaptionCont {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.button-dropdown .SelectBox.filter-true {
+  border-radius: 3px;
+  background-color: #b5b3b3;
+  font-family: 'TTRoundsCondensed';
+  font-weight: normal;
+  font-size: 16px;
+  font-stretch: condensed;
+  text-align: left;
+  color: white;
+  font-style: normal; }
+  .button-dropdown .SelectBox.filter-true span {
+    padding-right: 30px; }
+    .button-dropdown .SelectBox.filter-true span:before {
+      content: attr(data-before);
+      display: inline-block; }
+  .button-dropdown .SelectBox.filter-true label {
+    cursor: pointer;
+    border-left: 1px solid white; }
+    .button-dropdown .SelectBox.filter-true label i {
+      background-image: url("../img/svg/combined-shape.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 11px;
+      height: 11px; }
+
 .filter-button-dropdown {
   position: relative;
   cursor: pointer;
@@ -4539,7 +5138,8 @@ slideRightNone
       color: #000000; }
 
 .button-reset-filter {
-  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
   font-family: 'TTRoundsCondensed';
   font-weight: normal;
   font-size: 16px;
@@ -4547,8 +5147,16 @@ slideRightNone
   text-align: left;
   color: #5e5e5e;
   cursor: pointer;
-  top: 24px;
-  right: 0; }
+  margin-left: 30px; }
+  .button-reset-filter:before {
+    content: '';
+    display: inline-block;
+    background-image: url("../img/svg/combined-shape-copy.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 11px;
+    height: 11px;
+    margin-right: 12px; }
   .button-reset-filter:hover {
     color: #000000; }
 
@@ -4626,7 +5234,19 @@ slideRightNone
   .container-text-popup-m .wrapper-content-soc{
     padding: 0 60px 50px 80px; }
   .container-tabs-btn.row-tabs .tabs-link{
-    margin-right: 35px; } }
+    margin-right: 35px; }
+  .block-list-items:nth-child(3n+2){
+    margin-left: 0;
+    margin-right: 0; }
+  .block-list-items:nth-child(3n+3){
+    margin-left: 0; }
+  .block-list-items{
+    width: 48%; }
+  .block-list-items:nth-child(1n){
+    margin-right: 2%; }
+  .block-list-items:nth-child(2n){
+    margin-left: 2%;
+    margin-right: 0; } }
 
 @media all and (max-width: 1207px){
   .container-telephone-hotline-f .block-label-txt{

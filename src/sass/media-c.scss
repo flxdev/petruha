@@ -141,10 +141,33 @@
       padding: 0 60px 50px 80px;
     }
   }
+
   .container-tabs-btn.row-tabs{
     .tabs-link{
       margin-right: 35px;
     }
+  }
+
+  .block-list-items:nth-child(3n+2) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .block-list-items:nth-child(3n+3) {
+    margin-left: 0;
+  }
+
+  .block-list-items{
+    width: 48%;
+  }
+
+  .block-list-items:nth-child(1n) {
+    margin-right: 2%;
+  }
+
+  .block-list-items:nth-child(2n) {
+    margin-left: 2%;
+    margin-right: 0;
   }
 }
 

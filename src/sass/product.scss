@@ -5,3 +5,49 @@
   display: inline-block;
   margin-bottom: 70px;
 }
+
+.wrapper-product-subbrand{
+  width: 100%;
+  font-size: 0;
+}
+
+.block-product-subbrand{
+  @include display-inline-top;
+  width: 50%;
+}
+
+.block-product-subbrand_title{
+  @include fontTTRoundsCondensedR;
+  font-size: 24px;
+  font-stretch: condensed;
+  line-height: 1.5;
+  text-align: left;
+  color: #000000;
+}
+
+.block-product-subbrand_doc{
+  font-size: 0;
+  width: 100%;
+}
+
+.block-doc{
+  @include display-inline-top;
+  .block-doc_icon{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .block-doc_icon.catalog{
+    background-image: url("../img/svg/catalog.svg");
+  }
+  .block-doc_icon.archiv{
+
+  }
+  .block-doc-info{
+    .block-doc-info_title{
+
+    }
+    .block-doc-info_r{
+
+    }
+  }
+}

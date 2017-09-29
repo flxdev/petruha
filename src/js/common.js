@@ -380,6 +380,67 @@ function initTabsC() {
     })
 }
 
+function initSelectMulti() {
+    window.test = $('.filter-sel').SumoSelect({
+        csvDispCount: 1,
+        okCancelInMulti:true,
+        isClickAwayOk: false,
+        captionFormat :  '{0}' ,
+        locale :  ['Применить', 'Очистить', 'Select All']
+    });
+
+    $('.btnCancel').on('click', function(){
+        var num = $('option').length;
+        var numberFilter = $(this).closest('.SumoSelect').find('.filter-sel').data("number-filter");
+        var thisClear = $(this).closest('.SumoSelect').find('.SelectBox').hasClass('filter-true');
+        if(thisClear === true){
+            $(this).closest('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+            $(this).closest('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+        }
+        for(var i=0; i<num; i++){
+            $('.filter-sel')[numberFilter].sumo.unSelectItem(i);
+        }
+    });
+
+    $('.button-reset-filter').on('click', function(){
+        var num = $('option').length;
+
+            $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+            $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+
+        for(var i=0; i<num; i++){
+            $('.filter-sel')[0].sumo.unSelectItem(i);
+            $('.filter-sel')[1].sumo.unSelectItem(i);
+        }
+
+    });
+
+    $('.filter-clear-this').on('click', function(){
+        var num = $('option').length;
+        if($('.filter-true').length === 1){
+            $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+            $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+        }
+        for(var i=0; i<num; i++){
+            $('.filter-sel')[0].sumo.unSelectItem(i);
+            $('.filter-sel')[1].sumo.unSelectItem(i);
+        }
+    });
+
+    $('.btnOk').on('click', function () {
+        var searchClass = $(this).closest('.SumoSelect').find('.SelectBox > span').hasClass('placeholder');
+        var filterTxt = $(this).closest('.SumoSelect').find('.filter-sel').data("filter-txt");
+        if (searchClass === true){
+            $(this).closest('.button-dropdown').find('.SelectBox').removeClass('filter-true');
+            $(this).closest('.button-dropdown').find('.SelectBox > label').removeClass('filter-clear-this');
+        } else {
+            $(this).closest('.button-dropdown').find('.SelectBox').addClass('filter-true');
+            $(this).closest('.button-dropdown').find('.SelectBox > label').addClass('filter-clear-this');
+            $(this).closest('.button-dropdown').find('.filter-true > span').attr('data-before',filterTxt)
+        }
+    })
+}
+
 
 initSliderHeader();
 initScrollOrdering();
@@ -397,3 +458,4 @@ initSwiperCompany();
 initAnchor();
 initTabs();
 initTabsC();
+initSelectMulti();
