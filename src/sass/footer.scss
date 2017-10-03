@@ -118,6 +118,7 @@
     text-align: right;
     color: #9fa2ad;
     span{
+      margin-left: 5px;
       color: #39b54a;
       text-decoration: underline;
       @include hover-time;
