@@ -635,8 +635,7 @@ slideRightNone
 .container-header + .container-block-info{
   padding-top: 90px;
   .wrapper-central-unit{
-    padding: 0 60px;
-    margin-bottom: 55px;
+    padding: 0 60px 55px;
   }
 }
 
@@ -1034,4 +1033,8 @@ slideRightNone
   text-align: left;
   color: #000000;
   margin-bottom: 28px;
+}
+
+.container-stock{
+  font-size: 0;
 }

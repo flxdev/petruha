@@ -6,8 +6,93 @@ block content
             .container-main
                 include includes/search-block
                 include includes/_header
-                include includes/container-block-big-stock
-                include includes/container-block-shares
-                include includes/container-navigation
+                section.container-block-info.gray
+                    .wrapper-central-unit
+                        .container-row
+                            .central-title.revealator-slideup.revealator-delay2.revealator-duration3.revealator-once
+                                span.central-title_txt Акции
+
+                            .container-sorting
+                                label.txt-sorting Сортировать:
+                                select.select-box.select2
+                                    option(value='1') По популярности
+                                    option(value='2') По цене
+                                    option(value='3') По рейтингу
+                section.container-central-unit.gray
+                    .ajax_container
+                        .container-stock
+                            a(href='#').block-info-list.revealator-slideup.revealator-delay4.revealator-duration3.revealator-once.js-big-popup
+                                img.wrapper-block-info_img(src='img/2.jpg' alt='')
+                                .wrapper-block-info
+                                    .wrapper-block-info_text
+                                        .block-info_text-section АКТУАЛЬНАЯ
+                                        .two-block
+                                            .block-info_text-title Участвуйте в розыгрыше призов!
+                                            .block-info_text-txt Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем одноразовые пакеты, тщательно моем фрукты и овощи, но покупаем курицу без упаковки.
+
+                            a(href='#').block-info-list.revealator-slideup.revealator-delay6.revealator-duration3.revealator-once.js-big-popup
+                                img.wrapper-block-info_img(src='img/3.jpg' alt='')
+                                .wrapper-block-info
+                                    .wrapper-block-info_text
+                                        .block-info_text-section АКТУАЛЬНАЯ
+                                        .two-block
+                                            .block-info_text-title «Гарантируем удачу!»
+                                            .block-info_text-txt Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем одноразовые пакеты, тщательно моем фрукты и овощи, но покупаем курицу без упаковки.
+                        .wrapper-central-unit
+                            .container-row
+
+                                .container-block-row
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay2.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap.jpg' alt='')
+                                            .block-info_text-section АКТУАЛЬНАЯ
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title «Микс» стал ещё выгоднее!
+                                            .block-text-outside_txt Теперь Вы можете приобрести свои любимые части курочки в одной упаковке дешевле!
+                                            .block-text-outside_data 8 августа 2017
+
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay4.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap2.jpg' alt='')
+                                            .block-info_text-section АКТУАЛЬНАЯ
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title «Гарантируем удачу!»
+                                            .block-text-outside_txt Участвуй в акции от Петруха Мастер! Регистрируй чеки, выкладывай фотки, выигрывай призы!
+                                            .block-text-outside_data 8 августа 2017
+
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay6.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap3.jpg' alt='')
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title Участвуйте в розыгрыше призов!
+                                            .block-text-outside_txt Пришло время протестировать свои ежедневные привычки и расскахать нам о них на нашем сайте!
+                                            .block-text-outside_data 8 августа 2017
+
+
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay2.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap.jpg' alt='')
+                                            .block-info_text-section АКТУАЛЬНАЯ
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title «Микс» стал ещё выгоднее!
+                                            .block-text-outside_txt Теперь Вы можете приобрести свои любимые части курочки в одной упаковке дешевле!
+                                            .block-text-outside_data 8 августа 2017
+
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay4.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap2.jpg' alt='')
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title «Гарантируем удачу!»
+                                            .block-text-outside_txt Участвуй в акции от Петруха Мастер! Регистрируй чеки, выкладывай фотки, выигрывай призы!
+                                            .block-text-outside_data 8 августа 2017
+
+                                    a(href='#').block-text-outside.revealator-slideup.revealator-delay6.revealator-duration3.revealator-once.js-big-popup
+                                        .block-text-outside_img
+                                            img(src='img/shares/Bitmap3.jpg' alt='')
+                                        .block-text-outside_wrapper
+                                            .block-text-outside_title Участвуйте в розыгрыше призов!
+                                            .block-text-outside_txt Пришло время протестировать свои ежедневные привычки и расскахать нам о них на нашем сайте!
+                                            .block-text-outside_data 8 августа 2017
+                        include includes/container-navigation
 
 

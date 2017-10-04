@@ -2846,8 +2846,7 @@ slideRightNone
 .container-header + .container-block-info {
   padding-top: 90px; }
   .container-header + .container-block-info .wrapper-central-unit {
-    padding: 0 60px;
-    margin-bottom: 55px; }
+    padding: 0 60px 55px; }
 
 .container-header + .container-block-info + .container-central-unit .wrapper-central-unit {
   padding-top: 40px;
@@ -3198,6 +3197,9 @@ slideRightNone
   color: #000000;
   margin-bottom: 28px; }
 
+.container-stock {
+  font-size: 0; }
+
 .container-left-menu {
   position: fixed;
   background: white;
@@ -3223,7 +3225,8 @@ slideRightNone
     .wrapper-left-menu .wrapper-left-menu_logo .block-left-menu_logo {
       width: 183px;
       height: 89px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      display: block; }
 
 .wrapper-left-menu_nav {
   width: 100%;
