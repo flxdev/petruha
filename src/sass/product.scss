@@ -251,7 +251,8 @@
 }
 
 .brand-info-show{
-  padding-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 30px;
   .swiper-container-product{
     width: 100%;
     overflow: hidden;
@@ -263,10 +264,33 @@
     }
   }
   .swiper-pagination{
-    position: relative;
+    position: absolute;
     z-index: 2;
-    bottom: 0px;
-    margin-top: 20px;
+    bottom: 15px;
+    width: 100%;
+    margin-left: -30px;
+    .swiper-pagination_list{
+      width: 7px;
+      height: 7px;
+      background-color: #afadaa;
+      object-fit: contain;
+      cursor: pointer;
+      border-radius: 50%;
+      @include display-inline-middle;
+      margin: 0 3px;
+      border: 10px solid white;
+      box-sizing: content-box;
+      @include hover-time-all;
+      &:hover{
+        background: #eb1c24;
+      }
+    }
+    .swiper-pagination_list.active-list{
+      width: 10px;
+      height: 10px;
+      object-fit: contain;
+      background: #eb1c24;
+    }
     .swiper-pagination-bullet{
       margin: 0 12px;
     }
