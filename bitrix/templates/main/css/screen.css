@@ -5165,23 +5165,41 @@ slideRightNone
 .block-product-brand.blue .brand-info-hiden_list .icon-proteins {
   background-image: url("../img/svg/icon-blue-3.svg"); }
 
-.block-product-brand.one .block-btn-state {
+.block-product-brand.grin-one .block-btn-state {
   top: 20px; }
-  .block-product-brand.one .block-btn-state .btn-state {
+  .block-product-brand.grin-one .block-btn-state .btn-state {
     width: 36px;
     height: 36px;
     background-image: url("../img/svg/icon-one.svg"); }
-    .block-product-brand.one .block-btn-state .btn-state .btn-click {
+    .block-product-brand.grin-one .block-btn-state .btn-state .btn-click {
       display: none; }
 
-.block-product-brand.one .brand-info-hiden_list .icon-calories {
+.block-product-brand.grin-one .brand-info-hiden_list .icon-calories {
   background-image: url("../img/svg/icon-green-1.svg"); }
 
-.block-product-brand.one .brand-info-hiden_list .icon-fats {
+.block-product-brand.grin-one .brand-info-hiden_list .icon-fats {
   background-image: url("../img/svg/icon-green-2.svg"); }
 
-.block-product-brand.one .brand-info-hiden_list .icon-proteins {
+.block-product-brand.grin-one .brand-info-hiden_list .icon-proteins {
   background-image: url("../img/svg/icon-green-3.svg"); }
+
+.block-product-brand.blue-one .block-btn-state {
+  top: 20px; }
+  .block-product-brand.blue-one .block-btn-state .btn-state {
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/svg/icon-one-blue.svg"); }
+    .block-product-brand.blue-one .block-btn-state .btn-state .btn-click {
+      display: none; }
+
+.block-product-brand.blue-one .brand-info-hiden_list .icon-calories {
+  background-image: url("../img/svg/icon-blue-1.svg"); }
+
+.block-product-brand.blue-one .brand-info-hiden_list .icon-fats {
+  background-image: url("../img/svg/icon-blue-2.svg"); }
+
+.block-product-brand.blue-one .brand-info-hiden_list .icon-proteins {
+  background-image: url("../img/svg/icon-blue-3.svg"); }
 
 .block-product-brand-info {
   width: 100%; }

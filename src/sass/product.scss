@@ -220,7 +220,7 @@
   }
 }
 
-.block-product-brand.one{
+.block-product-brand.grin-one{
   .block-btn-state{
     top: 20px;
     .btn-state{
@@ -241,6 +241,31 @@
     }
     .icon-proteins{
       background-image: url("../img/svg/icon-green-3.svg");
+    }
+  }
+}
+
+.block-product-brand.blue-one{
+  .block-btn-state{
+    top: 20px;
+    .btn-state{
+      width: 36px;
+      height: 36px;
+      background-image: url("../img/svg/icon-one-blue.svg");
+      .btn-click{
+        display: none;
+      }
+    }
+  }
+  .brand-info-hiden_list{
+    .icon-calories{
+      background-image: url("../img/svg/icon-blue-1.svg");
+    }
+    .icon-fats{
+      background-image: url("../img/svg/icon-blue-2.svg");
+    }
+    .icon-proteins{
+      background-image: url("../img/svg/icon-blue-3.svg");
     }
   }
 }
