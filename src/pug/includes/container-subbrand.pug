@@ -40,7 +40,13 @@ section.container-central-unit.gray
                                 option(value='Голень') Состояние 1
                                 option(value='Бедро') Состояние 2
                                 option(value='Филе') Состояние 3
-                                option(value='Крыло') Состояние 3
+                                option(value='Крыло') Состояние 4
+                                option(value='Состояние 5') Состояние 5
+                                option(value='Состояние 6') Состояние 6
+                                option(value='Состояние 7') Состояние 7
+
+                            label.filter-clear
+                                i
 
                     .block-filter
                         .button-dropdown
@@ -50,6 +56,9 @@ section.container-central-unit.gray
                                 option(value='Блюда 3') Глубина переработки 3
                                 option(value='Блюда 4') Глубина переработки 4
                                 option(value='Блюда 5') Глубина переработки 5
+
+                            label.filter-clear
+                                i
 
                     .button-reset-filter Очистить фильтр
 
@@ -228,7 +237,8 @@ section.container-central-unit.gray
                 .block-product-brand.grin-one
                     .block-state
                         .block-btn-state
-                            .btn-state
+                            // Подсказка
+                            .btn-state.tooltip-btn(data-toggle="tooltip" data-html="true" title="<p>Охлажденная упаковка</p>")
                                 .btn-click
                             .btn-yp
                                 .icon-yp
@@ -350,7 +360,8 @@ section.container-central-unit.gray
                         .block-btn-state
                             .btn-state
                                 .btn-click
-                            .btn-yp
+                            // Вывод подсказки
+                            .btn-yp.tooltip-btn(data-toggle="tooltip" data-html="true" title="<p>Упаковка: средний лоток</p><br><p>Упаковка: Вес: 0,98 кг</p><br><p>Лотков в гофроящике: 8 шт</p><br><p>Вес гофроящика: 7,8 кг</p>")
                                 .icon-yp
                                 | Упаковка
                         .block-product-brand-info

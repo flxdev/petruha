@@ -77,6 +77,11 @@
       left: 50%;
       transform: translate(-50%,-50%);
       @include hover-time-run;
+      svg{
+        path{
+          fill: white;
+        }
+      }
     }
   }
   .swiper-button-prev{
@@ -87,6 +92,11 @@
     left: 0;
     margin-top: 0;
     @include hover-time-run;
+    svg{
+      path{
+        fill: white;
+      }
+    }
     &:hover{
       background-color: hsla(0,0%,100%,.15);
     }
@@ -117,9 +127,14 @@
   height: 100%;
   position: relative;
   padding: 7% 11% 0 11%;
-  h1{
+  .block-info_text-title{
     color: white;
     margin-bottom: 28px;
+    font-size: 60px;
+    font-stretch: condensed;
+    line-height: 1;
+    text-align: left;
+    @include fontTTRoundsCondensedB;
   }
   .wrapper-swiper-slide_txt{
     @include fontOpenSans300;

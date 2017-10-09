@@ -9,3 +9,5 @@
 //=include lib/slick.min.js
 
 //=include lib/jquery.sumoselect.min.js
+
+//=include lib/bootstrap-tooltip.js

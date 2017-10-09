@@ -177,10 +177,11 @@
         @include fontTTRoundsCondensedB;
         font-size: 20px;
         font-stretch: condensed;
-        line-height: 3.5;
+        line-height: 1.5;
         text-align: center;
         color: #ffffff;
         text-transform: uppercase;
+        padding: 20px 10px;
         @include hover-time-run;
         &:after{
           content: '';
@@ -190,6 +191,8 @@
           background-color: rgba(255, 255, 255, 0.3);
           margin: 0 auto;
           @include hover-time-run;
+          bottom: 0;
+          position: absolute;
         }
         &:last-child:after{
           background-color: inherit;
@@ -257,7 +260,7 @@
 
 .block-white-tabs{
   width: 310px;
-  margin: 60px auto;
+  margin: 67px auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -378,6 +381,9 @@
       }
     }
     .input-box.error{
+      border: solid 1px #eb1c24;
+    }
+    .textarea-box.error{
       border: solid 1px #eb1c24;
     }
     .form-error{
@@ -591,6 +597,10 @@
       }
     }
   }
+}
+
+.js-form.edit-pass{
+  display: none;
 }
 
 .wrapper-white-feedback.response{
