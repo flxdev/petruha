@@ -24,8 +24,42 @@
   .wrapper-filter{
     padding: 60px 0 0;
     .container-sorting{
-      top: 59px;
+      top: 0;
     }
+  }
+}
+
+.wrapper-filter-multiple{
+  width: 100%;
+  position: relative;
+}
+
+.container-filter.add-container-sort{
+  .wrapper-filter{
+    font-size: 0;
+    margin-bottom: 30px;
+    .wrapper-filter-title{
+      margin-bottom: 10px;
+    }
+    .block-filter{
+      margin-bottom: 10px;
+    }
+    .button-reset-filter{
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .wrapper-filter-multiple {
+    width: 63%;
+    position: relative;
+    @include display-inline-top;
+  }
+  .container-sorting{
+    width: 37%;
+    @include display-inline-top;
+    position: relative;
+    top: 0;
+    text-align: right;
   }
 }
 

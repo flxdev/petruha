@@ -406,6 +406,31 @@
   }
 }
 
+.wrapper-central-unit.innovation{
+  padding: 95px 60px 93px;
+  .central-title{
+    width: 50%;
+    @include fontTTRoundsCondensedB;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1.22;
+    text-align: left;
+    color: #000000;
+  }
+  .innovation-prew{
+    @include display-inline-top;
+    width: 50%;
+    @include fontTTRoundsCondensedR;
+    font-size: 24px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: left;
+    color: #000000;
+    padding-left: 25px;
+    padding-top: 3px;
+  }
+}
+
 .container-tabs-btn{
   position: absolute;
   top: 108px;

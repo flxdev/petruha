@@ -172,6 +172,36 @@ h1{
 .container-central-unit{
   width: 100%;
   position: relative;
+  animation-name: bounceInUp;
+  animation-duration: 1.6s;
+  animation-fill-mode: both;
+  @keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+      transform: translate3d(0,10px,0)
+    }
+
+    90% {
+      transform: translate3d(0,0,0)
+    }
+
+    to {
+      transform: translateZ(0)
+    }
+  }
   .wrapper-central-unit{
     padding: 80px 60px 93px 60px;
   }
@@ -371,6 +401,36 @@ slideRightNone
   background-size: cover;
   background-position: center center;
   height: 250px;
+  animation-name: bounceInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  @keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+      transform: translate3d(0,10px,0)
+    }
+
+    90% {
+      transform: translate3d(0,0,0)
+    }
+
+    to {
+      transform: translateZ(0)
+    }
+  }
   .wrapper-header{
     padding: 40px 60px;
     position: relative;
@@ -638,6 +698,36 @@ slideRightNone
 
 .container-header + .container-block-info{
   padding-top: 90px;
+  animation-name: bounceInUp;
+  animation-duration: 1.6s;
+  animation-fill-mode: both;
+  @keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+      transform: translate3d(0,10px,0)
+    }
+
+    90% {
+      transform: translate3d(0,0,0)
+    }
+
+    to {
+      transform: translateZ(0)
+    }
+  }
   .wrapper-central-unit{
     padding: 0 60px 55px;
   }
@@ -998,6 +1088,9 @@ slideRightNone
   .box-soc{
     float: left;
     width: 320px;
+    .ya-share2{
+      margin-top: 5px;
+    }
     img{
       width: 100%;
     }
@@ -1082,3 +1175,4 @@ slideRightNone
   padding: 15px;
   width: 220px;
 }
+

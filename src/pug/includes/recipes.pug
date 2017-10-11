@@ -14,34 +14,35 @@ section.container-central-unit.gray
 
             .container-filter
                 .wrapper-filter
-                    span.wrapper-filter-title Фильтр:
+                    .wrapper-filter-multiple
+                        span.wrapper-filter-title Фильтр:
 
-                    .block-filter
-                        .button-dropdown
-                            select(multiple="multiple1" placeholder="Ингредиенты" class="filter-sel" data-filter-txt="Ингредиенты: " data-number-filter=0)
-                                option(value='Голень') Голень
-                                option(value='Бедро') Бедро
-                                option(value='Филе') Филе
-                                option(value='Крыло') Крыло
-                                option(value='Окорочка') Окорочка
-                                option(value='Тушка') Тушка
+                        .block-filter
+                            .button-dropdown
+                                select(multiple="multiple1" placeholder="Ингредиенты" class="filter-sel" data-filter-txt="Ингредиенты: " data-number-filter=0)
+                                    option(value='Голень') Голень
+                                    option(value='Бедро') Бедро
+                                    option(value='Филе') Филе
+                                    option(value='Крыло') Крыло
+                                    option(value='Окорочка') Окорочка
+                                    option(value='Тушка') Тушка
 
-                            label.filter-clear
-                                i
+                                label.filter-clear
+                                    i
 
-                    .block-filter
-                        .button-dropdown
-                            select(multiple="multiple2" placeholder="Блюда" class="filter-sel" data-filter-txt="Блюда: " data-number-filter=1)
-                                option(value='Блюда 1') Блюда 1
-                                option(value='Блюда 2') Блюда 2
-                                option(value='Блюда 3') Блюда 3
-                                option(value='Блюда 4') Блюда 4
-                                option(value='Блюда 5') Блюда 5
+                        .block-filter
+                            .button-dropdown
+                                select(multiple="multiple2" placeholder="Блюда" class="filter-sel" data-filter-txt="Блюда: " data-number-filter=1)
+                                    option(value='Блюда 1') Блюда 1
+                                    option(value='Блюда 2') Блюда 2
+                                    option(value='Блюда 3') Блюда 3
+                                    option(value='Блюда 4') Блюда 4
+                                    option(value='Блюда 5') Блюда 5
 
-                            label.filter-clear
-                                i
+                                label.filter-clear
+                                    i
 
-                    .button-reset-filter Очистить фильтр
+                        .button-reset-filter Очистить фильтр
 
             .container-block-row
                 a(href='#').block-text-inside

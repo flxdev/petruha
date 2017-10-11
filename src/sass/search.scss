@@ -49,6 +49,7 @@
   color: #5e5e5e;
   margin-bottom: 50px;
   span{
+    @include fontOpenSans600;
     color: #000000;
   }
 }

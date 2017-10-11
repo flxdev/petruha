@@ -258,6 +258,15 @@ function initSearchBtn() {
             $('.input-search').css({'padding': '0 50px', 'color': 'rgba( 255, 255, 255, 1)'});
         }
     })
+    $('.input-search').blur(function () {
+        $('.wrapper-search-block')
+            .removeClass('open-search')
+            .css({
+                'width': '52px',
+                'padding': '0'
+            });
+        $('.input-search').css({'padding': '0', 'color': 'rgba( 255, 255, 255, 0)'});
+    })
 }
 
 function initSelect() {
@@ -416,7 +425,6 @@ function initSelectMulti() {
     });
 
     $('.btnCancel').on('click', function(){
-        var num = $('option').length;
         var numberFilter = $(this).closest('.SumoSelect').find('.filter-sel').data("number-filter");
         var thisClear = $(this).closest('.SumoSelect').find('.SelectBox').hasClass('filter-true');
         if(thisClear === true){
@@ -424,13 +432,11 @@ function initSelectMulti() {
             $(this).closest('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
             $(this).closest('.button-dropdown').find('.filter-clear').removeClass('open-clear')
         }
-        for(var i=0; i<num; i++){
-            $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
-        }
+        $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
+        ajaxFilter($(this));
     });
 
     $('.filter-clear').on('click', function(){
-        var num = $('option').length;
         var numberFilter = $(this).closest('.block-filter').find('.filter-sel').data("number-filter");
         var openClear = $(this).closest('.block-filter').find('.filter-clear').hasClass('open-clear');
         if(openClear === true){
@@ -438,23 +444,21 @@ function initSelectMulti() {
             $(this).closest('.block-filter').find('.SelectBox').removeClass('filter-true');
             $(this).closest('.block-filter').find('.SelectBox > label').removeClass('filter-clear-this');
         }
-        for(var i=0; i<num; i++){
-            $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
-        }
+        $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
+        ajaxFilter($(this));
     });
 
     $('.button-reset-filter').on('click', function(){
-        var num = $('option').length;
+        var num = $('.SumoSelect').length;
 
-            $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
-            $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
-            $('.block-filter').find('.filter-clear').removeClass('open-clear');
+        $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+        $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+        $('.block-filter').find('.filter-clear').removeClass('open-clear');
 
         for(var i=0; i<num; i++){
-            $('.filter-sel')[0].sumo.unSelectAll(i);
-            $('.filter-sel')[1].sumo.unSelectAll(i);
+            $('.filter-sel')[i].sumo.unSelectAll(i);
         }
-
+        ajaxFilter($(this));
     });
 
     $('.btnOk').on('click', function () {
@@ -470,7 +474,16 @@ function initSelectMulti() {
             $(this).closest('.button-dropdown').find('.filter-true > span').attr('data-before',filterTxt);
             $(this).closest('.button-dropdown').find('.filter-clear').addClass('open-clear')
         }
-    })
+        ajaxFilter($(this));
+    });
+
+    $('.block-filter select').each(function (i, select) {
+        if(!select.value.length) return;
+        var dataText = $(select).attr('data-filter-txt');
+        $(select).closest('.SumoSelect').find('.SelectBox').addClass('filter-true');
+        $(select).closest('.SumoSelect').find('.SelectBox > span').attr('data-before',dataText);
+        $(select).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
+    });
 }
 
 function initSwiperProduct1() {
@@ -532,6 +545,16 @@ function initTooltip() {
     $('.tooltip-btn[data-toggle=tooltip]').tooltip();
 }
 
+function initShare() {
+    if($('#my-share').length === 1){
+        var share = Ya.share2('my-share', {
+            content: {
+                url: 'https://yandex.com'
+            }
+        });
+    }
+}
+
 
 $(window).on('resize', function () {
     initHeightSliderPreview();
@@ -560,4 +583,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initNewPass();
     initHeightSliderPreview();
     initTooltip();
+    // initShare();
 });
