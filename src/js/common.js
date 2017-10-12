@@ -427,6 +427,17 @@ function initTabs() {
     })
 }
 
+function initTabsCompany() {
+    $('.row-tabs-company .tabs-link').click(function () {
+        var tab_id = $(this).attr('data-tab-c');
+
+        $('.row-tabs-company .tabs-link').removeClass('current-t');
+        $('.container-contact').removeClass('current-t');
+        $(this).addClass('current-t');
+        $("#"+tab_id).addClass('current-t');
+    })
+}
+
 // function initTabsC() {
 //     $('.container-tabs-btn .tabs-link').click(function () {
 //         $('.container-tabs-btn .tabs-link').removeClass('current-t');
@@ -588,10 +599,36 @@ function initProductionCycle() {
     });
 }
 
+function initDropzoneCompany(){
+    Dropzone.options.myAwesomeDropzone = {
+        paramName: "file",
+        uploadMultiple: true,
+        dictDefaultMessage:'Attach file',
+        addRemoveLinks: true,
+        maxFilesize: 10,
+        previewTemplate: document.getElementById('preview-template').innerHTML,
+        accept: function(file, done) {
+            if (file.name == "justinbieber.jpg") {
+                done("Naha, you don't.");
+            }
+            else { done(); }
+        },
+        init: function() {
+            this.on("error", function() {
+                $('#myAwesomeDropzone').find('.dz-message_waring').addClass('dis-error');
+                $('#myAwesomeDropzone').find('.dz-message_error').removeClass('dis-error');
+            });
+        }
+    };
+}
+
 
 $(window).on('resize', function () {
     initHeightSliderPreview();
 });
+
+
+initDropzoneCompany();
 
 document.addEventListener('DOMContentLoaded', function () {
     initSliderHeader();
@@ -618,4 +655,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initTooltip();
     // initShare();
     initProductionCycle();
+    initTabsCompany();
 });

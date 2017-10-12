@@ -11,3 +11,5 @@
 //=include lib/jquery.sumoselect.min.js
 
 //=include lib/bootstrap-tooltip.js
+
+//=include lib/dropzone.js

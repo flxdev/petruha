@@ -6,6 +6,14 @@
   margin-bottom: 70px;
 }
 
+.container-tabs-btn.row-tabs-company{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
 .wrapper-product-subbrand{
   width: 100%;
   font-size: 0;
@@ -425,3 +433,78 @@
     display: block;
   }
 }
+
+.container-contact{
+  display: none;
+  opacity: 0;
+  transition-delay: 0.15s;
+  .wrapper-white-feedback_form{
+    width: 50%;
+  }
+}
+
+.container-contact.current-t{
+  display: block;
+  opacity: 1;
+  transition: opacity 0.6s;
+  transition-delay: 0.15s;
+}
+
+.box-add-file{
+  .dz-message{
+    font-size: 0;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .icon-add-file{
+    width: 14px;
+    height: 15px;
+    @include display-inline-middle;
+    margin-right: 10px;
+  }
+  .txt-def-mes{
+    @include display-inline-middle;
+    @include fontOpenSans300;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: #39b54a;
+  }
+  .dz-message_waring{
+    @include fontOpenSans300;
+    font-size: 14px;
+    text-align: left;
+    color: #b5b3b3;
+    margin-left: 24px;
+    margin-top: 17px;
+    width: 250px;
+  }
+  .dz-message_error{
+    @include fontOpenSans300;
+    font-size: 14px;
+    text-align: left;
+    color: #eb1c24;
+    margin-left: 24px;
+    margin-top: 17px;
+    width: 270px;
+    position: relative;
+    padding-left: 27px;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background-image: url("../img/svg/icon-error.svg");
+      width: 18px;
+      height: 15px;
+      object-fit: contain;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .dis-error{
+    display: none;
+  }
+}
+
