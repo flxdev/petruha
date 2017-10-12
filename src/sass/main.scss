@@ -376,7 +376,7 @@ slideRightNone
     width: 100%;
     height: 52px;
     border-radius: 52px;
-    @include hover-time-all;
+    transition: all 0.2s ease-in-out;
     @include fontTTRoundsCondensedR;
     font-size: 18px;
     font-stretch: condensed;
@@ -778,6 +778,7 @@ slideRightNone
   width: 100%;
   position: relative;
   padding-bottom: 115px;
+  overflow: hidden;
 }
 
 .wrapper-navigation{
@@ -880,22 +881,34 @@ slideRightNone
   overflow: auto;
 }
 
+.wrapper-gradient-line{
+  width: 329px;
+  position: fixed;
+  bottom: 0;
+  .block-gradient-line{
+    width: 100%;
+    height: 51px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), #ffffff);
+  }
+}
+
 .wrapper-nav-text{
   align-items: stretch;
   width: 345px;
   height: 100%;
   overflow: auto;
   position: relative;
-  &:after{
-    content: '';
-    display: block;
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-    right: 0;
-    height: 51px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), #ffffff);
-  }
+  z-index: 3;
+  //&:after{
+  //  content: '';
+  //  display: block;
+  //  width: 100%;
+  //  position: sticky;
+  //  bottom: 0;
+  //  right: 0;
+  //  height: 51px;
+  //  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), #ffffff);
+  //}
 }
 
 .container-text-popup-m{

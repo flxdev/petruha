@@ -75,6 +75,9 @@
         color: #39b54a;
         text-decoration: underline;
         @include hover-time-all;
+        b{
+          @include fontOpenSans600;
+        }
         &:hover{
           color: #eb1c24;
         }
@@ -84,6 +87,9 @@
       }
       .block-search-txt{
         margin-top: 20px;
+        b{
+          @include fontOpenSans600;
+        }
       }
     }
   }

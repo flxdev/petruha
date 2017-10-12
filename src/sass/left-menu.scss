@@ -192,6 +192,7 @@
           margin: 0 auto;
           @include hover-time-run;
           bottom: 0;
+          left: 5%;
           position: absolute;
         }
         &:last-child:after{
@@ -259,8 +260,8 @@
 }
 
 .block-white-tabs{
-  width: 310px;
-  margin: 67px auto;
+  width: 337px;
+  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
