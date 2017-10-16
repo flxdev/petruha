@@ -203,7 +203,7 @@ h1{
     }
   }
   .wrapper-central-unit{
-    padding: 80px 60px 93px 60px;
+    padding: 80px 60px 80px 60px;
   }
 }
 
@@ -922,12 +922,14 @@ slideRightNone
     padding: 40px 60px;
     position: relative;
     .bread-crumbs{
+      position: relative;
       a{
         @include fontOpenSans300;
         font-size: 14px;
         text-align: left;
         color: rgba(255, 255, 255, 0.8);
         @include hover-time;
+        margin-right: 6px;
         &:hover{
           //color: #eb1c24;
         }
@@ -1187,5 +1189,40 @@ slideRightNone
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
   width: 220px;
+}
+
+#success-form{
+  width: 450px;
+  padding: 48px 50px 48px 48px;
+  .success-form_title{
+    @include fontTTRoundsCondensedR;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 29px;
+  }
+  .success-form_txt{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #5e5e5e;
+  }
+  .fancybox-close-small:after {
+    font: 37px/31px Arial,Helvetica Neue,Helvetica,sans-serif;
+    color: black;
+  }
+  .fancybox-close-small {
+    top: 6px;
+    right: 10px;
+  }
+}
+
+.container-share{
+  font-size: 0;
+  display: flex;
+  height: 100%;
 }
 

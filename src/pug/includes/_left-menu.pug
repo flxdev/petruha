@@ -145,7 +145,7 @@
                 .wrapper-white-feedback
                     .wrapper-white-feedback_title Форма обратной связи
                     .wrapper-white-feedback_form
-                        form.js-form
+                        form.js-form.dropzone#myAwesomeDropzone2(action="/" method="" enctype="multipart/form-data")
                             .box-input
                                 .form-label
                                     label.input-label ФИО<span>*</span>
@@ -182,6 +182,30 @@
 
                             .box-dropzon-btn
                                 .wrapper-dropzone
+                                    .box-add-file
+                                        #preview-template2
+                                            .dz-preview.dz-file-preview
+                                                .dz-details
+                                                    .dz-filename
+                                                        span(data-dz-name)
+                                                    .dz-size(data-dz-size)
+                                                    img.img-none(data-dz-thumbnail)
+                                        .dz-default.dz-message
+                                            span.icon-add-file
+                                                <svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">
+                                                <g stroke="null" id="svg_1">
+                                                <g stroke="null" id="svg_2">
+                                                <path stroke="null" id="svg_3" class="fill-add-file" d="m6.3794,17.86129c-0.04922,-0.98869 0.26925,-1.95281 0.93224,-2.65594l9.50768,-10.08336c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-9.53084,10.10793c-0.88302,0.93649 -1.32598,2.18923 -1.22754,3.4911l0.02316,0.28555c0.17081,2.31819 1.93975,4.08984 4.10243,4.14204c1.15517,0.02456 2.28427,-0.44215 3.12097,-1.32951l9.4324,-10.00353c1.17833,-1.24967 1.84132,-2.99676 1.76894,-4.79298c-0.1216,-3.36214 -2.70118,-6.04572 -5.87137,-6.17468l-0.09844,0c-1.6705,-0.0522 -3.29179,0.62637 -4.47011,1.87605l-10.88288,11.54183c-1.59812,1.69489 -2.40877,4.01308 -2.26111,6.40803l0,0.1044c0.26925,4.08984 3.36417,7.37215 7.19735,7.68534c2.26111,0.15659 4.49617,-0.70313 6.0914,-2.39802l11.17818,-11.85501c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-11.14923,11.83352c-1.40125,1.4861 -3.31784,2.2138 -5.2576,2.08484c-3.34101,-0.26099 -5.99296,-3.12572 -6.23905,-6.66902l0,-0.1044c-0.1216,-2.0572 0.56455,-4.08984 1.93975,-5.54831l10.85682,-11.51419c0.98146,-1.04088 2.33349,-1.59049 3.70869,-1.5383l0.09844,0c2.6288,0.07676 4.74226,2.31819 4.86385,5.10616c0.04922,1.45846 -0.49218,2.91693 -1.47363,3.96088l-9.4324,10.00353c-0.61377,0.65094 -1.49969,1.01632 -2.35955,0.98869c-1.62128,-0.0522 -2.97332,-1.3817 -3.09492,-3.12572l0.0029,-0.26099z"/>
+                                                </g>
+                                                </g>
+                                                </g>
+                                                </svg>
+                                            span.txt-def-mes Прикрепить файл
+
+                                        .dz-message_waring Общий размер вложений не должен превышать 10 Мб
+                                        .dz-message_error.dis-error Вы превысили допустимый лимит размера вложений в 10 Мб.
+
+
                                 .box-btn-form
                                     button.btn-form.radius Отправить
 
@@ -195,74 +219,266 @@
     .container-text-popup
         .btn-close.js-close
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40"><defs><path d="M39.562 0v39.562H0V0z"/></defs><g fill="none" fill-rule="evenodd"><mask fill="#fff"><use xlink:href="#a"/></mask><path fill="#FFF" d="M19.783 37.984c-10.038 0-18.204-8.166-18.205-18.203 0-10.036 8.166-18.2 18.203-18.2 10.038 0 18.204 8.165 18.204 18.2 0 10.038-8.165 18.204-18.2 18.204M19.78 0C8.874 0 0 8.874 0 19.78c0 10.91 8.875 19.783 19.783 19.783 10.906 0 19.78-8.874 19.78-19.78C39.563 8.872 30.688 0 19.78 0m8.2 11.578a.79.79 0 0 0-1.115 0l-7.085 7.086-7.085-7.086a.79.79 0 1 0-1.116 1.117l7.084 7.086-7.085 7.086a.79.79 0 1 0 1.115 1.116l7.085-7.085 7.085 7.085a.786.786 0 0 0 1.116 0 .79.79 0 0 0 0-1.116l-7.084-7.085 7.085-7.085a.79.79 0 0 0 0-1.117" mask="url(#b)"/></g></svg>
-        .wrapper-text-popup
-            .container-text-popup-m
-                .wrapper-text-popup_header(style="background-image:url('img/2.jpg')")
-                    .bread-crumbs
-                        a(href='#') Главная
-                        span Акции
-                    .wrapper-text-popup_container
-                        .wrapper-text-popup_title Участвуйте в розыгрыше призов!
-                        .wrapper-text-popup_txt Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем пакеты.
-                        .wrapper-text-popup_btn
-                            a(href='#').btn-white Зарегистрировать чек
-                .wrapper-content-text
-                    p Приближается пора весенне-зимних праздников. Впереди нас ждет заметчательный праздник 14 февраля, не так долго осталось и до 23 февраля и 8 марта. Наряду с выбором подарка, очень часто встает достаточно банальный вопрос: "Что приготовить на романтический ужин?"
-                    p По адресу <a href="#">http://chef.petruha.by</a> доступен календарь с рецептами ко всем этим праздникам!  Переходите, экспериментируйте, наслаждайтесь!
+        .container-share(style="display:none")
+            .wrapper-text-popup
+                .container-text-popup-m
+                    .wrapper-text-popup_header(style="background-image:url('img/2.jpg')")
+                        .bread-crumbs
+                            a(href='#') Главная
+                            span Акции
+                        .wrapper-text-popup_container
+                            .wrapper-text-popup_title Участвуйте в розыгрыше призов!
+                            .wrapper-text-popup_txt Мы так выборочно относимся к вопросу гигиены — прячемся от чихающегося человека и при этом собираем пакеты.
+                            .wrapper-text-popup_btn
+                                a(href='#').btn-white Зарегистрировать чек
+                    .wrapper-content-text
+                        p Приближается пора весенне-зимних праздников. Впереди нас ждет заметчательный праздник 14 февраля, не так долго осталось и до 23 февраля и 8 марта. Наряду с выбором подарка, очень часто встает достаточно банальный вопрос: "Что приготовить на романтический ужин?"
+                        p По адресу <a href="#">http://chef.petruha.by</a> доступен календарь с рецептами ко всем этим праздникам!  Переходите, экспериментируйте, наслаждайтесь!
 
 
-                .wrapper-content-soc
-                    .line
-                    .box-soc
-                        .ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,gplus" data-size="m" data-description="Текст, которым нужно поделиться." data-image="Изображение, которым нужно поделиться." data-title="Заголовок, которым нужно поделиться")
-                        //img(src='img/soc-img.jpg' alt='')
-                    a(href='#').box-link.js-close Все акции
+                    .wrapper-content-soc
+                        .line
+                        .box-soc
+                            .ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,gplus" data-size="m" data-description="Текст, которым нужно поделиться." data-image="Изображение, которым нужно поделиться." data-title="Заголовок, которым нужно поделиться")
+                            //img(src='img/soc-img.jpg' alt='')
+                        a(href='#').box-link.js-close Все акции
 
-        .wrapper-nav-text
-            .container-nav-text-m
-                .menu-nav-text
-                    ul
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title Лидирующие позиции рейтинга Беларуси
-                                    .container-menu-nav_date 11 августа 2017
+            .wrapper-nav-text
+                .container-nav-text-m
+                    .menu-nav-text
+                        ul
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title Лидирующие позиции рейтинга Беларуси
+                                        .container-menu-nav_date 11 августа 2017
 
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title Новинка – Плечевая и локтевая части крыла «От Петрухи»!
-                                    .container-menu-nav_date 17 июля 2017
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title Новинка – Плечевая и локтевая части крыла «От Петрухи»!
+                                        .container-menu-nav_date 17 июля 2017
 
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title Новинка – Мякоть бедра без кости «От Петрухи»!
-                                    .container-menu-nav_date 9 июля 2017
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title Новинка – Мякоть бедра без кости «От Петрухи»!
+                                        .container-menu-nav_date 9 июля 2017
 
-                        li.box-menu-nav.active
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title Участвуйте в розыгрыше призов!
-                                    .container-menu-nav_date 9 июля 2017
+                            li.box-menu-nav.active
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title Участвуйте в розыгрыше призов!
+                                        .container-menu-nav_date 9 июля 2017
 
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title «Смолевичи Бройлер» получил сертификат безопасности
-                                    .container-menu-nav_date 5 июля 2017
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title «Смолевичи Бройлер» получил сертификат безопасности
+                                        .container-menu-nav_date 5 июля 2017
 
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title «Петруха Микс» стал ещё выгоднее!
-                                    .container-menu-nav_date 3 июля 2017
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title «Петруха Микс» стал ещё выгоднее!
+                                        .container-menu-nav_date 3 июля 2017
 
-                        li.box-menu-nav
-                            a(href='#').link-menu-nav
-                                .container-menu-nav
-                                    .container-menu-nav_title Вкусная новинка! Мясо птицы в маринаде «Гурме Гриль»!
-                                    .container-menu-nav_date 3 июля 2017
+                            li.box-menu-nav
+                                a(href='#').link-menu-nav
+                                    .container-menu-nav
+                                        .container-menu-nav_title Вкусная новинка! Мясо птицы в маринаде «Гурме Гриль»!
+                                        .container-menu-nav_date 3 июля 2017
 
-                .wrapper-gradient-line
-                    .block-gradient-line
+                    .wrapper-gradient-line
+                        .block-gradient-line
+
+        .container-recipes(style="display:none")
+            .wrapper-text-popup
+                .container-text-popup-m
+                    .wrapper-text-popup_header(style="background-image:url('img/4.jpg')")
+                        .bread-crumbs
+                            a(href='#') Главная
+                            a(href='#') Рецепты
+
+                        .container-header-recipes
+                            .container-header-recipes_title Запеченные куриные крылышки в медово-соевом маринаде с картофелем
+                            .container-header-recipes_txt БЖУ на порцию: белки 92 гр, жиры 47,1 гр, углеводы 62,7, ккал 1018.
+
+                        .block-text-inside_outside
+                            .block-text-inside_outside-time
+                                span.icon-time
+                                | Подготовка: 15 мин.
+                            .block-text-inside_outside-servings
+                                span.icon-servings
+                                | Приготовление: 45 мин.
+                    .container-recipes-info
+                        .wrapper-content-text
+                            p Налить в миску соевый соус, добавить мед, имбирь, мелко натертый чеснок и растительное масло. Перемешать. Положить в маринад крылышки и перемешать. Оставить мариноваться на 30-40 минут.
+
+                            .recipes-info-tabs
+                                .container-tabs-btn.row-tabs-company
+                                    .tabs-link.current-t(data-tab-c="tab-contact-1") Видео рецепт
+                                    .tabs-link(data-tab-c="tab-contact-2") Способ приготовления
+                                #tab-contact-1.container-contact.tabs-content.current-t
+                                    .box-recipes-video
+                                        <iframe src="https://www.youtube.com/embed/cB-foYQqww0" frameborder="0" allowfullscreen></iframe>
+
+                                #tab-contact-2.container-contact.tabs-content
+                                    .box-recipes-slider
+                                        .swiper-wrapper
+                                            .swiper-slide(style="background: url('img/recipe/Bitmap1.jpg')" data-number-slider="0")
+                                                .content-recipes-slider
+                                                    .content-recipes-slider_title СМЕШАТЬ
+                                                    .content-recipes-slider_txt все сухие ингредиенты <br> в ёмкости
+
+                                            .swiper-slide(style="background: url('img/recipe/Bitmap2.jpg')" data-number-slider="1")
+                                                .content-recipes-slider
+                                                    .content-recipes-slider_title СМЕШАТЬ
+                                                    .content-recipes-slider_txt все сухие ингредиенты <br> в ёмкости
+
+                                            .swiper-slide(style="background: url('img/recipe/Bitmap3.jpg')" data-number-slider="2")
+                                                .content-recipes-slider
+                                                    .content-recipes-slider_title СМЕШАТЬ
+                                                    .content-recipes-slider_txt все сухие ингредиенты <br> в ёмкости
+
+                                            .swiper-slide(style="background: url('img/recipe/Bitmap4.jpg')" data-number-slider="3")
+                                                .content-recipes-slider
+                                                    .content-recipes-slider_title СМЕШАТЬ
+                                                    .content-recipes-slider_txt все сухие ингредиенты <br> в ёмкости
+
+                                            .swiper-slide(style="background: url('img/recipe/Bitmap5.jpg')" data-number-slider="4")
+                                                .content-recipes-slider
+                                                    .content-recipes-slider_title СМЕШАТЬ
+                                                    .content-recipes-slider_txt все сухие ингредиенты <br> в ёмкости
+
+                                        // Add Pagination
+                                        .swiper-pagination
+                                        // Add Pagination
+                                        .swiper-button-next.js-number-slider
+                                            .icon-btn-slider
+                                                <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#ffffff" fill-rule="evenodd"/></svg>
+                                        .swiper-button-prev.js-number-slider
+                                            .icon-btn-slider
+                                                <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#ffffff" fill-rule="evenodd"/></svg>
+
+                                    .slider-number-recipes
+                                        <span class="number-active">1</span>/<span class="number-sl"></span> Шаг
+
+
+                            p Налить в миску соевый соус, добавить мед, имбирь, мелко натертый чеснок и растительное масло. Перемешать. Положить в маринад крылышки и перемешать. Оставить мариноваться на 30-40 минут.
+
+                            p Замаринованные крылышки переложить в огнеупорную посуду. Запекать в разогретой до 200 градусов духовке около 40-45 минут, периодически смазывая остатками маринада.
+
+                        .wrapper-ingredients
+                            .container-ingredients
+                                .block-ingredients
+                                    .block-ingredients_title Ингредиенты:
+
+                                    .block-quantity-por
+                                        .block-quantity-por_min -
+                                        .block-quantity-por_q 4 порции
+                                        .block-quantity-por_plus +
+
+                                    .block-ingredients-list
+                                        ul
+                                            li Куриные крылья: 1200 г
+                                            li Соевый соус 60 мл.
+                                            li Мёд 1 ст. л
+                                            li Молотый сухой имбирь 0,5 ч. л.
+                                            li Чеснок 3 зуб.
+                                            li Растительное масло 1 ст. л.
+
+
+                                .block-ingredients-slider
+                                    .block-ingredients-slider_title Продукт для приготовления:
+                                    .swiper-container-ingredients
+                                        .swiper-wrapper
+
+                                            .swiper-slide
+                                                .swiper-slide-img
+                                                    img(src='img/product/Bitmap1.jpg' alt='')
+
+                                                .swiper-slide-txt Крыло цыпленка–бройлера охлажденное
+
+                                            .swiper-slide
+                                                .swiper-slide-img
+                                                    img(src='img/product/Bitmap.jpg' alt='')
+
+                                                .swiper-slide-txt Крыло цыпленка–бройлера охлажденное
+
+                                            .swiper-slide
+                                                .swiper-slide-img
+                                                    img(src='img/product/Bitmap1.jpg' alt='')
+
+                                                .swiper-slide-txt Крыло цыпленка–бройлера охлажденное
+
+
+                                        // If we need pagination
+                                        .swiper-pagination
+
+                                        // If we need navigation buttons
+                                        .swiper-button-prev
+                                            .icon-btn-slider
+                                                <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#EB1C24" fill-rule="evenodd"/></svg>
+
+                                        .swiper-button-next
+                                            .icon-btn-slider
+                                                <svg width="20" height="40" viewBox="0 0 20 40" xmlns="http://www.w3.org/2000/svg"><path d="M19.02 19.118l.02-.02.956.8-.102.102.102.103-.956.798-.02-.018L.975 39.102l-.97-.97L18.14 20 .004 1.867l.97-.97 18.046 18.22z" fill="#EB1C24" fill-rule="evenodd"/></svg>
+
+
+
+
+
+
+
+
+                    .wrapper-tag
+                        ul
+                            li
+                                a(href="#") Крылья
+                            li
+                                a(href="#") Ужин
+                            li
+                                a(href="#") Закуска
+                            li
+                                a(href="#") Простые рецепты
+                            li
+                                a(href="#") Курица
+
+                    .wrapper-content-soc
+                        .box-soc
+                            .ya-share2(data-services="vkontakte,facebook,odnoklassniki,twitter,gplus" data-size="m" data-description="Текст, которым нужно поделиться." data-image="Изображение, которым нужно поделиться." data-title="Заголовок, которым нужно поделиться")
+                            //img(src='img/soc-img.jpg' alt='')
+
+                    .wrapper-similar-recipes
+                        .wrapper-similar-recipes_title Похожие рецепты:
+                        .container-block-row
+                            a(href='#').block-text-inside
+                                .wrapper-text-inside
+                                    img.wrapper-text-inside_img(src='img/recipe/Bitmap1.jpg' alt='')
+                                    .block-info_text-section КУРИНЫЕ КРЫЛЬЯ
+                                    .block-text-inside
+                                        .block-text-inside_title КРЫЛЬЯ
+                                        .block-text-inside_txt в пивном маринаде
+                                .block-text-inside_outside
+                                    .block-text-inside_outside-time
+                                        span.icon-time
+                                        | 60 мин
+                                    .block-text-inside_outside-servings
+                                        span.icon-servings
+                                        | 2 порции
+
+                            a(href='#').block-text-inside
+                                .wrapper-text-inside
+                                    img(src='img/recipe/Bitmap1.jpg').wrapper-text-inside_img
+                                    .block-info_text-section КУРИНЫЕ КРЫЛЬЯ
+                                    .block-text-inside
+                                        .block-text-inside_title КРЫЛЬЯ
+                                        .block-text-inside_txt в апельсиновом соусе
+                                .block-text-inside_outside
+                                    .block-text-inside_outside-time
+                                        span.icon-time
+                                        | 40 мин
+                                    .block-text-inside_outside-servings
+                                        span.icon-servings
+                                        | 4 порции

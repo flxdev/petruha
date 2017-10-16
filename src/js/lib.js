@@ -13,3 +13,7 @@
 //=include lib/bootstrap-tooltip.js
 
 //=include lib/dropzone.js
+
+//=include lib/jquery.fancybox.min.js
+
+//=include lib/sticky-kit.min.js

@@ -11,14 +11,14 @@ section.container-central-unit.gray
                 .btn-green.js-btn Обратная связь
         .container-contact-row
             .container-tabs-btn.row-tabs-company
-                .tabs-link.current-t(data-tab-c="tab-contact-1") Общие
-                .tabs-link(data-tab-c="tab-contact-2") Продажи
-                .tabs-link(data-tab-c="tab-contact-3") Закупки
-                .tabs-link(data-tab-c="tab-contact-4") Логистика
-            #tab-contact-1.container-contact.tabs-content.current-t
+                .tabs-link.current-t(data-tab-c="tab-contacts-1") Общие
+                .tabs-link(data-tab-c="tab-contacts-2") Продажи
+                .tabs-link(data-tab-c="tab-contacts-3") Закупки
+                .tabs-link(data-tab-c="tab-contacts-4") Логистика
+            #tab-contacts-1.container-contact.tabs-content.current-t
                 .wrapper-contact_big-title Форма связи со службами для Беларуси и России
                 .wrapper-white-feedback_form
-                    form.js-form.dropzone#myAwesomeDropzone(action="/" method="" enctype="multipart/form-data")
+                    form.js-form.dropzone(action="/" method="" enctype="multipart/form-data")
                         .box-input
                             .form-label
                                 label.input-label ФИО<span>*</span>
@@ -54,7 +54,7 @@ section.container-central-unit.gray
                                 textarea.textarea-box(data-validation="required length" data-validation-length='min3' data-validation-error-msg="Неверно введены данные")
 
                         .box-dropzon-btn
-                            .wrapper-dropzone
+                            .wrapper-dropzone#myAwesomeDropzone
                                 .box-add-file
                                     #preview-template
                                         .dz-preview.dz-file-preview
@@ -63,7 +63,7 @@ section.container-central-unit.gray
                                                     span(data-dz-name)
                                                 .dz-size(data-dz-size)
                                                 img.img-none(data-dz-thumbnail)
-                                    .dz-default.dz-message
+                                    .dz-default.dz-message.submit-all
                                         span.icon-add-file
                                             <svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">
                                             <g stroke="null" id="svg_1">
@@ -80,9 +80,9 @@ section.container-central-unit.gray
 
 
                             .box-btn-form
-                                button.btn-form.radius Отправить
+                                button.btn-form.radius(data-src="#success-form") Отправить
 
-            #tab-contact-2.container-contact.tabs-content
+            #tab-contacts-2.container-contact.tabs-content
                 .wrapper-contact_big-title Отдел продаж
                 .wrapper-contact_list
                     .wrapper-contact_list-title Беларусь
@@ -120,7 +120,7 @@ section.container-central-unit.gray
                             .label E-mail:
                             .text
                                 a.email(href='mailto: nataliiya.voloshyna@servolux.com') nataliiya.voloshyna@servolux.com
-            #tab-contact-3.container-contact.tabs-content
+            #tab-contacts-3.container-contact.tabs-content
                 .wrapper-contact_big-title Отдел закупок
                 .wrapper-contact_list
                     .wrapper-contact_list-title Беларусь и Россия
@@ -137,7 +137,7 @@ section.container-central-unit.gray
                             .label E-mail:
                             .text
                                 a.email(href='mailto: konstantin.silukov@servolux.com') konstantin.silukov@servolux.com
-            #tab-contact-4.container-contact.tabs-content
+            #tab-contacts-4.container-contact.tabs-content
                 .wrapper-contact_big-title Отдел логистики
                 .wrapper-contact_list
                     .wrapper-contact_list-title Беларусь и Россия

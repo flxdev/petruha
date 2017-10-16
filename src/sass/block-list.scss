@@ -266,6 +266,7 @@
         font-stretch: condensed;
         line-height: 1.29;
         color: #ffffff;
+        text-transform: uppercase;
       }
       .block-text-inside_txt{
         @include fontTTRoundsCondensedR;
@@ -275,41 +276,43 @@
       }
     }
   }
-  .block-text-inside_outside{
-    width: 100%;
-    font-size: 0;
-    .block-text-inside_outside-time{
-      @include display-inline-top;
-      @include fontOpenSans300;
-      font-size: 14px;
-      color: #b5b3b3;
-      margin-right: 30px;
-      .icon-time{
-        background-image: url("../img/svg/page-1.svg");
-        background-repeat: no-repeat;
-        width: 15px;
-        height: 18px;
-        background-size: cover;
-        display: inline-block;
-        vertical-align: bottom;
-        margin-right: 7px;
-      }
+}
+
+.block-text-inside_outside{
+  width: 100%;
+  font-size: 0;
+  position: relative;
+  .block-text-inside_outside-time{
+    @include display-inline-top;
+    @include fontOpenSans300;
+    font-size: 14px;
+    color: #b5b3b3;
+    margin-right: 30px;
+    .icon-time{
+      background-image: url("../img/svg/page-1.svg");
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 18px;
+      background-size: cover;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-right: 7px;
     }
-    .block-text-inside_outside-servings{
-      @include display-inline-top;
-      @include fontOpenSans300;
-      font-size: 14px;
-      color: #b5b3b3;
-      .icon-servings{
-        background-image: url("../img/svg/page-2.svg");
-        background-repeat: no-repeat;
-        width: 17px;
-        height: 16px;
-        background-size: cover;
-        display: inline-block;
-        vertical-align: baseline;
-        margin-right: 7px;
-      }
+  }
+  .block-text-inside_outside-servings{
+    @include display-inline-top;
+    @include fontOpenSans300;
+    font-size: 14px;
+    color: #b5b3b3;
+    .icon-servings{
+      background-image: url("../img/svg/page-2.svg");
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 16px;
+      background-size: cover;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 7px;
     }
   }
 }
