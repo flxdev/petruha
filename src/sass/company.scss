@@ -779,3 +779,206 @@
     }
   }
 }
+
+.container-lotock{
+  width: 100%;
+  position: relative;
+}
+
+.wrapper-lotock{
+  width: 100%;
+  font-size: 0;
+  padding: 0 60px;
+  .block-img-c{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .content-img{
+      width: 392px;
+      height: 192px;
+      margin: 0 auto;
+      position: relative;
+      .block-line{
+        position: absolute;
+      }
+      .line-1{
+        display: block;
+        width: 179px;
+        height: 134px;
+        object-fit: contain;
+        background-image: url("../img/svg/line-copy.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -85%;
+        left: -7%;
+      }
+      .line-2{
+        width: 48px;
+        height: 1px;
+        object-fit: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 25%;
+        left: -17%;
+        background-color: #f38a8e;
+      }
+      .line-3{
+        width: 179px;
+        height: 134px;
+        object-fit: contain;
+        background-image: url("../img/svg/line-copy.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: -75%;
+        left: -7%;
+        transform: rotate(107deg);
+      }
+      .line-4{
+        width: 179px;
+        height: 134px;
+        object-fit: contain;
+        background-image: url("../img/svg/line-copy.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -85%;
+        right: -7%;
+        transform: rotate(287deg);
+      }
+      .line-5{
+        width: 48px;
+        height: 1px;
+        object-fit: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 25%;
+        right: -20%;
+        background-color: #f38a8e;
+      }
+      .line-6{
+        width: 179px;
+        height: 134px;
+        object-fit: contain;
+        background-image: url("../img/svg/line-copy.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: -75%;
+        right: -7%;
+        transform: rotate(178deg);
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.block-lotock{
+  @include display-inline-top;
+  width: 50%;
+}
+
+.block-lotock.block-lotock-left{
+  .block-lotock_list{
+    .block-lotock_list_title{
+      //width: 40%;
+      width: 210px;
+    }
+  }
+  .block-lotock_list:nth-child(1){
+    padding-left: 9%;
+    .block-lotock_list-h{
+
+    }
+    .block-lotock_list_title{
+
+    }
+    .block-lotock_list-txt{
+      padding-right: 40%;
+    }
+  }
+  .block-lotock_list:nth-child(2){
+    .block-lotock_list-txt{
+      padding-right: 45%;
+    }
+  }
+  .block-lotock_list:nth-child(3){
+    padding-left: 9%;
+    .block-lotock_list-txt{
+      padding-right: 40%;
+    }
+  }
+}
+
+.block-lotock.block-lotock-right{
+  .block-lotock_list{
+    padding-left: 45%;
+  }
+  .block-lotock_list{
+    .block-lotock_list_title{
+      width: 66%;
+    }
+  }
+  .block-lotock_list:nth-child(1){
+    .block-lotock_list_title{
+      width: 66%;
+    }
+  }
+  .block-lotock_list:nth-child(2){
+    padding-left: 50%;
+    .block-lotock_list_title{
+      width: 66%;
+    }
+    .block-lotock_list-h {
+      .block-lotock_list_title{
+
+      }
+    }
+  }
+  .block-lotock_list:nth-child(3){
+    .block-lotock_list_title{
+      width: 66%;
+    }
+  }
+}
+
+.block-lotock_list{
+  margin-bottom: 50px;
+  position: relative;
+  .block-lotock_list-h{
+    font-size: 0;
+    margin-bottom: 22px;
+    .block-lotock_list_icon{
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include display-inline-middle;
+      margin-right: 30px;
+    }
+    .block-lotock_list_title{
+      @include fontOpenSans300;
+      color: black;
+      font-size: 18px;
+      line-height: 1.56;
+      text-align: left;
+      @include display-inline-middle;
+    }
+  }
+  .block-lotock_list-txt{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #5e5e5e;
+  }
+}

@@ -33,7 +33,91 @@
       width: 92%;
     }
   }
+  .block-lotock.block-lotock-left{
+    .block-lotock_list{
+      .block-lotock_list_title{
+        width: 40%;
+      }
+    }
+  }
+  .wrapper-lotock{
+    .block-img-c{
+      .content-img{
+        .line-1{
+          top: -90%;
+          left: -7%;
+        }
+        .line-2{
+          top: 25%;
+          left: -17%;
+        }
+        .line-3{
+          bottom: -85%;
+          left: -7%;
+        }
+        .line-4{
+          top: -90%;
+          right: -7%;
+        }
+        .line-5{
+          top: 25%;
+          right: -20%;
+        }
+        .line-6{
+          bottom: -85%;
+          right: -7%;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
 }
+@media all and (max-width: 1490px){
+  .wrapper-lotock{
+    .block-img-c{
+      .content-img{
+        .line-1{
+          top: -90%;
+          left: -5%;
+        }
+        .line-2{
+          top: 25%;
+          left: -10%;
+        }
+        .line-3{
+          bottom: -70%;
+          left: -5%;
+        }
+        .line-4{
+          top: -90%;
+          right: -15%;
+        }
+        .line-5{
+          top: 25%;
+          right: -19%;
+        }
+        .line-6{
+          bottom: -70%;
+          right: -15%;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .wrapper-lotock {
+    .block-img-c{
+      left: 49%;
+      .content-img{
+        width: 330px;
+      }
+    }
+  }
+}
+
 
 @media all and (max-width: 1439px){
   .wrapper-contact_list{
@@ -93,11 +177,89 @@
   .box-slider-production {
     padding-left: 70px;
   }
+  .block-lotock.block-lotock-right {
+    .block-lotock_list:nth-child(2) {
+      .block-lotock_list_title{
+        width: 63%;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1380px){
   .block-white-tabs{
     width: 345px;
+  }
+  .block-lotock.block-lotock-right {
+    .block-lotock_list{
+      padding-left: 40%;
+    }
+    .block-lotock_list:nth-child(2){
+      padding-left: 40%;
+    }
+  }
+  .block-lotock.block-lotock-left {
+    .block-lotock_list:first-child{
+      padding-left: 0;
+    }
+  }
+  .block-lotock.block-lotock-left {
+    .block-lotock_list:last-child{
+      padding-left: 0;
+    }
+  }
+  .wrapper-lotock {
+    .block-img-c{
+      top: 48%;
+      left: 48%;
+    }
+  }
+  .wrapper-lotock {
+    .block-img-c {
+      .content-img{
+        width: 300px;
+        height: 170px;
+      }
+    }
+  }
+  .wrapper-lotock {
+    .block-img-c {
+      .content-img {
+        .line-1{
+          width: 150px;
+          height: 100px;
+          top: -75%;
+          left: 0%;
+        }
+        .line-2{
+          left: -6%;
+          width: 40px;
+        }
+        .line-3{
+          width: 150px;
+          height: 100px;
+          bottom: -65%;
+          left: 0%;
+        }
+        .line-4{
+          width: 150px;
+          height: 100px;
+          top: -79%;
+          right: -15%;
+        }
+        .line-5{
+          right: -15%;
+          width: 40px;
+        }
+        .line-6{
+          width: 150px;
+          height: 100px;
+          bottom: -65%;
+          right: -15%;
+          transform: rotate(186deg);
+        }
+      }
+    }
   }
 }
 
@@ -325,6 +487,30 @@
       }
     }
   }
+  .block-lotock_list {
+    .block-lotock_list-h {
+      .block-lotock_list_icon{
+        margin-right: 15px;
+      }
+      .block-lotock_list_title{
+        font-size: 16px;
+      }
+    }
+    .block-lotock_list-txt{
+      font-size: 14px;
+    }
+  }
+  .wrapper-lotock{
+    padding: 0 30px;
+  }
+  .wrapper-lotock {
+    .block-img-c {
+      .content-img{
+        width: 270px;
+        height: 155px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1207px){
@@ -345,6 +531,56 @@
   }
   .box-slider-production{
     padding-left: 50px;
+  }
+}
+
+@media all and (max-width: 1130px){
+  .wrapper-lotock {
+    .block-img-c {
+      .content-img {
+        width: 236px;
+        height: 140px;
+      }
+    }
+  }
+  .wrapper-lotock {
+    .block-img-c {
+      .content-img {
+        .line-1{
+          width: 135px;
+          height: 90px;
+          top: -90%;
+          left: -7%;
+        }
+        .line-2{
+          left: -10%;
+          width: 30px;
+        }
+        .line-3{
+          width: 135px;
+          height: 90px;
+          bottom: -65%;
+          left: -7%;
+        }
+        .line-4{
+          top: -94%;
+          right: -15%;
+          width: 135px;
+          height: 90px;
+        }
+        .line-5{
+          right: -15%;
+          width: 30px;
+        }
+        .line-6{
+          width: 135px;
+          height: 90px;
+          bottom: -65%;
+          right: -15%;
+          transform: rotate(186deg);
+        }
+      }
+    }
   }
 }
 
