@@ -1065,6 +1065,41 @@ slideRightNone
   width: 100%;
   position: relative;
   padding: 40px 60px;
+  h1{
+    @include fontTTRoundsCondensedB;
+    font-size: 60px;
+    font-stretch: condensed;
+    line-height: 1;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 35px;
+  }
+  h2{
+    @include fontTTRoundsCondensedB;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1.22;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+  h3{
+    @include fontTTRoundsCondensedR;
+    font-size: 24px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  h4{
+    @include fontTTRoundsCondensedR;
+    font-size: 20px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: left;
+    color: #000000;
+  }
   p{
     @include fontOpenSans300;
     font-size: 16px;
@@ -1072,6 +1107,7 @@ slideRightNone
     text-align: left;
     color: #5e5e5e;
     margin-bottom: 15px;
+    display: block;
   }
 
   a{
@@ -1086,6 +1122,183 @@ slideRightNone
     &:focus{
       color: #d40008;
     }
+  }
+  p + .snipet-video, h2 + .snipet-video, h3 + .snipet-video{
+    margin-top: 40px;
+  }
+  .snipet-video{
+    width: 600px;
+    height: 355px;
+    margin-bottom: 30px;
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  sup{
+    vertical-align: super;
+  }
+  sub{
+    vertical-align: sub;
+  }
+  p + .block-direct-speech, h2 + .block-direct-speech, h3 + .block-direct-speech{
+    margin-top: 30px;
+  }
+  .block-direct-speech{
+    @include fontOpenSans600;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.88;
+    text-align: left;
+    color: #5e5e5e;
+    margin-bottom: 30px;
+    padding: 0 100px 0 50px;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      top:  0;
+      left: 25px;
+      border-radius: 3px;
+      background-color: #eb1c24;
+    }
+  }
+  i {
+    font-style: italic;
+  }
+  b{
+    font-weight: bold;
+  }
+  p + h2, p + h3{
+    margin-top: 50px;
+  }
+
+  .float-img-left{
+    width: 360px;
+    float: left;
+    margin-right: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  .float-img-right{
+    width: 360px;
+    float: right;
+    margin-left: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  ul{
+    margin-bottom: 50px;
+    li{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 13px;
+      &:before{
+        content: '';
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        background-color: #5e5e5e;
+        top: 12px;
+      }
+    }
+  }
+  ol{
+    list-style: decimal;
+    padding: 0;
+    margin-bottom: 50px;
+    padding-left: 18px;
+    li{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 13px;
+    }
+  }
+
+  h2 + ul, h3 + ul, h2 + ol, h3 + ol{
+    margin-top: -5px;
+  }
+  table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 60px;
+    th{
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 2;
+      text-align: left;
+      color: #6d6d6d;
+      border-bottom: 2px solid #ff1822;
+      padding: 10px 0;
+    }
+    td{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+      border-bottom: 1px solid #cdcdcd;
+      padding: 15px 0;
+    }
+  }
+}
+
+.container-central-txt{
+  width: 100%;
+  position: relative;
+  animation-name: bounceInUp;
+  animation-duration: 1.6s;
+  animation-fill-mode: both;
+  overflow: hidden;
+  @keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+      transform: translate3d(0,10px,0)
+    }
+
+    90% {
+      transform: translate3d(0,0,0)
+    }
+
+    to {
+      transform: translateZ(0)
+    }
+  }
+  .wrapper-content-text{
+    width: 930px;
   }
 }
 

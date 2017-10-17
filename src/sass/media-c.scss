@@ -511,6 +511,32 @@
       }
     }
   }
+  .container-central-txt {
+    .wrapper-content-text{
+      padding: 40px 30px;
+      width: 100%;
+    }
+  }
+  .container-header {
+    .wrapper-header{
+      padding: 40px 30px;
+      h1{
+        left: 30px;
+      }
+    }
+  }
+  .block-text-inside {
+    .wrapper-text-inside {
+      .block-text-inside {
+        .block-text-inside_title{
+          font-size: 22px;
+        }
+        .block-text-inside_txt{
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1207px){
