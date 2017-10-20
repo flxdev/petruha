@@ -775,7 +775,18 @@
       cursor: pointer;
     }
     .btn-cycle.op-100{
-      opacity: 1;
+      .block-point{
+        fill: #39B54A;
+        opacity: 1;
+      }
+      .block-point-icon{
+        path{
+          fill: white;
+        }
+      }
+      .ic-1{
+        fill: white;
+      }
     }
   }
 }

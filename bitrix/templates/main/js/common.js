@@ -674,55 +674,6 @@ function initShare() {
     }
 }
 
-// function initDropzoneCompany(){
-//     Dropzone.options.myAwesomeDropzone = {
-//         paramName: "file",
-//         uploadMultiple: true,
-//         addRemoveLinks: true,
-//         maxFilesize: 10,
-//         previewsContainer: '#preview-template',
-//         accept: function(file, done) {
-//             if (file.name == "justinbieber.jpg") {
-//                 done("Naha, you don't.");
-//             }
-//             else { done(); }
-//         },
-//         init: function() {
-//             // var myDropzone = this;
-//             // $(".submit-all").click(function (e) {
-//             //     e.preventDefault();
-//             //     e.stopPropagation();
-//             //     myDropzone.processQueue();
-//             // });
-//             // this.on("error", function() {
-//             //     $('#myAwesomeDropzone').find('.dz-message_waring').addClass('dis-error');
-//             //     $('#myAwesomeDropzone').find('.dz-message_error').removeClass('dis-error');
-//             // });
-//         }
-//     };
-//
-//     Dropzone.options.myAwesomeDropzone2 = {
-//         paramName: "file",
-//         uploadMultiple: true,
-//         dictDefaultMessage:'Attach file',
-//         addRemoveLinks: true,
-//         maxFilesize: 10,
-//         previewsContainer: '#preview-template2',
-//         accept: function(file, done) {
-//             if (file.name == "justinbieber.jpg") {
-//                 done("Naha, you don't.");
-//             }
-//             else { done(); }
-//         },
-//         // init: function() {
-//         //     this.on("error", function() {
-//         //         $('#myAwesomeDropzone2').find('.dz-message_waring').addClass('dis-error');
-//         //         $('#myAwesomeDropzone2').find('.dz-message_error').removeClass('dis-error');
-//         //     });
-//         // }
-//     };
-// }
-
 
 // @todo move to git
 Dropzone.autoDiscover = false;
@@ -736,7 +687,7 @@ function initDropzoneCompany() {
         dictFileTooBig: 'Файл слишком большой',
         dictResponseError: 'Сервер ответил с ошибкой',
         dictInvalidFileType: 'Неверный тип файла',
-        previewsContainer: '#preview-template',
+        // previewsContainer: '#preview-template',
         acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
         init: function () {
             this.on("removedfile", function (file) {
@@ -746,10 +697,18 @@ function initDropzoneCompany() {
                     data: "del=" + file['name'] + '&action=FILE',
                     dataType: "html"
                 });
-                this.on("error", function () {
-                    $(this).find('.dz-message_waring').addClass('dis-error');
-                    $(this).find('.dz-message_error').removeClass('dis-error');
-                });
+            });
+            this.on("error", function () {
+                $(this).find('.dz-message_waring').addClass('dis-error');
+                $(this).find('.dz-message_error').removeClass('dis-error');
+            });
+            this.on('resetFiles', function () {
+                if (this.files.length !== 0) {
+                    for (i = 0; i < this.files.length; i++) {
+                        this.files[i].previewElement.remove();
+                    }
+                    this.files.length = 0;
+                }
             });
         },
         sending: function (file, xhr, formData) {

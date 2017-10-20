@@ -619,6 +619,32 @@
   }
 }
 
+.wrapper-dropzone{
+  .dz-image{
+    display: none;
+  }
+  .dz-details {
+    float: left;
+    .dz-size{
+      float: right;
+      padding-top: 1px;
+    }
+    .dz-filename{
+      max-width: 210px;
+    }
+  }
+  .dz-success-mark, .dz-error-mark{
+    display: none;
+  }
+  .dz-preview{
+    position: relative;
+    width: 300px;
+  }
+  .dz-remove{
+    margin-top: 8px;
+  }
+}
+
 .btn-form.radius{
   border-radius: 30px;
 }

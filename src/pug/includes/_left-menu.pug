@@ -145,7 +145,7 @@
                 .wrapper-white-feedback
                     .wrapper-white-feedback_title Форма обратной связи
                     .wrapper-white-feedback_form
-                        form.js-form.dropzone#myAwesomeDropzone2(action="/" method="" enctype="multipart/form-data")
+                        form.js-form.dropzone(action="/" method="" enctype="multipart/form-data" data-zone="#preview-template1")
                             .box-input
                                 .form-label
                                     label.input-label ФИО<span>*</span>
@@ -183,13 +183,6 @@
                             .box-dropzon-btn
                                 .wrapper-dropzone
                                     .box-add-file
-                                        #preview-template2
-                                            .dz-preview.dz-file-preview
-                                                .dz-details
-                                                    .dz-filename
-                                                        span(data-dz-name)
-                                                    .dz-size(data-dz-size)
-                                                    img.img-none(data-dz-thumbnail)
                                         .dz-default.dz-message
                                             span.icon-add-file
                                                 <svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">

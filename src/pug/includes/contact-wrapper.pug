@@ -18,7 +18,7 @@ section.container-central-unit.gray
             #tab-contacts-1.container-contact.tabs-content.current-t
                 .wrapper-contact_big-title Форма связи со службами для Беларуси и России
                 .wrapper-white-feedback_form
-                    form.js-form.dropzone(action="/" method="" enctype="multipart/form-data" data-modal="#success-form")
+                    form.js-form.dropzone(action="/" method="" enctype="multipart/form-data" data-modal="#success-form" data-zone="#preview-template2")
                         .box-input
                             .form-label
                                 label.input-label ФИО<span>*</span>
@@ -54,15 +54,8 @@ section.container-central-unit.gray
                                 textarea.textarea-box(data-validation="required length" data-validation-length='min3' data-validation-error-msg="Неверно введены данные")
 
                         .box-dropzon-btn
-                            .wrapper-dropzone#myAwesomeDropzone
+                            .wrapper-dropzone(data-wrapper-zone="2")
                                 .box-add-file
-                                    #preview-template
-                                        .dz-preview.dz-file-preview
-                                            .dz-details
-                                                .dz-filename
-                                                    span(data-dz-name)
-                                                .dz-size(data-dz-size)
-                                                img.img-none(data-dz-thumbnail)
                                     .dz-default.dz-message.submit-all
                                         span.icon-add-file
                                             <svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">
