@@ -1,0 +1,89 @@
+section.container-central-unit.gray
+    .wrapper-central-unit
+        .container-contact-row
+            .container-tabs-btn.row-tabs-company
+                .tabs-link(data-tab-c="tab-lk-1") Промо акция
+                .tabs-link.current-t(data-tab-c="tab-lk-2") Персональные данные
+
+            #tab-lk-1.container-contact.tabs-content
+
+            #tab-lk-2.container-contact.tabs-content.current-t
+                .wrapper-lk_form
+                    form.js-form(data-modal="#success-form-save")
+                        .wrapper-lk_form-row
+                            .box-input
+                                .form-label
+                                    label.input-label Фамилия
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные" value="Симонян").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label Имя
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные" value="Арсений").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label Отчество
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные" value="Арсений").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label Телефон
+                                .form-input
+                                    input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Неверно введены данные" value="+ 375(29)8565544").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label E-mail
+                                .form-input
+                                    input(type="text" name="email" data-validation="email" data-validation-error-msg="Неверно введены данные" value="simon@mail.ru").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label Пароль
+                                .form-input
+                                    input(type="password" data-validation="length" data-validation-length="min2" data-validation-error-msg="Неверно введены данные" value="pass").input-box
+                                .btn-change-pass Изменить пароль
+
+                            .box-input.new-pass.display-none
+                                .form-label
+                                    label.input-label Повторить пароль
+                                .form-input
+                                    input(type="password" data-validation="length" data-validation-length="min2" data-validation-error-msg="Неверно данные").input-box
+
+                        .wrapper-lk_form-row
+                            .box-input
+                                .form-label
+                                    label.input-label Населенный пункт
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные" value="Минск").input-box
+
+                            .box-input
+                                .form-label
+                                    label.input-label Улица
+                                .form-input
+                                    input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные" value="Сурганова").input-box
+
+                            .box-input
+                                .box-input
+                                    .form-label
+                                        label.input-label Дом
+                                    .form-input
+                                        input(data-validation="length  required" type="text" data-validation-length='min1' data-validation-error-msg=" " value="152").input-box
+
+                                .box-input
+                                    .form-label
+                                        label.input-label Корпус
+                                    .form-input
+                                        input(data-validation="length  required" type="text" data-validation-length='min1' data-validation-error-msg=" " value="-").input-box
+
+                                .box-input
+                                    .form-label
+                                        label.input-label Квартира
+                                    .form-input
+                                        input(data-validation="length  required" type="text" data-validation-length='min1' data-validation-error-msg=" " value="155").input-box
+
+                        button(type='submit').btn-form.disabled-btn.js-save Сохранить изменения

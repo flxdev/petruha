@@ -175,6 +175,7 @@ h1{
   animation-name: bounceInUp;
   animation-duration: 1.6s;
   animation-fill-mode: both;
+  background: white;
   @keyframes bounceInUp {
     0%,60%,75%,90%,to {
       animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -1364,6 +1365,36 @@ slideRightNone
 
 .container-stock{
   font-size: 0;
+  animation-name: bounceInUp;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  @keyframes bounceInUp {
+    0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0,3000px,0)
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0,-20px,0)
+    }
+
+    75% {
+      transform: translate3d(0,10px,0)
+    }
+
+    90% {
+      transform: translate3d(0,0,0)
+    }
+
+    to {
+      transform: translateZ(0)
+    }
+  }
 }
 
 .tooltip {
@@ -1404,7 +1435,7 @@ slideRightNone
   width: 220px;
 }
 
-#success-form{
+#success-form, #success-form-save{
   width: 450px;
   padding: 48px 50px 48px 48px;
   .success-form_title{
@@ -1439,3 +1470,16 @@ slideRightNone
   height: 100%;
 }
 
+.out{
+  min-height: 75vh;
+}
+
+.display-none{
+  display: none !important;
+}
+
+.disabled-btn{
+  background-color: #e1e1e1 !important;
+  color: #ffffff;
+  pointer-events: none;
+}

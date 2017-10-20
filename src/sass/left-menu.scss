@@ -68,10 +68,16 @@
   }
   li.active{
     border-left: 3px solid #eb1c24;
+    .active-link{
+      transition: all .4s ease-out;
+    }
     &:hover{
       background-color: white;
       .box-hover-menu{
         color: #eb1c24;
+      }
+      .active-link{
+        color: white;
       }
     }
   }
@@ -423,6 +429,15 @@
         }
       }
     }
+  }
+  .btn-change-pass{
+    text-align: right;
+    @include fontOpenSans300;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #39b54a;
+    cursor: pointer;
+    margin-top: 7px;
   }
 }
 

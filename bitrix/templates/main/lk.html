@@ -505,60 +505,127 @@
             <div class="container-header" style="background-image:url('img/bg/bg-contact.jpg');">
               <div class="wrapper-header">
                 <div class="bread-crumbs"><a href="#">Главная</a></div>
-                <h1>Продукты</h1>
+                <h1>Личный кабинет</h1>
               </div>
             </div>
-            <section class="container-central-unit">
+            <section class="container-central-unit gray">
               <div class="wrapper-central-unit">
-                <div class="container-tabs-btn row-tabs">
-                  <div class="tabs-link current-t" data-tab-c="tab-c-1">Все</div>
-                  <div class="tabs-link" data-tab-c="tab-c-2">"Петруха"</div>
-                  <div class="tabs-link" data-tab-c="tab-c-3">"Петруха Мастер"</div>
-                  <div class="tabs-link" data-tab-c="tab-c-4">"Петруха Просто"</div>
-                  <div class="tabs-link" data-tab-c="tab-c-5">"Петруха Микс"</div>
-                  <div class="tabs-link" data-tab-c="tab-c-6">"Петруха Халяль"</div>
-                </div>
-                <div class="container-product">
-                  <div class="block-product">
-                    <div class="wrapper-product"><a class="central-title" href="#"><span class="central-title_txt">Продукты</span><span class="central-title_icon"></span></a>
-                      <div class="central-text">Любой продукт ТМ «Петруха» — основа здорового питания. Мы заботимся о здоровье наших покупателей и контролируем качество продукции на всех этапах производства.</div>
+                <div class="container-contact-row">
+                  <div class="container-tabs-btn row-tabs-company">
+                    <div class="tabs-link" data-tab-c="tab-lk-1">Промо акция</div>
+                    <div class="tabs-link current-t" data-tab-c="tab-lk-2">Персональные данные</div>
+                  </div>
+                  <div class="container-contact tabs-content" id="tab-lk-1"></div>
+                  <div class="container-contact tabs-content current-t" id="tab-lk-2">
+                    <div class="wrapper-lk_form">
+                      <form class="js-form" data-modal="#success-form-save">
+                        <div class="wrapper-lk_form-row">
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Фамилия</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Неверно введены данные" value="Симонян">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Имя</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Неверно введены данные" value="Арсений">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Отчество</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Неверно введены данные" value="Арсений">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Телефон</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Неверно введены данные" value="+ 375(29)8565544">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">E-mail</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" type="text" name="email" data-validation="email" data-validation-error-msg="Неверно введены данные" value="simon@mail.ru">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Пароль</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" type="password" data-validation="length" data-validation-length="min2" data-validation-error-msg="Неверно введены данные" value="pass">
+                            </div>
+                            <div class="btn-change-pass">Изменить пароль</div>
+                          </div>
+                          <div class="box-input new-pass display-none">
+                            <div class="form-label">
+                              <label class="input-label">Повторить пароль</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" type="password" data-validation="length" data-validation-length="min2" data-validation-error-msg="Неверно данные">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wrapper-lk_form-row">
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Населенный пункт</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Неверно введены данные" value="Минск">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="form-label">
+                              <label class="input-label">Улица</label>
+                            </div>
+                            <div class="form-input">
+                              <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Неверно введены данные" value="Сурганова">
+                            </div>
+                          </div>
+                          <div class="box-input">
+                            <div class="box-input">
+                              <div class="form-label">
+                                <label class="input-label">Дом</label>
+                              </div>
+                              <div class="form-input">
+                                <input class="input-box" data-validation="length  required" type="text" data-validation-length="min1" data-validation-error-msg=" " value="152">
+                              </div>
+                            </div>
+                            <div class="box-input">
+                              <div class="form-label">
+                                <label class="input-label">Корпус</label>
+                              </div>
+                              <div class="form-input">
+                                <input class="input-box" data-validation="length  required" type="text" data-validation-length="min1" data-validation-error-msg=" " value="-">
+                              </div>
+                            </div>
+                            <div class="box-input">
+                              <div class="form-label">
+                                <label class="input-label">Квартира</label>
+                              </div>
+                              <div class="form-input">
+                                <input class="input-box" data-validation="length  required" type="text" data-validation-length="min1" data-validation-error-msg=" " value="155">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn-form disabled-btn js-save" type="submit">Сохранить изменения</button>
+                      </form>
                     </div>
-                  </div><a class="block-product" href="#"><img class="block-product-img" src="img/product/img-4.jpg" alt="">
-                    <div class="wrapper-product">
-                      <div class="wrapper-product_logo" style="background-image:url(&quot;img/logo-product/logo-1.jpg&quot;);"></div>
-                      <div class="wrapper-product_text">
-                        <div class="wrapper-product_text-title">КАЧЕСТВО <br> И НАТУРАЛЬНОСТЬ</div>
-                        <div class="wrapper-product_text-txt">от кормов до готового продукта</div>
-                      </div>
-                    </div></a><a class="block-product" href="#"><img class="block-product-img" src="img/product/img-2.jpg" alt="">
-                    <div class="wrapper-product">
-                      <div class="wrapper-product_logo" style="background-image:url(&quot;img/logo-product/logo-2.png&quot;);"></div>
-                      <div class="wrapper-product_text">
-                        <div class="wrapper-product_text-title">ВСЕГДА <br> ПОЛУЧАЕТСЯ</div>
-                        <div class="wrapper-product_text-txt"></div>
-                      </div>
-                    </div></a><a class="block-product" href="#"><img class="block-product-img" src="img/product/img-5.jpg" alt="">
-                    <div class="wrapper-product">
-                      <div class="wrapper-product_logo" style="background-image:url(&quot;img/logo-product/logo-3.png&quot;);"></div>
-                      <div class="wrapper-product_text">
-                        <div class="wrapper-product_text-title">ПРОСТЫЕ <br> РЕШЕНИЯ</div>
-                        <div class="wrapper-product_text-txt">на каждый день</div>
-                      </div>
-                    </div></a><a class="block-product" href="#"><img class="block-product-img" src="img/product/img-1.jpg" alt="">
-                    <div class="wrapper-product">
-                      <div class="wrapper-product_logo" style="background-image:url(&quot;img/logo-product/logo-4.png&quot;);"></div>
-                      <div class="wrapper-product_text">
-                        <div class="wrapper-product_text-title">ВЫГОДНАЯ <br>ПОКУПКА</div>
-                        <div class="wrapper-product_text-txt">для большой семьи</div>
-                      </div>
-                    </div></a><a class="block-product" href="#"><img class="block-product-img" src="img/product/img-3.jpg" alt="">
-                    <div class="wrapper-product">
-                      <div class="wrapper-product_logo" style="background-image:url(&quot;img/logo-product/logo-1.jpg&quot;);"></div>
-                      <div class="wrapper-product_text">
-                        <div class="wrapper-product_text-title">КАЧЕСТВО <br> И НАТУРАЛЬНОСТЬ</div>
-                        <div class="wrapper-product_text-txt">от кормов до готового продукта</div>
-                      </div>
-                    </div></a>
+                  </div>
                 </div>
               </div>
             </section>

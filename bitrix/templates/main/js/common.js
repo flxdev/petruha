@@ -128,8 +128,10 @@ function initSetting() {
 
 var globalSetting = [];
 
-
+// @todo success popup
 function formResponse(form) {
+    var findPopup = form.is('[data-modal]');
+    var openPopup = form.data('modal');
     if (form.closest('.wrapper-white-feedback').length) {
         var cont = form.closest('.wrapper-white-feedback'),
             resp = cont.next('.response');
@@ -139,8 +141,12 @@ function formResponse(form) {
             });
         }
     }
-
-    $('.btn-form').fancybox();
+    else if(findPopup == true){
+        $.fancybox.open({
+            src: openPopup,
+            type : 'inline'
+        });
+    }
 }
 
 function initValidForm() {
@@ -417,6 +423,11 @@ function initClosePopup() {
                 'pointer-events': 'initial',
                 'opacity': '1'
             });
+
+            // @todo move to git
+            if(typeof arParams !== undefined){
+                window.history.pushState(null, null,  arParams.URI);
+            }
         }
         e.stopPropagation();
     })
@@ -663,53 +674,88 @@ function initShare() {
     }
 }
 
-function initDropzoneCompany(){
-    Dropzone.options.myAwesomeDropzone = {
-        paramName: "file",
-        uploadMultiple: true,
-        addRemoveLinks: true,
-        maxFilesize: 10,
-        previewsContainer: '#preview-template',
-        accept: function(file, done) {
-            if (file.name == "justinbieber.jpg") {
-                done("Naha, you don't.");
-            }
-            else { done(); }
-        },
-        init: function() {
-            // var myDropzone = this;
-            // $(".submit-all").click(function (e) {
-            //     e.preventDefault();
-            //     e.stopPropagation();
-            //     myDropzone.processQueue();
-            // });
-            // this.on("error", function() {
-            //     $('#myAwesomeDropzone').find('.dz-message_waring').addClass('dis-error');
-            //     $('#myAwesomeDropzone').find('.dz-message_error').removeClass('dis-error');
-            // });
-        }
-    };
+// function initDropzoneCompany(){
+//     Dropzone.options.myAwesomeDropzone = {
+//         paramName: "file",
+//         uploadMultiple: true,
+//         addRemoveLinks: true,
+//         maxFilesize: 10,
+//         previewsContainer: '#preview-template',
+//         accept: function(file, done) {
+//             if (file.name == "justinbieber.jpg") {
+//                 done("Naha, you don't.");
+//             }
+//             else { done(); }
+//         },
+//         init: function() {
+//             // var myDropzone = this;
+//             // $(".submit-all").click(function (e) {
+//             //     e.preventDefault();
+//             //     e.stopPropagation();
+//             //     myDropzone.processQueue();
+//             // });
+//             // this.on("error", function() {
+//             //     $('#myAwesomeDropzone').find('.dz-message_waring').addClass('dis-error');
+//             //     $('#myAwesomeDropzone').find('.dz-message_error').removeClass('dis-error');
+//             // });
+//         }
+//     };
+//
+//     Dropzone.options.myAwesomeDropzone2 = {
+//         paramName: "file",
+//         uploadMultiple: true,
+//         dictDefaultMessage:'Attach file',
+//         addRemoveLinks: true,
+//         maxFilesize: 10,
+//         previewsContainer: '#preview-template2',
+//         accept: function(file, done) {
+//             if (file.name == "justinbieber.jpg") {
+//                 done("Naha, you don't.");
+//             }
+//             else { done(); }
+//         },
+//         // init: function() {
+//         //     this.on("error", function() {
+//         //         $('#myAwesomeDropzone2').find('.dz-message_waring').addClass('dis-error');
+//         //         $('#myAwesomeDropzone2').find('.dz-message_error').removeClass('dis-error');
+//         //     });
+//         // }
+//     };
+// }
 
-    Dropzone.options.myAwesomeDropzone2 = {
-        paramName: "file",
+
+// @todo move to git
+Dropzone.autoDiscover = false;
+
+function initDropzoneCompany() {
+    $('.wrapper-dropzone').dropzone({
+        url: "/",
         uploadMultiple: true,
-        dictDefaultMessage:'Attach file',
         addRemoveLinks: true,
         maxFilesize: 10,
-        previewsContainer: '#preview-template2',
-        accept: function(file, done) {
-            if (file.name == "justinbieber.jpg") {
-                done("Naha, you don't.");
-            }
-            else { done(); }
+        dictFileTooBig: 'Файл слишком большой',
+        dictResponseError: 'Сервер ответил с ошибкой',
+        dictInvalidFileType: 'Неверный тип файла',
+        previewsContainer: '#preview-template',
+        acceptedFiles: ".doc,.docx,.pdf,.txt,image/*",
+        init: function () {
+            this.on("removedfile", function (file) {
+                $.ajax({
+                    type: "POST",
+                    url: "/",
+                    data: "del=" + file['name'] + '&action=FILE',
+                    dataType: "html"
+                });
+                this.on("error", function () {
+                    $(this).find('.dz-message_waring').addClass('dis-error');
+                    $(this).find('.dz-message_error').removeClass('dis-error');
+                });
+            });
         },
-        // init: function() {
-        //     this.on("error", function() {
-        //         $('#myAwesomeDropzone2').find('.dz-message_waring').addClass('dis-error');
-        //         $('#myAwesomeDropzone2').find('.dz-message_error').removeClass('dis-error');
-        //     });
-        // }
-    };
+        sending: function (file, xhr, formData) {
+            formData.append('action', 'FILE');
+        }
+    });
 }
 
 function initSwiperIngredients() {
@@ -749,9 +795,46 @@ function initCycleSchedule() {
         $('.block-cycle_schedule-text').text(txt);
         $('.wrapper-slider-production li').eq( $(this).data('cycle-eq') ).click();
     });
-
 }
 
+function initLk() {
+    $('.btn-change-pass').on('click', function () {
+        $(this).closest('.box-input').find('.input-box').css({
+            "pointer-events": "auto"
+        }).focus();
+    })
+}
+
+function initNewPassLk() {
+    $('.btn-change-pass').on('click', function () {
+        $('.new-pass').removeClass('display-none');
+        $('.js-save').removeClass('disabled-btn');
+        $('.new-pass').find('.input-box').css({
+            "pointer-events": "auto"
+        })
+    });
+
+    $('.js-form').each(function () {
+       // var disBtn = $(this).hasClass('disabled-btn');
+        var disBtn = $('.disabled-btn').length;
+        if (disBtn === 1){
+            $('.input-box').focus(function () {
+                $('.btn-form').removeClass('disabled-btn');
+            })
+        }
+    })
+}
+
+function initColorBody() {
+    $(".gray").each(function() {
+        var eachBlock = $(this).length;
+        if(eachBlock === 1){
+            $('body').addClass('gray')
+        }
+    });
+}
+
+initColorBody();
 
 $(window).on('resize', function () {
     initHeightSliderPreview();
@@ -781,10 +864,12 @@ document.addEventListener('DOMContentLoaded', function () {
     initProductSelect();
     initClosePopup();
     initNewPass();
+    initNewPassLk()
     initHeightSliderPreview();
     initTooltip();
     // initShare();
     initProductionCycle();
     initTabsCompany();
     initCycleSchedule();
+    initLk();
 });
