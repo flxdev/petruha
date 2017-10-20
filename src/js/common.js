@@ -5,6 +5,7 @@ function initSliderHeader() {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 30,
+        simulateTouch: false,
         speed: 900,
     });
 }
@@ -462,6 +463,7 @@ function initSwiperCompany() {
         prevButton: '.swiper-button-prev',
         spaceBetween: 30,
         effect: 'fade',
+        simulateTouch: false,
         fade: {
             crossFade: true
         },
@@ -594,6 +596,7 @@ function initSwiperProduct1() {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         spaceBetween: 30,
+        simulateTouch: false
     });
 }
 
@@ -727,7 +730,8 @@ function initSwiperIngredients() {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        simulateTouch: false
     });
 }
 
