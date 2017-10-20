@@ -717,6 +717,11 @@ function initDropzoneCompany() {
     });
 }
 
+function clearDropzone() {
+    var obj = Dropzone.forElement("div.wrapper-dropzone.dz-started");
+    obj.emit("resetFiles");
+}
+
 function initSwiperIngredients() {
     var mySwiper = new Swiper('.swiper-container-ingredients', {
         nextButton: '.swiper-button-next',
