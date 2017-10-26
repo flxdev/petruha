@@ -378,10 +378,13 @@
       line-height: 1.5;
       text-align: left;
       color: #000000;
-      @include hover-time-all;
+      @include hover-time-run;
       padding: 12px 15px;
       &:focus{
         border-color: #39b54a;
+      }
+      &:focus:hover{
+        background-color: white;
       }
       &:hover{
         background-color: #f9f9f9;
@@ -420,12 +423,18 @@
       .select2-selection--single{
         .select2-selection__arrow{
           top: 10px;
+          b{
+            border-color: #b5b3b3 transparent transparent;
+            margin-left: -15px;
+            margin-top: -1px;
+            border-width: 7px 6px 0;
+          }
         }
         .select2-selection__rendered{
           @include fontOpenSans300;
           font-size: 16px;
           padding-left: 15px;
-          line-height: 50px;
+          line-height: 47px;
         }
       }
     }
@@ -455,7 +464,7 @@
 .select2-container--default{
   .select2-results__option[aria-selected=true]{
     background-color: inherit;
-    color: #000000;
+    //color: #000000;
   }
   .select2-results__option{
     background-color: inherit;
@@ -488,7 +497,7 @@
   line-height: 1;
   text-align: left;
   color: #ffffff;
-  padding: 15px 40px 17px 40px;
+  padding: 15px 40px 16px 40px;
   border-radius: 2px;
   background-color: #39b54a;
   @include hover-time-run;
@@ -595,6 +604,7 @@
     color: black;
     @include hover-time-all;
     resize: none;
+    border-bottom: solid 1px #b5b3b3;
     &:focus{
       border-color: #39b54a;
     }

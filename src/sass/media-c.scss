@@ -537,6 +537,13 @@
       }
     }
   }
+  .block-info-list:nth-child(3) {
+    .wrapper-block-info_text {
+      .two-block{
+        top: 50px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1207px){

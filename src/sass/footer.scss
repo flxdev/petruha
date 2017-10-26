@@ -4,9 +4,9 @@
   padding: 50px 60px;
   background: white;
   @include hover-time-all;
-  animation-name: bounceInUp;
-  animation-duration: 1.8s;
-  animation-fill-mode: both;
+  //animation-name: bounceInUp;
+  //animation-duration: 1.8s;
+  //animation-fill-mode: both;
   @keyframes bounceInUp {
     0%,60%,75%,90%,to {
       animation-timing-function: cubic-bezier(.215,.61,.355,1)

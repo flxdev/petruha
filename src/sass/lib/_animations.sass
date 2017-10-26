@@ -1,0 +1,261 @@
+//animations
+.animated
+	&.main-screen-title
+		animation: fadeInDown 1s ease-out 0.2s both
+	&.title-wrapper
+		animation-delay: 0s
+		animation-duration: 2s
+		animation-fill-mode: none
+	&.screen-link-text
+		animation: linkText 1s ease-out both
+	&.line
+		animation: vertLine 1s ease-in-out 0.3s both
+	&.line.lineTwo
+		animation: vertLineTwo 1s ease-in-out 0.5s both
+
+@keyframes zoomOut
+	from
+		transform: scale(1)
+	to
+		transform: scale(0.7)
+
+.bgMoveUp
+	animation: bgMoveUp 250s linear
+	animation-iteration-count: infinite
+
+@keyframes bgMoveUp
+	0
+		background-position: 0 0
+	100%
+		background-position: 0 100000%
+
+.slideBrand
+	animation: slideBrand 0.35s ease-in-out
+
+@keyframes slideBrand
+	from
+		opacity: 0.1
+	to
+		opacity: 1
+
+.slideBrandOut
+	animation: slideBrandOut 0.35s ease-in-out
+
+@keyframes slideBrandOut
+	from
+		opacity: 0.2
+	to
+		opacity: 0
+
+
+.fadeInDownMenu
+	animation-name: fadeInDownMenu
+	animation-duration: 1s
+	animation-delay: 0.1s
+	animation-fill-mode: both
+
+@keyframes fadeInDownMenu
+	from
+		opacity: 0
+		transform: translatey(-40px)
+	to
+		opacity: 1
+		transform: translatey(0px)
+
+@keyframes fadeInLeft
+	from
+		opacity: 0
+		transform: translate(0,-40px)
+	to
+		opacity: 1
+		transform: translate(0,0px)
+
+@keyframes fadeInLeft
+	from
+		opacity: 0
+		transform: translate(0,-40px)
+	to
+		opacity: 1
+		transform: translate(0,0px)
+
+@keyframes linkText
+	from
+		opacity: 0
+		transform: translate(0, 40px)
+	to
+		opacity: 1
+		transform: translate(0,0)
+
+@keyframes vertLine
+	from
+		transform: translate(0, 100vh)
+		opacity: 1
+	to
+		transform: translate(0, 0)
+		opacity: 0.2
+
+@keyframes vertLineTwo
+	from
+		transform: translate(0, -100vh)
+		opacity: 1
+	to
+		transform: translate(0, 0)
+		opacity: 0.2
+
+@keyframes fadeOutUp
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translate3d(0, -15px, 0)
+
+.fadeOutUp
+  animation-name: fadeOutUp
+
+.animated
+	animation-duration: 0.7s
+	animation-fill-mode: both
+	&.infinite
+		animation-iteration-count: infinite 
+
+
+
+.fadeIn
+	animation-name: fadeIn
+
+@keyframes fadeInDown
+	from
+		opacity: 0
+		transform: translate3d(0, -15px, 0)
+
+	to
+		opacity: 1
+		transform: none
+
+
+.fadeInDown
+	animation-name: fadeInDown
+
+
+@keyframes fadeInDownFast
+	from
+		opacity: 0
+		transform: translate3d(0, -15px, 0)
+
+	to
+		opacity: 1
+		transform: none
+
+
+.fadeInDownFast
+	animation-name: fadeInDownFast
+	animation-duration: 0.15s!important
+
+
+@keyframes fadeInLeft
+	from
+		opacity: 0
+		transform: translate3d(-15px, 0, 0)
+
+	to
+		opacity: 1
+		transform: none
+
+
+.fadeInLeftLong
+	&:after
+		animation-name: fadeInLeftLong
+		animation-duration: 0.5s
+		animation-delay: 0.1s
+		animation-fill-mode: both
+		animation-timing-function: ease-in-out
+
+
+@keyframes fadeInLeftLong
+	from
+		opacity: 0
+		width: 0
+
+	to
+		opacity: 1
+		width: 100%
+
+
+.fadeInLeft
+	animation-name: fadeInLeft
+
+@keyframes fadeInRight
+	from
+		opacity: 0
+		transform: translate3d(15px, 0, 0)
+
+	to
+		opacity: 1
+		transform: none
+
+.fadeInRight
+	animation-name: fadeInRight
+
+
+@keyframes fadeInUp
+	from
+		opacity: 0
+		transform: translate3d(0, 15px, 0)
+	to
+		opacity: 1
+		transform: none
+
+.fadeInUp
+	animation-name: fadeInUp
+
+
+
+.rotateIn
+	animation-name: rotateIn
+
+
+@keyframes rotateIn
+	from
+		transform-origin: center
+		transform: rotate3d(0, 0, 1, -200deg) scale(0.1)
+		opacity: 0
+	to
+		transform-origin: center
+		transform: none
+		opacity: 1
+
+
+.scaleIn
+	animation-name: scaleIn
+
+
+@keyframes scaleIn
+	from
+		transform-origin: center
+		transform: scale(0.1)
+		opacity: 0
+	to
+		transform-origin: center
+		transform: none
+		opacity: 1
+
+*
+	+r(992)
+		.animated, .animateThis
+			/*CSS transitions*/
+			opacity: 1
+			-o-transition-property: none !important
+			-moz-transition-property: none !important
+			-webkit-transition-property: none !important
+			transition-property: none !important
+			/*CSS transforms*/
+			-o-transform: none !important
+			-moz-transform: none !important
+			-ms-transform: none !important
+			-webkit-transform: none !important
+			transform: none !important
+			/*CSS animations*/
+			-webkit-animation: none !important
+			-moz-animation: none !important
+			-o-animation: none !important
+			animation: none !important

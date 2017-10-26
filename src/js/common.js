@@ -129,7 +129,7 @@ function initSetting() {
 
 var globalSetting = [];
 
-// @todo success popup
+
 function formResponse(form) {
     var findPopup = form.is('[data-modal]');
     var openPopup = form.data('modal');
@@ -425,10 +425,10 @@ function initClosePopup() {
                 'opacity': '1'
             });
 
-            // @todo move to git
-            if(typeof arParams !== undefined){
-                window.history.pushState(null, null,  arParams.URI);
-            }
+
+            // if(typeof arParams !== undefined){
+            //     window.history.pushState(null, null,  arParams.URI);
+            // }
         }
         e.stopPropagation();
     })
@@ -538,7 +538,7 @@ function initSelectMulti() {
             $(this).closest('.button-dropdown').find('.filter-clear').removeClass('open-clear')
         }
         $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
-        ajaxFilter($(this));
+        // ajaxFilter($(this));
     });
 
     $('.filter-clear').on('click', function(){
@@ -550,7 +550,7 @@ function initSelectMulti() {
             $(this).closest('.block-filter').find('.SelectBox > label').removeClass('filter-clear-this');
         }
         $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
-        ajaxFilter($(this));
+        // ajaxFilter($(this));
     });
 
     $('.button-reset-filter').on('click', function(){
@@ -563,7 +563,7 @@ function initSelectMulti() {
         for(var i=0; i<num; i++){
             $('.filter-sel')[i].sumo.unSelectAll(i);
         }
-        ajaxFilter($(this));
+        // ajaxFilter($(this));
     });
 
     $('.btnOk').on('click', function () {
@@ -579,7 +579,7 @@ function initSelectMulti() {
             $(this).closest('.button-dropdown').find('.filter-true > span').attr('data-before',filterTxt);
             $(this).closest('.button-dropdown').find('.filter-clear').addClass('open-clear')
         }
-        ajaxFilter($(this));
+        // ajaxFilter($(this));
     });
 
     $('.block-filter select').each(function (i, select) {
@@ -678,7 +678,6 @@ function initShare() {
 }
 
 
-// @todo move to git
 Dropzone.autoDiscover = false;
 
 function initDropzoneCompany() {
@@ -793,6 +792,13 @@ function initNewPassLk() {
     })
 }
 
+function initAnimation() {
+    inView.offset(0);
+    inView('.animateThis').on('enter', function (el) {
+        $(el).addClass('animated ' + $(el).data('anim'));
+    });
+}
+
 function initColorBody() {
     $(".gray").each(function() {
         var eachBlock = $(this).length;
@@ -813,7 +819,7 @@ initDropzoneCompany();
 
 document.addEventListener('DOMContentLoaded', function () {
     initSliderHeader();
-    initScrollOrdering();
+    // initScrollOrdering();
     initSetting();
     initMenu();
     initValidForm();
@@ -832,7 +838,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initProductSelect();
     initClosePopup();
     initNewPass();
-    initNewPassLk()
+    initNewPassLk();
     initHeightSliderPreview();
     initTooltip();
     // initShare();
@@ -840,4 +846,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initTabsCompany();
     initCycleSchedule();
     initLk();
+    initAnimation();
 });

@@ -17,3 +17,5 @@
 //=include lib/jquery.fancybox.min.js
 
 //=include lib/sticky-kit.min.js
+
+//=include lib/in-view.min.js

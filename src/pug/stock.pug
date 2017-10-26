@@ -6,7 +6,7 @@ block content
             .container-main
                 include includes/search-block
                 include includes/_header
-                section.container-block-info.gray
+                section.container-block-info.gray.animateThis(data-anim="fadeInUp")
                     .wrapper-central-unit
                         .container-row
                             .central-title
@@ -18,7 +18,7 @@ block content
                                     option(value='1') По популярности
                                     option(value='2') По цене
                                     option(value='3') По рейтингу
-                section.container-central-unit.gray
+                section.container-central-unit.gray.animateThis(data-anim="fadeInUp")
                     .ajax_container
                         .container-stock
                             a(href='#').block-info-list.js-big-popup

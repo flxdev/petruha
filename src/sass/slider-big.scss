@@ -3,9 +3,9 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
-  animation-name: bounceInUp;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  //animation-name: bounceInUp;
+  //animation-duration: 1s;
+  //animation-fill-mode: both;
   @keyframes bounceInUp {
     0%,60%,75%,90%,to {
       animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -38,27 +38,57 @@
     background-size: cover;
     background-position: center center;
     height: 500px;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
   }
   .swiper-pagination-bullet-active{
-    background-color: #eb1c24 !important;
+    &:before{
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: #eb1c24 !important;
+      border-radius: 50%;
+    }
   }
   .swiper-pagination-bullet{
-    background-color: white;
+    width: 17px;
+    height: 17px;
     opacity: 1;
+    background-color: inherit;
     @include hover-time-run;
-    &:hover{
+    &:before{
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+    &:hover:before{
       background-color: #eb1c24;
     }
   }
   .swiper-container-horizontal>.swiper-pagination-bullets{
-    bottom: 45px;
+    bottom: 35px;
     .swiper-pagination-bullet {
-      margin: 0 12px;
+      margin: 0 10px;
     }
   }
   .swiper-button-next{
     background-image: none;
-    width: 120px;
+    width: 90px;
     height: 100%;
     top: 0;
     right: 0;
@@ -86,7 +116,7 @@
   }
   .swiper-button-prev{
     background-image: none;
-    width: 120px;
+    width: 90px;
     height: 100%;
     top: 0;
     left: 0;
@@ -135,6 +165,7 @@
     line-height: 1;
     text-align: left;
     @include fontTTRoundsCondensedB;
+    display: inherit;
   }
   .wrapper-swiper-slide_txt{
     @include fontOpenSans300;
