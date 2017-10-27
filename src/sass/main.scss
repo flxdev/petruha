@@ -1354,6 +1354,16 @@ slideRightNone
     .ya-share2{
       margin-top: 5px;
     }
+    .ya-share2__container_size_m{
+      .ya-share2__item{
+        margin: 5px 10px 5px 0;
+      }
+      .ya-share2__icon{
+        height: 31px;
+        width: 33px;
+        background-size: 33px 31px;
+      }
+    }
     img{
       width: 100%;
     }

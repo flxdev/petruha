@@ -112,6 +112,7 @@
       width: 245px;
       .options{
         padding-top: 16px;
+        padding-bottom: 16px;
         li.opt{
           @include fontTTRoundsCondensedR;
           font-size: 16px;
@@ -250,8 +251,12 @@
   }
 }
 
-.button-reset-filter{
+.button-reset-filter.open-reset-filter{
   @include display-inline-middle;
+}
+
+.button-reset-filter{
+  display: none;
   @include fontTTRoundsCondensedR;
   font-size: 16px;
   font-stretch: condensed;
@@ -259,6 +264,7 @@
   color: #5e5e5e;
   cursor: pointer;
   margin-left: 30px;
+
   &:before{
     content: '';
     display: inline-block;
@@ -352,15 +358,17 @@
   width: 100%;
   position: relative;
   display: flex;
-  align-items: flex-start;
   margin-bottom: 25px;
-  .wrapper-content-text{
+  .container-recipes-info_txt{
     align-items: stretch;
     width: 65%;
+    position: relative;
+  }
+  .wrapper-content-text{
     padding: 40px 0 40px 60px;
     position: relative;
     margin-bottom: 55px;
-    height: 100%;
+    width: 100%;
     &:before{
       content: '';
       display: block;
@@ -374,8 +382,8 @@
   .wrapper-ingredients{
     align-items: stretch;
     width: 35%;
-    height: 100%;
     padding: 0 30px;
+    position: relative;
   }
 }
 
@@ -466,6 +474,16 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center center !important;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.4);
+    }
   }
   .swiper-button-next, .swiper-button-prev{
     background-image: none;
@@ -750,4 +768,10 @@
   text-align: left;
   color: #000000;
   margin-bottom: 15px;
+}
+
+.sticky-ingredients{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
 }

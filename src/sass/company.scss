@@ -730,6 +730,26 @@
       }
     }
   }
+  .slick-slide{
+
+  }
+  .slick-slide.slick-active{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+  }
+
+  @keyframes fadeInUpBig {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 2000px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 .box-slider-production{

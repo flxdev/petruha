@@ -4067,6 +4067,12 @@ slideRightNone
     width: 320px; }
     .wrapper-content-soc .box-soc .ya-share2 {
       margin-top: 5px; }
+    .wrapper-content-soc .box-soc .ya-share2__container_size_m .ya-share2__item {
+      margin: 5px 10px 5px 0; }
+    .wrapper-content-soc .box-soc .ya-share2__container_size_m .ya-share2__icon {
+      height: 31px;
+      width: 33px;
+      background-size: 33px 31px; }
     .wrapper-content-soc .box-soc img {
       width: 100%; }
   .wrapper-content-soc .box-link {
@@ -5359,7 +5365,8 @@ slideRightNone
       position: absolute;
       top: 20px;
       left: 20px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      z-index: 2; }
     .block-text-inside .wrapper-text-inside .wrapper-text-inside_img {
       width: 100%;
       position: relative;
@@ -6288,6 +6295,33 @@ slideRightNone
       border-radius: 100%; }
       .wrapper-slider-production .slick-dots li.slick-active button:before {
         display: none; }
+  .wrapper-slider-production .slick-slide.slick-active {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp; }
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
 
 .box-slider-production {
   width: 100%;
@@ -7090,7 +7124,8 @@ slideRightNone
       z-index: 5;
       width: 245px; }
       .button-dropdown .SumoSelect .optWrapper .options {
-        padding-top: 16px; }
+        padding-top: 16px;
+        padding-bottom: 16px; }
         .button-dropdown .SumoSelect .optWrapper .options li.opt {
           font-family: 'TTRoundsCondensed';
           font-weight: normal;
@@ -7203,9 +7238,12 @@ slideRightNone
     .filter-button-dropdown .filter_title:hover {
       color: #000000; }
 
-.button-reset-filter {
+.button-reset-filter.open-reset-filter {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle; }
+
+.button-reset-filter {
+  display: none;
   font-family: 'TTRoundsCondensed';
   font-weight: normal;
   font-size: 16px;
@@ -7300,21 +7338,19 @@ slideRightNone
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
   margin-bottom: 25px; }
-  .container-recipes-info .wrapper-content-text {
+  .container-recipes-info .container-recipes-info_txt {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
     width: 65%;
+    position: relative; }
+  .container-recipes-info .wrapper-content-text {
     padding: 40px 0 40px 60px;
     position: relative;
     margin-bottom: 55px;
-    height: 100%; }
+    width: 100%; }
     .container-recipes-info .wrapper-content-text:before {
       content: '';
       display: block;
@@ -7329,8 +7365,8 @@ slideRightNone
     -ms-flex-align: stretch;
     align-items: stretch;
     width: 35%;
-    height: 100%;
-    padding: 0 30px; }
+    padding: 0 30px;
+    position: relative; }
 
 .recipes-info-tabs {
   width: 100%; }
@@ -7402,6 +7438,15 @@ slideRightNone
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center center !important; }
+    .box-recipes-slider .swiper-slide:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); }
   .box-recipes-slider .swiper-button-next, .box-recipes-slider .swiper-button-prev {
     background-image: none; }
   .box-recipes-slider .swiper-button-next {
@@ -7649,6 +7694,11 @@ slideRightNone
   text-align: left;
   color: #000000;
   margin-bottom: 15px; }
+
+.sticky-ingredients {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
   *{

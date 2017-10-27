@@ -393,6 +393,8 @@ function initBigPopup() {
                 'opacity': '.7'
             });
             initSwiperIngredients();
+            initSticky();
+            initSwiperRecipes();
         }
     });
 }
@@ -550,6 +552,10 @@ function initSelectMulti() {
             $(this).closest('.block-filter').find('.SelectBox > label').removeClass('filter-clear-this');
         }
         $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
+
+        if($('.open-clear').length < 1){
+            $('.button-reset-filter').removeClass('open-reset-filter');
+        }
         ajaxFilter($(this));
     });
 
@@ -559,7 +565,7 @@ function initSelectMulti() {
         $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
         $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
         $('.block-filter').find('.filter-clear').removeClass('open-clear');
-
+        $('.button-reset-filter').removeClass('open-reset-filter');
         for(var i=0; i<num; i++){
             $('.filter-sel')[i].sumo.unSelectAll(i);
         }
@@ -577,7 +583,8 @@ function initSelectMulti() {
             $(this).closest('.button-dropdown').find('.SelectBox').addClass('filter-true');
             $(this).closest('.button-dropdown').find('.SelectBox > label').addClass('filter-clear-this');
             $(this).closest('.button-dropdown').find('.filter-true > span').attr('data-before',filterTxt);
-            $(this).closest('.button-dropdown').find('.filter-clear').addClass('open-clear')
+            $(this).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
+            $('.button-reset-filter').addClass('open-reset-filter');
         }
         ajaxFilter($(this));
     });
@@ -588,7 +595,8 @@ function initSelectMulti() {
         $(select).closest('.SumoSelect').find('.SelectBox').addClass('filter-true');
         $(select).closest('.SumoSelect').find('.SelectBox > span').attr('data-before',dataText);
         $(select).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
-    });
+        $('.button-reset-filter').addClass('open-reset-filter');
+    });;
 }
 
 function initSwiperProduct1() {
@@ -799,6 +807,10 @@ function initAnimation() {
     });
 }
 
+function initSticky() {
+    $('.sticky-ingredients').Stickyfill();
+}
+
 function initColorBody() {
     $(".gray").each(function() {
         var eachBlock = $(this).length;
@@ -847,4 +859,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initCycleSchedule();
     initLk();
     initAnimation();
+    initSticky();
 });
