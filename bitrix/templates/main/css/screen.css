@@ -4280,16 +4280,16 @@ slideRightNone
     .wrapper-left-menu_nav li .box-hover-menu.active {
       background-color: #eb1c24;
       color: white; }
-  .wrapper-left-menu_nav li.active {
+  .wrapper-left-menu_nav li.active-menu {
     border-left: 3px solid #eb1c24; }
-    .wrapper-left-menu_nav li.active .active-link {
+    .wrapper-left-menu_nav li.active-menu .active-link {
       -webkit-transition: all .4s ease-out;
       transition: all .4s ease-out; }
-    .wrapper-left-menu_nav li.active:hover {
+    .wrapper-left-menu_nav li.active-menu:hover {
       background-color: white; }
-      .wrapper-left-menu_nav li.active:hover .box-hover-menu {
+      .wrapper-left-menu_nav li.active-menu:hover .box-hover-menu {
         color: #eb1c24; }
-      .wrapper-left-menu_nav li.active:hover .active-link {
+      .wrapper-left-menu_nav li.active-menu:hover .active-link {
         color: white; }
 
 .wrapper-left-menu_img {
