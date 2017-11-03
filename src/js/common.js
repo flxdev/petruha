@@ -168,7 +168,6 @@ function initValidForm() {
             });
         });
     }
-
 }
 
 function initTabsForm() {
@@ -442,10 +441,11 @@ function initSliderHistory() {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
+        adaptiveHeight: true,
+        speed: 300,
     });
 
     $('.box-slider-company').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        console.log(nextSlide);
         $('.box-slider-company_nav a').removeClass('active');
         $('.box-slider-company_nav a').eq(nextSlide).addClass('active');
     });
@@ -466,10 +466,11 @@ function initSwiperCompany() {
         spaceBetween: 30,
         effect: 'fade',
         simulateTouch: false,
+        autoHeight: true,
         fade: {
             crossFade: true
         },
-        speed: 500,
+        speed: 500
     });
 }
 
@@ -528,6 +529,7 @@ function initSelectMulti() {
         isClickAwayOk: false,
         captionFormat : '{0}',
         captionFormatAllSelected: '{0}',
+        forceCustomRendering: true,
         locale :  ['Применить', 'Очистить', 'Select All']
     });
 
@@ -596,7 +598,7 @@ function initSelectMulti() {
         $(select).closest('.SumoSelect').find('.SelectBox > span').attr('data-before',dataText);
         $(select).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
         $('.button-reset-filter').addClass('open-reset-filter');
-    });;
+    });
 }
 
 function initSwiperProduct1() {
@@ -826,6 +828,14 @@ $(window).on('resize', function () {
     initHeightSliderPreview();
 });
 
+function fistInitSlider() {
+    var blockHeight = $('.swiper-slider-content > .swiper-wrapper');
+    var heightH = $('.swiper-slider-content').find('.swiper-slide').height();
+    blockHeight.css({
+        "height": heightH + 'px'
+    })
+}
+
 
 initDropzoneCompany();
 
@@ -860,4 +870,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initLk();
     initAnimation();
     initSticky();
+    fistInitSlider();
 });

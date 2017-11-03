@@ -137,12 +137,14 @@
           color: black;
           span{
             i{
-              background-image: url("../img/icon-check.jpg");
+              background-image: url("../img/svg/icon-check.svg");
               background-size: cover;
-              width: 17px;
-              height: 14px;
+              width: 19px;
+              height: 17px;
               background-repeat: no-repeat;
               border: none;
+              background-color: inherit;
+              margin-left: 8px;
             }
           }
         }

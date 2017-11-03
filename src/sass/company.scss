@@ -33,15 +33,22 @@
   position: relative;
   .slider-company-img{
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
   }
   .slider-company-txt{
     //width: 684px;
     width: 590px;
-    position: absolute;
+    min-height: 450px;
+    //position: absolute;
+    position: relative;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 0 auto;
+    padding: 100px 0 120px 0;
+
+
     .slider-company-txt_number{
       @include fontTTRoundsCondensedB;
       font-size: 60px;
@@ -82,7 +89,7 @@
       content: '';
       background-image: url("../img/next-btn-slider-big.png");
       background-repeat: no-repeat;
-      background-position: left top;
+      background-position: left bottom;
       width: 20px;
       height: 40px;
       display: block;
@@ -96,7 +103,7 @@
     &:before{
       background-image: url("../img/next-btn-slider-big.png");
       background-position: left bottom;
-      opacity: 1;
+      opacity: 0.3;
     }
   }
   .slick-prev{
@@ -109,7 +116,7 @@
       content: '';
       background-image: url("../img/prev-btn-slider-big.png");
       background-repeat: no-repeat;
-      background-position: left top;
+      background-position: left bottom;
       width: 20px;
       height: 40px;
       display: block;
@@ -123,7 +130,7 @@
     &:before{
       background-image: url("../img/prev-btn-slider-big.png");
       background-position: left bottom;
-      opacity: 1;
+      opacity: .3;
     }
   }
 }
@@ -132,7 +139,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 60px;
+  bottom: 40px;
   text-align: center;
   .slider-nav{
     @include fontOpenSans600;

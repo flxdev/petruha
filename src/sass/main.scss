@@ -795,6 +795,14 @@ slideRightNone
   .select2-container{
     .select2-selection--single{
       height: 33px;
+      .select2-selection__arrow {
+        b{
+          border-color: #5e5e5e transparent transparent;
+          margin-left: -12px;
+          margin-top: -1px;
+          border-width: 5px 5px 0;
+        }
+      }
     }
   }
 }
@@ -974,7 +982,7 @@ slideRightNone
           font-size: 14px;
           text-align: left;
           color: rgba(255, 255, 255, 0.8);
-          padding-left: 4px;
+          padding-left: 7px;
         }
       }
       span{
@@ -982,7 +990,7 @@ slideRightNone
         font-size: 14px;
         text-align: left;
         color: rgba(255, 255, 255, 0.8);
-        margin-left: 6px;
+        margin-left: 3px;
       }
     }
     .wrapper-text-popup_container{
