@@ -73,6 +73,11 @@
       }
     }
   }
+  .container-production-cycle_schedule {
+    .block-cycle_schedule{
+      width: 64%;
+    }
+  }
 }
 @media all and (max-width: 1490px){
   .wrapper-lotock{
@@ -184,6 +189,11 @@
       }
     }
   }
+  .container-production-cycle_schedule {
+    .block-cycle_schedule{
+      width: 69%;
+    }
+  }
 }
 
 @media all and (max-width: 1380px){
@@ -259,6 +269,11 @@
           transform: rotate(186deg);
         }
       }
+    }
+  }
+  .block-product-subbrand {
+    .block-product{
+      width: 80%;
     }
   }
 }
@@ -542,6 +557,12 @@
       .two-block{
         top: 50px;
       }
+    }
+  }
+  .block-product-subbrand {
+    .block-product{
+      width: 85%;
+      margin-right: 0;
     }
   }
 }

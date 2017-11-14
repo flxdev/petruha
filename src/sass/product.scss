@@ -26,6 +26,24 @@
   .wrapper-content-text{
     padding: 0;
   }
+  .block-product{
+    width: 70%;
+    margin-right: 0;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.35);
+    padding: 0;
+    .wrapper-product{
+      position: absolute;
+    }
+    &:hover{
+      .block-product-img{
+        transform: none
+      }
+    }
+  }
+}
+
+.w-100{
+  width: 100%;
 }
 
 .wrapper-product-subbrand + .container-filter{
@@ -80,15 +98,20 @@
   color: #000000;
 }
 
+.block-product-subbrand_title + .block-product-subbrand_doc{
+  margin-top: 80px;
+}
+
 .block-product-subbrand_doc{
   font-size: 0;
   width: 100%;
-  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .block-doc{
   @include display-inline-top;
   margin-right: 35px;
+  margin-bottom: 25px;
   .block-doc_icon{
     background-size: cover;
     background-repeat: no-repeat;
