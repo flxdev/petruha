@@ -5021,7 +5021,7 @@ slideRightNone
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.25); }
   .container-slider-header .swiper-pagination-bullet-active:before {
     content: '';
     display: block;
@@ -6620,8 +6620,6 @@ slideRightNone
   .block-product-subbrand .block-product {
     width: 70%;
     margin-right: 0;
-    -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.35);
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.35);
     padding: 0; }
     .block-product-subbrand .block-product .wrapper-product {
       position: absolute; }
