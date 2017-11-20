@@ -1,14 +1,6 @@
 section.container-central-unit.gray.animateThis(data-anim="fadeInUp")
     .wrapper-central-unit
-        .container-telephone-hotline-f
-            .block-label-txt.telefon
-                .block-label Телефон горячей линии по Беларуси:
-                a(href='callto: +375249600100').block-telefon_txt +375 24 960 01 00
-            .block-label-txt.email
-                .block-label E-mail:
-                a(href='mailto: petruha@servolux.by').block-email_txt petruha@servolux.by
-            .block-btn
-                .btn-green.js-btn Обратная связь
+
         .container-contact-row
             .container-tabs-btn.row-tabs-company
                 .tabs-link.current-t(data-tab-c="tab-contacts-1") Общие
@@ -16,64 +8,17 @@ section.container-central-unit.gray.animateThis(data-anim="fadeInUp")
                 .tabs-link(data-tab-c="tab-contacts-3") Закупки
                 .tabs-link(data-tab-c="tab-contacts-4") Логистика
             #tab-contacts-1.container-contact.tabs-content.current-t
-                .wrapper-contact_big-title Форма связи со службами для Беларуси и России
-                .wrapper-white-feedback_form
-                    form.js-form.dropzone(action="/" method="" enctype="multipart/form-data" data-modal="#success-form" data-zone="#preview-template2")
-                        .box-input
-                            .form-label
-                                label.input-label ФИО<span>*</span>
-                            .form-input
-                                input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Неверно введены данные").input-box
-
-                        .box-input
-                            .form-label
-                                label.input-label Телефон <span>*</span>
-                            .form-input
-                                input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Неверно введены данные").input-box
-
-                        .box-input
-                            .form-label
-                                label.input-label E-mail<span>*</span>
-                            .form-input
-                                input(type="text" name="email" data-validation="email" data-validation-error-msg="Неверно введены данные").input-box
-
-                        .box-input
-                            .form-label
-                                label.input-label Категория вопроса
-                            .form-input
-                                select.select-box.select2
-                                    option(value='1') Фирменный магазин
-                                    option(value='2') Поставка продукции
-                                    option(value='3') Корма
-                                    option(value='4') Отдел кадров
-
-                        .box-input.textarea
-                            .form-label
-                                label.input-label Вопрос<span>*</span>
-                            .form-input
-                                textarea.textarea-box(data-validation="required length" data-validation-length='min3' data-validation-error-msg="Неверно введены данные")
-
-                        .box-dropzon-btn
-                            .wrapper-dropzone(data-wrapper-zone="2")
-                                .box-add-file
-                                    .dz-default.dz-message.submit-all
-                                        span.icon-add-file
-                                            <svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">
-                                            <g stroke="null" id="svg_1">
-                                            <g stroke="null" id="svg_2">
-                                            <path stroke="null" id="svg_3" class="fill-add-file" d="m6.3794,17.86129c-0.04922,-0.98869 0.26925,-1.95281 0.93224,-2.65594l9.50768,-10.08336c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-9.53084,10.10793c-0.88302,0.93649 -1.32598,2.18923 -1.22754,3.4911l0.02316,0.28555c0.17081,2.31819 1.93975,4.08984 4.10243,4.14204c1.15517,0.02456 2.28427,-0.44215 3.12097,-1.32951l9.4324,-10.00353c1.17833,-1.24967 1.84132,-2.99676 1.76894,-4.79298c-0.1216,-3.36214 -2.70118,-6.04572 -5.87137,-6.17468l-0.09844,0c-1.6705,-0.0522 -3.29179,0.62637 -4.47011,1.87605l-10.88288,11.54183c-1.59812,1.69489 -2.40877,4.01308 -2.26111,6.40803l0,0.1044c0.26925,4.08984 3.36417,7.37215 7.19735,7.68534c2.26111,0.15659 4.49617,-0.70313 6.0914,-2.39802l11.17818,-11.85501c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-11.14923,11.83352c-1.40125,1.4861 -3.31784,2.2138 -5.2576,2.08484c-3.34101,-0.26099 -5.99296,-3.12572 -6.23905,-6.66902l0,-0.1044c-0.1216,-2.0572 0.56455,-4.08984 1.93975,-5.54831l10.85682,-11.51419c0.98146,-1.04088 2.33349,-1.59049 3.70869,-1.5383l0.09844,0c2.6288,0.07676 4.74226,2.31819 4.86385,5.10616c0.04922,1.45846 -0.49218,2.91693 -1.47363,3.96088l-9.4324,10.00353c-0.61377,0.65094 -1.49969,1.01632 -2.35955,0.98869c-1.62128,-0.0522 -2.97332,-1.3817 -3.09492,-3.12572l0.0029,-0.26099z"/>
-                                            </g>
-                                            </g>
-                                            </g>
-                                            </svg>
-                                        span.txt-def-mes Прикрепить файл
-
-                                    .dz-message_waring Общий размер вложений не должен превышать 10 Мб
-                                    .dz-message_error.dis-error Вы превысили допустимый лимит размера вложений в 10 Мб.
-
-
-                            .box-btn-form
-                                button.btn-form.radius Отправить
+                .wrapper-contact_big-title Общие контакты
+                .container-telephone-hotline-f
+                    .block-label-txt.telefon
+                        .block-label Телефон горячей линии по Беларуси:
+                        a(href='callto: +375249600100').block-telefon_txt +375 24 960 01 00
+                    .block-label-txt.email
+                        .block-label E-mail:
+                        a(href='mailto: petruha@servolux.by').block-email_txt petruha@servolux.by
+                        .block-label-txt_txt Для связи со специализированными службами компании заполните форму обратной связи по кнопке.
+                    .block-btn
+                        .btn-green.js-btn Обратная связь
 
             #tab-contacts-2.container-contact.tabs-content
                 .wrapper-contact_big-title Отдел продаж
@@ -96,6 +41,10 @@ section.container-central-unit.gray.animateThis(data-anim="fadeInUp")
                             .label Телефон:
                             .text
                                 a.telefon(href='callto: +74956516106') +7 495 651 61 06
+                        .wrapper-contact_block-row
+                            .label
+                            .text
+                                a.telefon(href='callto: +74956516106') +7 495 651 61 06
                         .wrapper-contact_block-row.email
                             .label E-mail:
                             .text
@@ -113,6 +62,13 @@ section.container-central-unit.gray.animateThis(data-anim="fadeInUp")
                             .label E-mail:
                             .text
                                 a.email(href='mailto: nataliiya.voloshyna@servolux.com') nataliiya.voloshyna@servolux.com
+                        .wrapper-contact_block-row.email
+                            .label
+                            .text
+                                a.email(href='mailto: nataliiya.voloshyna@servolux.com') nataliiya.voloshyna@servolux.com
+                .block-btn.sales
+                    .btn-green.js-btn Обратная связь
+
             #tab-contacts-3.container-contact.tabs-content
                 .wrapper-contact_big-title Отдел закупок
                 .wrapper-contact_list
