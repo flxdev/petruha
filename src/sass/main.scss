@@ -223,6 +223,7 @@ h1{
 .central-title{
   font-size: 0;
   display: inline-block;
+  transform: translateZ(0px);
   .central-title_txt{
     @include display-inline-middle;
     @include fontTTRoundsCondensedB;
@@ -397,7 +398,7 @@ slideRightNone
     text-align: left;
     color: white;
     background-color: transparent;
-  ;
+    //background-color: rgba(94, 94, 94, .5);
   }
   .btn-search{
     position: absolute;
@@ -622,9 +623,9 @@ slideRightNone
   }
   .block-btn{
     position: absolute;
-    //top: 10px;
     right: 0;
-    bottom: 0px;
+    bottom: auto;
+    top: 1px;
   }
 }
 
@@ -1503,7 +1504,8 @@ slideRightNone
   background-color: white;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 220px;
+  max-width: none;
+  white-space: nowrap;
 }
 
 #success-form, #success-form-save{

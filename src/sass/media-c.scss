@@ -668,3 +668,27 @@
     bottom: 40px;
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .container-production-cycle_schedule {
+    .block-cycle_schedule {
+      svg{
+        height: 45vh;
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::i-block-chrome, .central-title .central-title_icon{
+    margin-top: 1px;
+  }
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+
+  .central-title .central-title_icon{
+    margin-top: 1px;
+  }
+}}

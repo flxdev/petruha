@@ -276,6 +276,7 @@ function initSearchBtn() {
                     'width': '52px',
                     'padding': '0'
                 });
+            $('.input-search').css({'background-color': 'transparent'});
             $('.input-search').css({'padding': '0', 'color': 'rgba( 255, 255, 255, 0)'});
         } else {
             $('.wrapper-search-block')
@@ -283,10 +284,10 @@ function initSearchBtn() {
                 .css({
                     'width': '500px',
                 });
-
+            $('.input-search').css({'background-color': 'rgba(94, 94, 94, .5)'});
             $('.input-search').focus().css({'padding': '0 50px', 'color': 'rgba( 255, 255, 255, 1)'});
         }
-    })
+    });
     $('.input-search').blur(function () {
         $('.wrapper-search-block')
             .removeClass('open-search')
@@ -294,6 +295,7 @@ function initSearchBtn() {
                 'width': '52px',
                 'padding': '0'
             });
+        $('.input-search').css({'background-color': 'transparent'});
         $('.input-search').css({'padding': '0', 'color': 'rgba( 255, 255, 255, 0)'});
     })
 }

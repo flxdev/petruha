@@ -11,6 +11,7 @@
   margin-bottom: 29px;
   position: relative;
   overflow: hidden;
+  transform: translateZ(0px);
   @include hover-time-run;
   .block-product-img{
     width: 100%;
@@ -73,12 +74,14 @@
     height: 100%;
     padding: 0;
     position: relative;
+    transform: translateZ(0px);
     .central-text{
       @include fontOpenSans300;
       font-size: 16px;
       line-height: 1.88;
       text-align: left;
       color: #5e5e5e;
+      transform: translateZ(0px);
     }
   }
   &:hover{

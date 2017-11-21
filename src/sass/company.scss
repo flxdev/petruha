@@ -321,7 +321,8 @@
 .wrapper-row-content{
   width: 100%;
   position: relative;
-  margin-bottom: 90px;
+  //margin-bottom: 90px;
+  margin-bottom: 40px;
   .wrapper-content_title-row{
     display: block;
     width: 485px;
@@ -358,6 +359,7 @@
     }
     .container-content-txt_bold + .container-open-doc{
       margin-top: 30px;
+      margin-right: 30px;
     }
     p{
       @include fontOpenSans300;
@@ -426,7 +428,7 @@
 
 .wrapper-row-content.central-content{
   width: 100%;
-  padding: 96px 0;
+  padding: 85px 0;
   .container-content-txt_title{
     width: 100%;
     padding: 0 60px;
@@ -464,7 +466,8 @@
 }
 
 .container-environment{
-  padding: 100px 0;
+  //padding: 100px 0;
+  padding: 75px 0;
   .container-content-txt_title{
     width: 100%;
     padding: 0 60px;
@@ -558,11 +561,11 @@
 
 .wrapper-row-content.content-no-img{
   .container-content-txt:first-child{
-    padding: 85px 60px 85px 60px;
+    padding: 75px 60px 75px 60px;
     width: 52%;
   }
   .container-content-txt:last-child{
-    padding: 85px 55px 85px 0;
+    padding: 75px 55px 75px 0;
     width: 48%;
   }
   ul{
