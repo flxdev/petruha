@@ -4226,7 +4226,9 @@ slideRightNone
   height: 100%; }
 
 .out {
-  min-height: 75vh; }
+  min-height: 75vh;
+  position: relative;
+  z-index: 5; }
 
 .display-none {
   display: none !important; }
@@ -4685,11 +4687,13 @@ slideRightNone
   width: 600px;
   margin: 0 auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+  bottom: 50%;
+  right: 50%; }
 
 .wrapper-white-feedback .wrapper-white-feedback_title {
   font-family: 'TTRoundsCondensed';
@@ -4773,7 +4777,7 @@ slideRightNone
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     resize: none;
-    border-bottom: solid 1px #b5b3b3; }
+    border: solid 1px #b5b3b3; }
     .box-input.textarea .textarea-box:focus {
       border-color: #39b54a; }
     .box-input.textarea .textarea-box:hover {
@@ -4856,6 +4860,7 @@ slideRightNone
   width: 84%;
   padding: 50px 60px;
   background: white;
+  position: relative;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
 
@@ -5232,8 +5237,6 @@ slideRightNone
       color: #5e5e5e;
       -webkit-transform: translateZ(0px);
       transform: translateZ(0px); }
-  .block-product:first-child:hover {
-    opacity: 1; }
 
 .central-title + .central-text {
   margin-top: 34px; }
@@ -6019,7 +6022,7 @@ slideRightNone
 .wrapper-row-content.right-content {
   margin-bottom: 120px; }
   .wrapper-row-content.right-content .container-content-txt {
-    padding: 90px 175px 90px 60px;
+    padding: 70px 175px 70px 60px;
     width: 58%; }
     .wrapper-row-content.right-content .container-content-txt .container-content-txt_title {
       font-family: 'TTRoundsCondensed';
@@ -6079,7 +6082,7 @@ slideRightNone
     width: 57%; }
 
 .container-environment {
-  padding: 75px 0; }
+  padding: 75px 0 0; }
   .container-environment .container-content-txt_title {
     width: 100%;
     padding: 0 60px;
@@ -6092,11 +6095,11 @@ slideRightNone
     color: #000;
     margin-bottom: 60px; }
   .container-environment .wrapper-row-content.right-content {
-    margin-bottom: 90px; }
+    margin-bottom: 30px; }
   .container-environment .wrapper-row-content.left-content {
     padding-left: 60px; }
     .container-environment .wrapper-row-content.left-content .container-content-txt {
-      padding: 90px 88px 90px 50px; }
+      padding: 70px 88px 70px 50px; }
 
 .wrapper-central-unit.innovation {
   padding: 95px 60px 80px; }
@@ -6186,7 +6189,8 @@ slideRightNone
     height: 40px; }
 
 .container-open-doc {
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 30px; }
   .container-open-doc:hover .block-txt-info .txt {
     color: #1ea832; }
   .container-open-doc:focus .block-txt-info .txt {
@@ -6417,7 +6421,8 @@ slideRightNone
 
 .container-lotock {
   width: 100%;
-  position: relative; }
+  position: relative;
+  margin-top: 90px; }
 
 .wrapper-lotock {
   width: 100%;
@@ -7790,7 +7795,10 @@ slideRightNone
   .wrapper-lotock .block-img-c .content-img img{
     width: 100%; }
   .container-production-cycle_schedule .block-cycle_schedule{
-    width: 64%; } }
+    width: 64%; }
+  .wrapper-contact_list{
+    width: 450px;
+    padding-right: 50px; } }
 
 @media all and (max-width: 1490px){
   .wrapper-lotock .block-img-c .content-img .line-1{
@@ -7820,7 +7828,8 @@ slideRightNone
 
 @media all and (max-width: 1439px){
   .wrapper-contact_list{
-    width: 50%; }
+    width: 40%;
+    padding-right: 75px; }
   .wrapper-text-popup{
     width: 70%; }
   .wrapper-nav-text{
@@ -8031,7 +8040,9 @@ slideRightNone
     top: 50px; }
   .block-product-subbrand .block-product{
     width: 85%;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .wrapper-contact_list .wrapper-contact_block .wrapper-contact_block-row .label{
+    width: 75px; } }
 
 @media all and (max-width: 1207px){
   .container-telephone-hotline-f .block-label-txt{

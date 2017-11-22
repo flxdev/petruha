@@ -78,6 +78,10 @@
       width: 64%;
     }
   }
+  .wrapper-contact_list{
+    width: 450px;
+    padding-right: 50px;
+  }
 }
 @media all and (max-width: 1490px){
   .wrapper-lotock{
@@ -126,7 +130,8 @@
 
 @media all and (max-width: 1439px){
   .wrapper-contact_list{
-    width: 50%;
+    width: 40%;
+    padding-right: 75px;
   }
   .wrapper-text-popup{
     width: 70%;
@@ -563,6 +568,15 @@
     .block-product{
       width: 85%;
       margin-right: 0;
+    }
+  }
+  .wrapper-contact_list {
+    .wrapper-contact_block {
+      .wrapper-contact_block-row {
+        .label{
+          width: 75px;
+        }
+      }
     }
   }
 }

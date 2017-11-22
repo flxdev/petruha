@@ -1545,6 +1545,8 @@ slideRightNone
 
 .out{
   min-height: 75vh;
+  position: relative;
+  z-index: 5;
 }
 
 .display-none{

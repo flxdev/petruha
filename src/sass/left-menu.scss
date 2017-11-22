@@ -513,9 +513,17 @@
   width: 600px;
   margin: 0 auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%,-50%);
+  transition: all .2s ease-in-out;
+  -webkit-transform: translate(50%, 50%);
+  -moz-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  -o-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+  bottom: 50%;
+  right: 50%;
 }
 
 .wrapper-white-feedback{
@@ -604,7 +612,8 @@
     color: black;
     @include hover-time-all;
     resize: none;
-    border-bottom: solid 1px #b5b3b3;
+    //border-bottom: solid 1px #b5b3b3;
+    border: solid 1px #b5b3b3;
     &:focus{
       border-color: #39b54a;
     }

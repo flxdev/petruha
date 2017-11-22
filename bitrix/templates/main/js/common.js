@@ -809,6 +809,11 @@ function initAnimation() {
     inView('.animateThis').on('enter', function (el) {
         $(el).addClass('animated ' + $(el).data('anim'));
     });
+    inView('.block-product').on('enter', function (el) {
+        setTimeout(function () {
+            $(el).removeClass('animateThis');
+        }, 200)
+    });
 }
 
 function initSticky() {

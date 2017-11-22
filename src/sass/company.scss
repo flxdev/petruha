@@ -396,7 +396,7 @@
 .wrapper-row-content.right-content{
   margin-bottom: 120px;
   .container-content-txt{
-    padding: 90px 175px 90px 60px;
+    padding: 70px 175px 70px 60px;
     width: 58%;
     .container-content-txt_title{
       @include fontTTRoundsCondensedB;
@@ -467,7 +467,7 @@
 
 .container-environment{
   //padding: 100px 0;
-  padding: 75px 0;
+  padding: 75px 0 0;
   .container-content-txt_title{
     width: 100%;
     padding: 0 60px;
@@ -480,12 +480,12 @@
     margin-bottom: 60px;
   }
   .wrapper-row-content.right-content {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
   }
   .wrapper-row-content.left-content{
     padding-left: 60px;
     .container-content-txt{
-      padding: 90px 88px 90px 50px;
+      padding: 70px 88px 70px 50px;
     }
   }
 }
@@ -586,6 +586,7 @@
 
 .container-open-doc{
   display: inline-block;
+  margin-right: 30px;
   &:hover{
     .block-txt-info{
       .txt{
@@ -841,6 +842,7 @@
 .container-lotock{
   width: 100%;
   position: relative;
+  margin-top: 90px;
 }
 
 .wrapper-lotock{
