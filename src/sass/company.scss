@@ -426,6 +426,19 @@
   }
 }
 
+.wrapper-row-content.left-content {
+  .container-content-txt {
+    p{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .wrapper-row-content.central-content{
   width: 100%;
   padding: 85px 0;

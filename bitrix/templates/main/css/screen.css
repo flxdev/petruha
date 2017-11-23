@@ -6049,6 +6049,15 @@ slideRightNone
     background-repeat: no-repeat;
     min-height: 430px; }
 
+.wrapper-row-content.left-content .container-content-txt p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: left;
+  color: #5e5e5e;
+  margin-bottom: 15px; }
+
 .wrapper-row-content.central-content {
   width: 100%;
   padding: 85px 0; }
@@ -7676,7 +7685,7 @@ slideRightNone
 .block-ingredients-slider .block-ingredients-slider_title {
   font-family: 'TTRoundsCondensed';
   font-weight: bold;
-  font-size: 22px;
+  font-size: 23px;
   font-stretch: condensed;
   line-height: 1.45;
   text-align: center;
