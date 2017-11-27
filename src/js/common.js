@@ -443,7 +443,8 @@ function initSliderHistory() {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
-        adaptiveHeight: true,
+        // adaptiveHeight: true,
+        adaptiveHeight: false,
         speed: 300,
     });
 
@@ -468,7 +469,8 @@ function initSwiperCompany() {
         spaceBetween: 30,
         effect: 'fade',
         simulateTouch: false,
-        autoHeight: true,
+        // autoHeight: true,
+        autoHeight: false,
         fade: {
             crossFade: true
         },
