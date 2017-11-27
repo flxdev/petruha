@@ -439,6 +439,18 @@
   }
 }
 
+.wrapper-row-content.right-content {
+  .container-content-img{
+    background-size: contain;
+  }
+}
+
+.wrapper-row-content.left-content {
+  .container-content-img{
+    background-size: contain;
+  }
+}
+
 .wrapper-row-content.central-content{
   width: 100%;
   padding: 85px 0;
@@ -573,6 +585,7 @@
 }
 
 .wrapper-row-content.content-no-img{
+  padding-top: 30px;
   .container-content-txt:first-child{
     padding: 75px 60px 75px 60px;
     width: 52%;
@@ -585,7 +598,7 @@
     li{
       @include display-inline-middle;
       margin-right: 45px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       &:last-child{
         margin-right: 0;
       }
